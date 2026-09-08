@@ -1,0 +1,7 @@
+method,view_id,image_auroc,pixel_auroc,smoke,train_images,val_images,test_images,result_json
+padim,4,0.975,0.9046682529079653,False,1350,150,18,/home/root123/LF/WYM/SteelRailWay/results/baselines_rgb/cam4/padim/result.json
+patchcore,4,0.925,0.9170146956506329,False,1350,150,18,/home/root123/LF/WYM/SteelRailWay/results/baselines_rgb/cam4/patchcore/result.json
+fastflow,4,0.675,0.7816201574104217,False,1350,150,18,/home/root123/LF/WYM/SteelRailWay/results/baselines_rgb/cam4/fastflow/result.json
+draem,4,0.80625,0.5293757516329546,False,1350,150,18,/home/root123/LF/WYM/SteelRailWay/results/baselines_rgb/cam4/draem/result.json
+stfpm,4,0.65,0.7682091636947032,False,1350,150,18,/home/root123/LF/WYM/SteelRailWay/results/baselines_rgb/cam4/stfpm/result.json
+rd4ad_i,4,0.975,0.8349893018568371,False,1350,150,18,/home/root123/LF/WYM/SteelRailWay/results/baselines_rgb/cam4/rd4ad_i/result.json

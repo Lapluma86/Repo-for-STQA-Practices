@@ -1,0 +1,36 @@
+{
+  "method": "PaDiM",
+  "cam": "cam4",
+  "view_id": 4,
+  "image_auroc": 0.9875,
+  "pixel_auroc": 0.9232230102203395,
+  "layers": [
+    1,
+    2
+  ],
+  "target_map_size": 16,
+  "img_size": 512,
+  "patch_size": 900,
+  "patch_stride": 850,
+  "eval_root": "G:\\SteelRailWay\\rail_mvtec_gt_test",
+  "bank_root": "G:\\SteelRailWay\\rail_mvtec_gt_test_aug_cam4_normal50",
+  "bank_selection": "manifest_added_good",
+  "eval_selection": "all",
+  "bank_manifest": "G:\\SteelRailWay\\rail_mvtec_gt_test_aug_cam4_normal50\\cam4_augmented_manifest.json",
+  "eval_manifest": "",
+  "bank_summary": {
+    "num_images": 42,
+    "num_good_images": 42,
+    "num_broken_images": 0,
+    "num_patch_samples": 294,
+    "num_patches_per_image": 7
+  },
+  "eval_summary": {
+    "num_images": 18,
+    "num_good_images": 8,
+    "num_broken_images": 10,
+    "num_patch_samples": 126,
+    "num_patches_per_image": 7
+  },
+  "scores_csv": "results\\padim_cam4_smoke_scores.csv"
+}

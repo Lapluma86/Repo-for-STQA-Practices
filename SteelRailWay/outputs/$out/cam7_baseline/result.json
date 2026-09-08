@@ -1,0 +1,52 @@
+{
+  "evaluated_at": "2026-05-04 22:38:37",
+  "view_id": 7,
+  "ckpt": "outputs\\rail_all\\Cam7\\20260501_035506_cam7_bs32_lr0.005_img512_ratio1.0\\best_cam7.pth",
+  "depth_peft_ckpt": "",
+  "module_ablation": "full",
+  "score_source_selected": "fusion",
+  "fusion_rule": "sum",
+  "assist_fill_mode": "zeros",
+  "assist_stats_dir": "",
+  "train_sample_ratio": 1.0,
+  "train_sample_num": null,
+  "sampling_mode": "uniform_time",
+  "train_sample_seed": 42,
+  "train_root": "G:/SteelRailWay/data_20260327",
+  "test_root": "G:/SteelRailWay/rail_mvtec_gt_test",
+  "status": "skipped",
+  "reason": "no test samples for this view",
+  "best_epoch": "N/A",
+  "best_val_loss": null,
+  "auroc": null,
+  "num_patches": 0,
+  "num_images": 0,
+  "num_abnormal": 0,
+  "num_normal": 0,
+  "score_min": null,
+  "score_max": null,
+  "scores_csv": "",
+  "scores_csv_by_source": {
+    "rgb": "",
+    "depth": "",
+    "fusion": "",
+    "rgb_isolated": "",
+    "depth_isolated": ""
+  },
+  "auroc_by_source": {
+    "rgb": null,
+    "depth": null,
+    "fusion": null,
+    "rgb_isolated": null,
+    "depth_isolated": null
+  },
+  "source_semantics": {
+    "rgb": "RGB branch score (cross-conditioned by current depth teacher features)",
+    "depth": "Depth branch score (cross-conditioned by current RGB teacher features)",
+    "fusion": "Fusion score from current rgb_cross + depth_cross anomaly maps",
+    "rgb_isolated": "RGB branch score with depth assist replaced by a fixed training-domain reference",
+    "depth_isolated": "Depth branch score with RGB assist replaced by a fixed training-domain reference"
+  },
+  "frame_ids": [],
+  "output_log": ""
+}

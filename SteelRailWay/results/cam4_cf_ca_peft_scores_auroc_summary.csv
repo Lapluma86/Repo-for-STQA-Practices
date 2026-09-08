@@ -1,0 +1,5 @@
+module_ablation,fusion_auroc_total,rgb_auroc,depth_auroc,fusion_auroc,rgb_isolated_auroc,depth_isolated_auroc,result_json
+full,0.68750000,0.60000000,0.67500000,0.68750000,0.81250000,0.63750000,outputs\rail_ablation\cam4_cf_ca_peft\full\result.json
+no_ca,0.73750000,0.61250000,0.82500000,0.73750000,0.85000000,0.68750000,outputs\rail_ablation\cam4_cf_ca_peft\no_ca\result.json
+no_cf,0.77500000,0.80000000,0.62500000,0.77500000,0.78750000,0.65000000,outputs\rail_ablation\cam4_cf_ca_peft\no_cf\result.json
+no_cf_ca,0.73750000,0.86250000,0.71250000,0.73750000,0.86250000,0.71250000,outputs\rail_ablation\cam4_cf_ca_peft\no_cf_ca\result.json

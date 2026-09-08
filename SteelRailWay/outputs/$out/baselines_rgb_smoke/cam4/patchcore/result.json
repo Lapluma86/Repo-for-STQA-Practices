@@ -1,0 +1,57 @@
+{
+  "method": "patchcore",
+  "cam": "cam4",
+  "view_id": 4,
+  "image_auroc": 0.6666666666666667,
+  "pixel_auroc": null,
+  "img_size": 512,
+  "patch_size": 900,
+  "patch_stride": 850,
+  "train_root": "\\data1\\Leaddo_data\\20260327-resize512",
+  "test_root": "G:\\SteelRailWay\\rail_mvtec_gt_test",
+  "train_sample_num": 1500,
+  "train_val_test_split": [
+    0.9,
+    0.1,
+    0.0
+  ],
+  "sampling_mode": "uniform_time",
+  "smoke": true,
+  "train_summary": {
+    "num_images": 5,
+    "num_good_images": 5,
+    "num_broken_images": 0,
+    "num_patch_samples": 5,
+    "num_patches_per_image": 1
+  },
+  "val_summary": {
+    "num_images": 1,
+    "num_good_images": 1,
+    "num_broken_images": 0,
+    "num_patch_samples": 1,
+    "num_patches_per_image": 1
+  },
+  "test_summary": {
+    "num_images": 6,
+    "num_good_images": 3,
+    "num_broken_images": 3,
+    "num_patch_samples": 6,
+    "num_patches_per_image": 1
+  },
+  "scores_csv": "G:\\SteelRailWay\\$out\\baselines_rgb_smoke\\cam4\\patchcore\\scores.csv",
+  "layers": [
+    1,
+    2
+  ],
+  "target_map_size": 32,
+  "embedding_dim_before_projection": 1536,
+  "embedding_dim_after_projection": 128,
+  "projection_dim_arg": 128,
+  "coreset_ratio": 0.01,
+  "coreset_size_arg": 0,
+  "memory_vectors_full": 5120,
+  "memory_vectors_coreset": 51,
+  "memory_coreset_indices_count": 51,
+  "k_nn": 5,
+  "query_chunk_size": 2048
+}

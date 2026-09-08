@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-05-04 15:42:22",
+  "scores_root": "outputs/rail_ablation/cam4_cf_ca_peft",
+  "iterations": 10000,
+  "rows": [
+    {
+      "module_ablation": "full",
+      "fusion_auroc": "0.68750000",
+      "fusion_ci_low": "0.42500000",
+      "fusion_ci_high": "0.91250000",
+      "delta_vs_full": "0.00000000",
+      "delta_ci_low": "0.00000000",
+      "delta_ci_high": "0.00000000",
+      "iterations": "10000"
+    },
+    {
+      "module_ablation": "no_cf",
+      "fusion_auroc": "0.77500000",
+      "fusion_ci_low": "0.51250000",
+      "fusion_ci_high": "1.00000000",
+      "delta_vs_full": "0.08750000",
+      "delta_ci_low": "-0.26250000",
+      "delta_ci_high": "0.42500000",
+      "iterations": "10000"
+    },
+    {
+      "module_ablation": "no_ca",
+      "fusion_auroc": "0.73750000",
+      "fusion_ci_low": "0.47500000",
+      "fusion_ci_high": "0.93750000",
+      "delta_vs_full": "0.05000000",
+      "delta_ci_low": "-0.30000000",
+      "delta_ci_high": "0.40000000",
+      "iterations": "10000"
+    },
+    {
+      "module_ablation": "no_cf_ca",
+      "fusion_auroc": "0.73750000",
+      "fusion_ci_low": "0.47500000",
+      "fusion_ci_high": "0.93750000",
+      "delta_vs_full": "0.05000000",
+      "delta_ci_low": "-0.30000000",
+      "delta_ci_high": "0.38750000",
+      "iterations": "10000"
+    }
+  ]
+}

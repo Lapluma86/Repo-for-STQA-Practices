@@ -1,0 +1,82 @@
+{
+  "created_at": "2026-05-04 21:49:59",
+  "note": "zscore_sum uses per-image map-level z-score before fusion; not the paper main metric.",
+  "args": {
+    "train_root": "data_20260327",
+    "test_root": "rail_mvtec_gt_test",
+    "view_id": 4,
+    "img_size": 512,
+    "depth_norm": "zscore",
+    "patch_size": 900,
+    "patch_stride": 850,
+    "precision": "fp32"
+  },
+  "schemes": [
+    {
+      "scheme": "cf_ca_repair_final",
+      "status": "ok",
+      "ckpt": "outputs\\rail_ablation\\cam4_cfca_repair\\cf_ca\\cam4_cf_ca_20260504_170923\\final\\repair_cam4.pth",
+      "depth_peft_source": "outputs\\rail_peft\\cam4_p1_20260501_225618\\final\\final_peft_cam4.pth",
+      "expected_branch_auroc": {
+        "rgb": 0.675,
+        "depth": 0.8,
+        "fusion_sum": 0.775
+      },
+      "observed_fusion_auroc": {
+        "sum": 0.7625,
+        "zscore_sum": 0.4625,
+        "max_norm": 0.76875
+      },
+      "num_images": 18,
+      "num_abnormal": 10,
+      "num_normal": 8,
+      "scale_summary": {
+        "scheme": "cf_ca_repair_final",
+        "rgb_max_mean": "0.00599114",
+        "rgb_max_median": "0.00386114",
+        "depth_max_mean": "0.00600603",
+        "depth_max_median": "0.00103126",
+        "ratio_mean": "1.13109755",
+        "ratio_median": "0.30521460",
+        "ratio_p25": "0.23255583",
+        "ratio_p75": "1.45881435"
+      },
+      "scale_per_image_csv": "results\\cam4_fusion_mechanism_validation_20260504_214959\\cf_ca_repair_final\\scale_per_image.csv",
+      "fusion_scores_csv": "results\\cam4_fusion_mechanism_validation_20260504_214959\\cf_ca_repair_final\\fusion_scores_cf_ca_repair_final.csv"
+    },
+    {
+      "scheme": "peft_full_then_cf_ca_final",
+      "status": "ok",
+      "ckpt": "outputs\\rail_ablation\\cam4_peft_full_then_cf_ca\\cam4_peft_full_then_cf_ca_20260504_200444\\peft_full_then_cf_ca\\final\\peft_full_then_cf_ca_cam4.pth",
+      "depth_peft_source": "outputs\\rail_ablation\\cam4_peft_full_then_cf_ca\\cam4_peft_full_then_cf_ca_20260504_200444\\peft_full_then_cf_ca\\final\\peft_full_then_cf_ca_cam4.pth::embedded",
+      "expected_branch_auroc": {
+        "rgb": 0.6875,
+        "depth": 0.8375,
+        "fusion_sum": 0.65
+      },
+      "observed_fusion_auroc": {
+        "sum": 0.65,
+        "zscore_sum": 0.525,
+        "max_norm": 0.64375
+      },
+      "num_images": 18,
+      "num_abnormal": 10,
+      "num_normal": 8,
+      "scale_summary": {
+        "scheme": "peft_full_then_cf_ca_final",
+        "rgb_max_mean": "0.01135473",
+        "rgb_max_median": "0.00364326",
+        "depth_max_mean": "0.00649931",
+        "depth_max_median": "0.00056386",
+        "ratio_mean": "1.23168213",
+        "ratio_median": "0.19839588",
+        "ratio_p25": "0.13751752",
+        "ratio_p75": "1.46567654"
+      },
+      "scale_per_image_csv": "results\\cam4_fusion_mechanism_validation_20260504_214959\\peft_full_then_cf_ca_final\\scale_per_image.csv",
+      "fusion_scores_csv": "results\\cam4_fusion_mechanism_validation_20260504_214959\\peft_full_then_cf_ca_final\\fusion_scores_peft_full_then_cf_ca_final.csv"
+    }
+  ],
+  "status": "ok",
+  "missing": []
+}

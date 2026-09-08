@@ -1,0 +1,24 @@
+Cam4 cf_ca_repair cross-camera evaluation
+created_at: 2026-05-04 23:30:52
+views: 1 5
+train_root: G:/SteelRailWay/data_20260327
+test_root: G:/SteelRailWay/rail_mvtec_gt_test
+cam4_peft_ckpt: outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth
+cfca_repair_ckpt: outputs/rail_ablation/cam4_cfca_repair/cf_ca/cam4_cf_ca_20260504_170923/final/repair_cam4.pth
+device: cuda:0
+precision: fp32
+assist_fill: zeros
+fusion_rule: sum
+
+Cam1
+  baseline: rgb=0.81818182, depth=0.72727273, fusion=0.73636364
+  with_cam4peft: rgb=0.79090909, depth=0.70909091, fusion=0.73636364, d_fusion_vs_baseline=0.00000000
+  with_cam4_cfca_repair: rgb=0.61818182, depth=0.57272727, fusion=0.61818182, d_fusion_vs_baseline=-0.11818182, d_fusion_vs_cam4peft=-0.11818182
+  isolated: rgb=0.84545455, depth=0.55454545, d_rgb_iso_vs_cam4peft=0.05454546, d_depth_iso_vs_cam4peft=-0.01818182
+
+Cam5
+  baseline: rgb=0.85714286, depth=0.73469388, fusion=0.75510204
+  with_cam4peft: rgb=0.81632653, depth=0.67346939, fusion=0.83673469, d_fusion_vs_baseline=0.08163265
+  with_cam4_cfca_repair: rgb=0.75510204, depth=0.79591837, fusion=0.75510204, d_fusion_vs_baseline=0.00000000, d_fusion_vs_cam4peft=-0.08163265
+  isolated: rgb=0.73469388, depth=0.51020408, d_rgb_iso_vs_cam4peft=-0.06122449, d_depth_iso_vs_cam4peft=-0.26530612
+

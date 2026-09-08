@@ -1,0 +1,70 @@
+{
+  "rows": [
+    {
+      "method": "padim",
+      "view_id": 4,
+      "image_auroc": 0.975,
+      "pixel_auroc": 0.9046682529079653,
+      "smoke": false,
+      "train_images": 1350,
+      "val_images": 150,
+      "test_images": 18,
+      "result_json": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgb/cam4/padim/result.json"
+    },
+    {
+      "method": "patchcore",
+      "view_id": 4,
+      "image_auroc": 0.925,
+      "pixel_auroc": 0.9170146956506329,
+      "smoke": false,
+      "train_images": 1350,
+      "val_images": 150,
+      "test_images": 18,
+      "result_json": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgb/cam4/patchcore/result.json"
+    },
+    {
+      "method": "fastflow",
+      "view_id": 4,
+      "image_auroc": 0.675,
+      "pixel_auroc": 0.7816201574104217,
+      "smoke": false,
+      "train_images": 1350,
+      "val_images": 150,
+      "test_images": 18,
+      "result_json": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgb/cam4/fastflow/result.json"
+    },
+    {
+      "method": "draem",
+      "view_id": 4,
+      "image_auroc": 0.80625,
+      "pixel_auroc": 0.5293757516329546,
+      "smoke": false,
+      "train_images": 1350,
+      "val_images": 150,
+      "test_images": 18,
+      "result_json": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgb/cam4/draem/result.json"
+    },
+    {
+      "method": "stfpm",
+      "view_id": 4,
+      "image_auroc": 0.65,
+      "pixel_auroc": 0.7682091636947032,
+      "smoke": false,
+      "train_images": 1350,
+      "val_images": 150,
+      "test_images": 18,
+      "result_json": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgb/cam4/stfpm/result.json"
+    },
+    {
+      "method": "rd4ad_i",
+      "view_id": 4,
+      "image_auroc": 0.975,
+      "pixel_auroc": 0.8349893018568371,
+      "smoke": false,
+      "train_images": 1350,
+      "val_images": 150,
+      "test_images": 18,
+      "result_json": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgb/cam4/rd4ad_i/result.json"
+    }
+  ]
+}

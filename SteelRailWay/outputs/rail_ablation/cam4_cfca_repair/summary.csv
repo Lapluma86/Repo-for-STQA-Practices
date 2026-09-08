@@ -1,0 +1,4 @@
+scheme,rgb_auroc,depth_auroc,fusion_auroc,delta_vs_peft_full,trainable_rgb_count,trainable_depth_count,final_ckpt
+cf_only,0.80000000,0.76250000,0.80000000,0.11250000,78,78,outputs/rail_ablation/cam4_cfca_repair/cf_only/cam4_cf_only_20260504_154942/final/repair_cam4.pth
+ca_only,0.46250000,0.87500000,0.47500000,-0.21250000,30,30,outputs/rail_ablation/cam4_cfca_repair/ca_only/cam4_ca_only_20260504_163147/final/repair_cam4.pth
+cf_ca,0.67500000,0.80000000,0.77500000,0.08750000,108,108,outputs/rail_ablation/cam4_cfca_repair/cf_ca/cam4_cf_ca_20260504_170923/final/repair_cam4.pth

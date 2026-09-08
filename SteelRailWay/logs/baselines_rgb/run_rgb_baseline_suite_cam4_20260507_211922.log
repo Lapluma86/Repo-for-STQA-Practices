@@ -1,0 +1,86 @@
+[INFO] TRAIN_ROOT=/data1/Leaddo_data/20260327-resize512
+[INFO] TEST_ROOT=/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test
+[INFO] METHOD=all
+[INFO] VIEW_ID=4
+[INFO] sample plan: 1500 -> 1350 train / 150 val
+[INFO] img_size=512
+[INFO] sampling_mode=uniform_time
+[INFO] test patch=900/850
+========================================================================
+[RUN] method=padim view_id=4
+========================================================================
+[RailDataset] Detected pre-resized data: /data1/Leaddo_data/20260327-resize512 (first image 512×512 ≈ 512), skipping runtime resize
+[RailDataset] Uniform-time sampled 1500/29407 (5.1%)
+[RailDataset] Train split (time-uniform interleave): 1350 images
+[RailDataset] Detected pre-resized data: /data1/Leaddo_data/20260327-resize512 (first image 512×512 ≈ 512), skipping runtime resize
+[RailDataset] Uniform-time sampled 1500/29407 (5.1%)
+[RailDataset] Val split (time-uniform interleave): 150 images
+[RailDataset] Detected image: 6000×927, 7 patches per image
+[Protocol] method=padim
+[Protocol] train_root=/data1/Leaddo_data/20260327-resize512
+[Protocol] test_root=/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test
+[Protocol] sample plan: 1500 -> 1350 train / 150 val
+[Protocol] img_size=512
+[Protocol] sampling_mode=uniform_time
+[Protocol] test patch=900/850
+========================================================================
+[RUN] method=patchcore view_id=4
+========================================================================
+[RailDataset] Detected pre-resized data: /data1/Leaddo_data/20260327-resize512 (first image 512×512 ≈ 512), skipping runtime resize
+[RailDataset] Uniform-time sampled 1500/29407 (5.1%)
+[RailDataset] Train split (time-uniform interleave): 1350 images
+[RailDataset] Detected pre-resized data: /data1/Leaddo_data/20260327-resize512 (first image 512×512 ≈ 512), skipping runtime resize
+[RailDataset] Uniform-time sampled 1500/29407 (5.1%)
+[RailDataset] Val split (time-uniform interleave): 150 images
+[RailDataset] Detected image: 6000×927, 7 patches per image
+[Protocol] method=patchcore
+[Protocol] train_root=/data1/Leaddo_data/20260327-resize512
+[Protocol] test_root=/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test
+[Protocol] sample plan: 1500 -> 1350 train / 150 val
+[Protocol] img_size=512
+[Protocol] sampling_mode=uniform_time
+[Protocol] test patch=900/850
+========================================================================
+[RUN] method=fastflow view_id=4
+========================================================================
+[RailDataset] Detected pre-resized data: /data1/Leaddo_data/20260327-resize512 (first image 512×512 ≈ 512), skipping runtime resize
+[RailDataset] Uniform-time sampled 1500/29407 (5.1%)
+[RailDataset] Train split (time-uniform interleave): 1350 images
+[RailDataset] Detected pre-resized data: /data1/Leaddo_data/20260327-resize512 (first image 512×512 ≈ 512), skipping runtime resize
+[RailDataset] Uniform-time sampled 1500/29407 (5.1%)
+[RailDataset] Val split (time-uniform interleave): 150 images
+[RailDataset] Detected image: 6000×927, 7 patches per image
+[Protocol] method=fastflow
+[Protocol] train_root=/data1/Leaddo_data/20260327-resize512
+[Protocol] test_root=/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test
+[Protocol] sample plan: 1500 -> 1350 train / 150 val
+[Protocol] img_size=512
+[Protocol] sampling_mode=uniform_time
+[Protocol] test patch=900/850
+========================================================================
+[RUN] method=draem view_id=4
+========================================================================
+[RailDataset] Detected pre-resized data: /data1/Leaddo_data/20260327-resize512 (first image 512×512 ≈ 512), skipping runtime resize
+[RailDataset] Uniform-time sampled 1500/29407 (5.1%)
+[RailDataset] Train split (time-uniform interleave): 1350 images
+[RailDataset] Detected pre-resized data: /data1/Leaddo_data/20260327-resize512 (first image 512×512 ≈ 512), skipping runtime resize
+[RailDataset] Uniform-time sampled 1500/29407 (5.1%)
+[RailDataset] Val split (time-uniform interleave): 150 images
+[RailDataset] Detected image: 6000×927, 7 patches per image
+[Protocol] method=draem
+[Protocol] train_root=/data1/Leaddo_data/20260327-resize512
+[Protocol] test_root=/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test
+[Protocol] sample plan: 1500 -> 1350 train / 150 val
+[Protocol] img_size=512
+[Protocol] sampling_mode=uniform_time
+[Protocol] test patch=900/850
+Traceback (most recent call last):
+  File "/home/root123/LF/WYM/SteelRailWay/scripts/baselines/run_rgb_baseline.py", line 991, in <module>
+    main()
+  File "/home/root123/LF/WYM/SteelRailWay/scripts/baselines/run_rgb_baseline.py", line 958, in main
+    payload = run_single_method(method, args)
+  File "/home/root123/LF/WYM/SteelRailWay/scripts/baselines/run_rgb_baseline.py", line 890, in run_single_method
+    return fit_draem(config, datasets, args)
+  File "/home/root123/LF/WYM/SteelRailWay/scripts/baselines/run_rgb_baseline.py", line 803, in fit_draem
+    score_map = score_map.detach().cpu().numpy()
+TypeError: Got unsupported ScalarType BFloat16

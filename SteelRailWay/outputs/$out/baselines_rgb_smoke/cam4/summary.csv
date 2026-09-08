@@ -1,0 +1,7 @@
+method,view_id,image_auroc,pixel_auroc,smoke,train_images,val_images,test_images,result_json
+padim,4,1.0,,True,5,1,6,G:\SteelRailWay\$out\baselines_rgb_smoke\cam4\padim\result.json
+patchcore,4,0.6666666666666667,,True,5,1,6,G:\SteelRailWay\$out\baselines_rgb_smoke\cam4\patchcore\result.json
+fastflow,4,0.0,,True,5,1,6,G:\SteelRailWay\$out\baselines_rgb_smoke\cam4\fastflow\result.json
+draem,4,0.888888888888889,,True,5,1,6,G:\SteelRailWay\$out\baselines_rgb_smoke\cam4\draem\result.json
+stfpm,4,0.888888888888889,,True,5,1,6,G:\SteelRailWay\$out\baselines_rgb_smoke\cam4\stfpm\result.json
+rd4ad_i,4,1.0,,True,5,1,6,G:\SteelRailWay\$out\baselines_rgb_smoke\cam4\rd4ad_i\result.json

@@ -1,0 +1,2 @@
+ckpt,view_id,smooth_sigma,n_images,n_abnormal,n_normal,n_patches,n_pixels,pixel_auroc_fused,pixel_auroc_rgb,pixel_auroc_depth,image_auroc_fused,image_auroc_rgb,image_auroc_depth
+/home/root123/LF/WYM/SteelRailWay/outputs/rail_all/Cam4/20260501_163620_cam4_bs32_lr0.005_img512_ratio1.0/best_cam4.pth,4,4.0,18,10,8,126,33030144,0.7307920791394605,0.7076108203798288,0.7271827447646944,0.41250000000000003,0.7375,0.41250000000000003

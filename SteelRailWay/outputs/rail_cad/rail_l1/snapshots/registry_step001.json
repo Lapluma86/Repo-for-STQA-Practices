@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "task_id_type": "view_id",
+  "sequence_name": "rail_l1",
+  "created_at": "2026-05-05 00:42:06",
+  "task_order": [
+    "4"
+  ],
+  "tasks": {
+    "4": {
+      "task_id": "4",
+      "view_id": 4,
+      "base_ckpt": "outputs/rail_all/Cam4/20260501_014226_cam4_bs32_lr0.005_img512_ratio1.0/best_cam4.pth",
+      "active_peft_ckpt": "outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth",
+      "active_run_dir": "outputs/rail_peft/cam4_p1_20260501_225618",
+      "baseline_eval": {
+        "source": "summary.csv",
+        "auroc": 0.3625,
+        "summary_row": {
+          "run_type": "baseline",
+          "fold": "",
+          "auroc": "0.36250000",
+          "num_images": "18",
+          "num_normal": "8",
+          "num_abnormal": "10",
+          "gain": "",
+          "bias": "",
+          "peft_ckpt": "",
+          "scores_csv": "outputs/rail_peft/cam4_p1_20260501_225618/eval/baseline_scores.csv",
+          "train_good": "",
+          "test_good": ""
+        }
+      },
+      "runs": [
+        {
+          "step_idx": 1,
+          "stage": "p1",
+          "run_dir": "outputs/rail_peft/cam4_p1_20260501_225618",
+          "peft_ckpt": "outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth",
+          "backtest_dir": "outputs/rail_cad/rail_l1/steps/step001_task4_p1_20260505_004206/backtest",
+          "created_at": "2026-05-05 00:42:06"
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "step_idx": 1,
+      "task_id": "4",
+      "view_id": 4,
+      "stage": "p1",
+      "run_dir": "outputs/rail_peft/cam4_p1_20260501_225618",
+      "peft_ckpt": "outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth",
+      "backtest_dir": "outputs/rail_cad/rail_l1/steps/step001_task4_p1_20260505_004206/backtest",
+      "created_at": "2026-05-05 00:42:06"
+    }
+  ],
+  "defaults": {
+    "runs_root": "/home/root123/LF/WYM/SteelRailWay/outputs/rail_all"
+  }
+}

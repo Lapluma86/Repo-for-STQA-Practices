@@ -1,0 +1,92 @@
+{
+  "method": "fastflow",
+  "cam": "cam4",
+  "view_id": 4,
+  "input_mode": "rgbd",
+  "image_auroc": 0.625,
+  "pixel_auroc": 0.6151000874610905,
+  "img_size": 512,
+  "patch_size": 900,
+  "patch_stride": 850,
+  "train_root": "/data1/Leaddo_data/20260327-resize512",
+  "test_root": "/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test",
+  "train_sample_num": 1500,
+  "train_val_test_split": [
+    0.9,
+    0.1,
+    0.0
+  ],
+  "sampling_mode": "uniform_time",
+  "depth_norm": "zscore",
+  "smoke": false,
+  "train_summary": {
+    "num_images": 1350,
+    "num_good_images": 1350,
+    "num_broken_images": 0,
+    "num_patch_samples": 1350,
+    "num_patches_per_image": 1
+  },
+  "val_summary": {
+    "num_images": 150,
+    "num_good_images": 150,
+    "num_broken_images": 0,
+    "num_patch_samples": 150,
+    "num_patches_per_image": 1
+  },
+  "test_summary": {
+    "num_images": 18,
+    "num_good_images": 8,
+    "num_broken_images": 10,
+    "num_patch_samples": 126,
+    "num_patches_per_image": 7
+  },
+  "scores_csv": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/fastflow/scores_fusion.csv",
+  "score_source_selected": "fusion",
+  "fusion_rule": "sum",
+  "image_auroc_by_source": {
+    "rgb": 0.6375,
+    "depth": 0.6,
+    "fusion": 0.625
+  },
+  "pixel_auroc_by_source": {
+    "rgb": 0.783249701555336,
+    "depth": 0.4165526544406926,
+    "fusion": 0.6151000874610905
+  },
+  "scores_csv_by_source": {
+    "rgb": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/fastflow/scores_rgb.csv",
+    "depth": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/fastflow/scores_depth.csv",
+    "fusion": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/fastflow/scores_fusion.csv"
+  },
+  "pixel_stats": {
+    "total": 33030144,
+    "positive": 431596,
+    "negative": 32598548
+  },
+  "epochs": 20,
+  "lr": 0.0001,
+  "best_val_fusion_mean": 0.0013326158712152392,
+  "val_history": [
+    0.03622339592625697,
+    0.025540371984243394,
+    0.014114950448274613,
+    0.009752006509030858,
+    0.007310925796627998,
+    0.005956078552020093,
+    0.004658050695434212,
+    0.003869521936091284,
+    0.003324168430020412,
+    0.003088961245957762,
+    0.0027409226641369362,
+    0.0024643483540664115,
+    0.002272610243720313,
+    0.00203822480669866,
+    0.0018766004087713859,
+    0.0017474733215446273,
+    0.0016349416393010568,
+    0.0015008208617412796,
+    0.0014027518394868822,
+    0.0013326158712152392
+  ],
+  "teacher_shared": true
+}

@@ -1,0 +1,14 @@
+Evaluation started at 2026-05-01 10:10:21
+Runs root: outputs/rail_all
+Train root: /data1/Leaddo_data/20260327-resize512
+Test root: ./rail_mvtec_gt_test
+Views: 1 2 3 4 5 6 7 8
+
+Cam1: status=ok, AUROC=0.7455, best_epoch=100, best_val_loss=1.3078, images=21, abnormal=11, normal=10
+Cam2: status=ok, AUROC=0.6667, best_epoch=100, best_val_loss=1.2893, images=14, abnormal=8, normal=6
+Cam3: status=ok, AUROC=0.6286, best_epoch=100, best_val_loss=1.2365, images=12, abnormal=5, normal=7
+Cam4: status=ok, AUROC=0.3625, best_epoch=100, best_val_loss=1.3359, images=18, abnormal=10, normal=8
+Cam5: status=ok, AUROC=0.7551, best_epoch=100, best_val_loss=1.4942, images=14, abnormal=7, normal=7
+Cam6: status=ok, AUROC=1.0000, best_epoch=100, best_val_loss=1.3487, images=11, abnormal=4, normal=7
+Cam7: status=skipped, AUROC=N/A, best_epoch=N/A, best_val_loss=N/A, images=0, abnormal=0, normal=0, reason=no test samples for this view
+Cam8: status=skipped, AUROC=N/A, best_epoch=N/A, best_val_loss=N/A, images=0, abnormal=0, normal=0, reason=no test samples for this view

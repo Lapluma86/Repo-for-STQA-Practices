@@ -1,0 +1,32 @@
+[
+  {
+    "scheme": "cf_only",
+    "rgb_auroc": "0.80000000",
+    "depth_auroc": "0.76250000",
+    "fusion_auroc": "0.80000000",
+    "delta_vs_peft_full": "0.11250000",
+    "trainable_rgb_count": 78,
+    "trainable_depth_count": 78,
+    "final_ckpt": "outputs/rail_ablation/cam4_cfca_repair/cf_only/cam4_cf_only_20260504_154942/final/repair_cam4.pth"
+  },
+  {
+    "scheme": "ca_only",
+    "rgb_auroc": "0.46250000",
+    "depth_auroc": "0.87500000",
+    "fusion_auroc": "0.47500000",
+    "delta_vs_peft_full": "-0.21250000",
+    "trainable_rgb_count": 30,
+    "trainable_depth_count": 30,
+    "final_ckpt": "outputs/rail_ablation/cam4_cfca_repair/ca_only/cam4_ca_only_20260504_163147/final/repair_cam4.pth"
+  },
+  {
+    "scheme": "cf_ca",
+    "rgb_auroc": "0.67500000",
+    "depth_auroc": "0.80000000",
+    "fusion_auroc": "0.77500000",
+    "delta_vs_peft_full": "0.08750000",
+    "trainable_rgb_count": 108,
+    "trainable_depth_count": 108,
+    "final_ckpt": "outputs/rail_ablation/cam4_cfca_repair/cf_ca/cam4_cf_ca_20260504_170923/final/repair_cam4.pth"
+  }
+]

@@ -1,0 +1,5 @@
+module_ablation,scheme,auroc_rgb,auroc_depth,auroc_fusion,delta_fusion_vs_full,num_images,num_abnormal,num_normal,note,result_json,depth_peft_ckpt
+full,完整模型,0.60000000,0.67500000,0.68750000,0.00000000,18,10,8,CF+CA,outputs/rail_ablation/cam4_cf_ca_peft/full/result.json,outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth
+no_cf,去除 CF,0.80000000,0.62500000,0.77500000,0.08750000,18,10,8,禁用瓶颈跨模态 filter 融合,outputs/rail_ablation/cam4_cf_ca_peft/no_cf/result.json,outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth
+no_ca,去除 CA,0.61250000,0.82500000,0.73750000,0.05000000,18,10,8,禁用解码阶段辅助 skip 融合,outputs/rail_ablation/cam4_cf_ca_peft/no_ca/result.json,outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth
+no_cf_ca,去除 CF+CA,0.86250000,0.71250000,0.73750000,0.05000000,18,10,8,两条跨模态路径均禁用,outputs/rail_ablation/cam4_cf_ca_peft/no_cf_ca/result.json,outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth

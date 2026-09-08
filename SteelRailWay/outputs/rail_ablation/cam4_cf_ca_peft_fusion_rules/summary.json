@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-05-04 15:41:35",
+  "rows": [
+    {
+      "module_ablation": "full",
+      "fusion_rule": "sum",
+      "fusion_auroc": "0.68750000",
+      "delta_vs_full_sum": "0.00000000",
+      "result_json": "outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/sum/full/result.json"
+    },
+    {
+      "module_ablation": "no_cf",
+      "fusion_rule": "sum",
+      "fusion_auroc": "0.77500000",
+      "delta_vs_full_sum": "0.08750000",
+      "result_json": "outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/sum/no_cf/result.json"
+    },
+    {
+      "module_ablation": "no_ca",
+      "fusion_rule": "sum",
+      "fusion_auroc": "0.73750000",
+      "delta_vs_full_sum": "0.05000000",
+      "result_json": "outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/sum/no_ca/result.json"
+    },
+    {
+      "module_ablation": "no_cf_ca",
+      "fusion_rule": "sum",
+      "fusion_auroc": "0.73750000",
+      "delta_vs_full_sum": "0.05000000",
+      "result_json": "outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/sum/no_cf_ca/result.json"
+    },
+    {
+      "module_ablation": "full",
+      "fusion_rule": "max_norm",
+      "fusion_auroc": "0.67500000",
+      "delta_vs_full_sum": "-0.01250000",
+      "result_json": "outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/max_norm/full/result.json"
+    },
+    {
+      "module_ablation": "no_cf",
+      "fusion_rule": "max_norm",
+      "fusion_auroc": "0.78750000",
+      "delta_vs_full_sum": "0.10000000",
+      "result_json": "outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/max_norm/no_cf/result.json"
+    },
+    {
+      "module_ablation": "no_ca",
+      "fusion_rule": "max_norm",
+      "fusion_auroc": "0.73750000",
+      "delta_vs_full_sum": "0.05000000",
+      "result_json": "outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/max_norm/no_ca/result.json"
+    },
+    {
+      "module_ablation": "no_cf_ca",
+      "fusion_rule": "max_norm",
+      "fusion_auroc": "0.86250000",
+      "delta_vs_full_sum": "0.17500000",
+      "result_json": "outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/max_norm/no_cf_ca/result.json"
+    }
+  ]
+}

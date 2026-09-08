@@ -1,0 +1,72 @@
+{
+  "method": "padim",
+  "cam": "cam5",
+  "view_id": 5,
+  "input_mode": "rgbd",
+  "image_auroc": 0.7551020408163265,
+  "pixel_auroc": 0.8756402897672007,
+  "img_size": 512,
+  "patch_size": 900,
+  "patch_stride": 850,
+  "train_root": "/data1/Leaddo_data/20260327-resize512",
+  "test_root": "/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test",
+  "train_sample_num": 1500,
+  "train_val_test_split": [
+    0.9,
+    0.1,
+    0.0
+  ],
+  "sampling_mode": "uniform_time",
+  "depth_norm": "zscore",
+  "smoke": false,
+  "train_summary": {
+    "num_images": 1350,
+    "num_good_images": 1350,
+    "num_broken_images": 0,
+    "num_patch_samples": 1350,
+    "num_patches_per_image": 1
+  },
+  "val_summary": {
+    "num_images": 150,
+    "num_good_images": 150,
+    "num_broken_images": 0,
+    "num_patch_samples": 150,
+    "num_patches_per_image": 1
+  },
+  "test_summary": {
+    "num_images": 14,
+    "num_good_images": 7,
+    "num_broken_images": 7,
+    "num_patch_samples": 98,
+    "num_patches_per_image": 7
+  },
+  "scores_csv": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam5/padim/scores_fusion.csv",
+  "score_source_selected": "fusion",
+  "fusion_rule": "sum",
+  "image_auroc_by_source": {
+    "rgb": 0.673469387755102,
+    "depth": 0.653061224489796,
+    "fusion": 0.7551020408163265
+  },
+  "pixel_auroc_by_source": {
+    "rgb": 0.9121131424479275,
+    "depth": 0.7062975329178113,
+    "fusion": 0.8756402897672007
+  },
+  "scores_csv_by_source": {
+    "rgb": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam5/padim/scores_rgb.csv",
+    "depth": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam5/padim/scores_depth.csv",
+    "fusion": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam5/padim/scores_fusion.csv"
+  },
+  "pixel_stats": {
+    "total": 25690112,
+    "positive": 237034,
+    "negative": 25453078
+  },
+  "layers": [
+    1,
+    2
+  ],
+  "target_map_size": 16,
+  "covariance_mode": "full"
+}

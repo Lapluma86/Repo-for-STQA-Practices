@@ -1,0 +1,92 @@
+{
+  "method": "fastflow",
+  "cam": "cam5",
+  "view_id": 5,
+  "input_mode": "rgbd",
+  "image_auroc": 0.7346938775510203,
+  "pixel_auroc": 0.5174192666159357,
+  "img_size": 512,
+  "patch_size": 900,
+  "patch_stride": 850,
+  "train_root": "/data1/Leaddo_data/20260327-resize512",
+  "test_root": "/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test",
+  "train_sample_num": 1500,
+  "train_val_test_split": [
+    0.9,
+    0.1,
+    0.0
+  ],
+  "sampling_mode": "uniform_time",
+  "depth_norm": "zscore",
+  "smoke": false,
+  "train_summary": {
+    "num_images": 1350,
+    "num_good_images": 1350,
+    "num_broken_images": 0,
+    "num_patch_samples": 1350,
+    "num_patches_per_image": 1
+  },
+  "val_summary": {
+    "num_images": 150,
+    "num_good_images": 150,
+    "num_broken_images": 0,
+    "num_patch_samples": 150,
+    "num_patches_per_image": 1
+  },
+  "test_summary": {
+    "num_images": 14,
+    "num_good_images": 7,
+    "num_broken_images": 7,
+    "num_patch_samples": 98,
+    "num_patches_per_image": 7
+  },
+  "scores_csv": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam5/fastflow/scores_fusion.csv",
+  "score_source_selected": "fusion",
+  "fusion_rule": "sum",
+  "image_auroc_by_source": {
+    "rgb": 0.5714285714285714,
+    "depth": 0.7551020408163265,
+    "fusion": 0.7346938775510203
+  },
+  "pixel_auroc_by_source": {
+    "rgb": 0.5239330575268425,
+    "depth": 0.4999591735490667,
+    "fusion": 0.5174192666159357
+  },
+  "scores_csv_by_source": {
+    "rgb": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam5/fastflow/scores_rgb.csv",
+    "depth": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam5/fastflow/scores_depth.csv",
+    "fusion": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam5/fastflow/scores_fusion.csv"
+  },
+  "pixel_stats": {
+    "total": 25690112,
+    "positive": 237034,
+    "negative": 25453078
+  },
+  "epochs": 20,
+  "lr": 0.0001,
+  "best_val_fusion_mean": 0.002977493641277154,
+  "val_history": [
+    0.04709944653014342,
+    0.04900584297875563,
+    0.03530072269340356,
+    0.027203427106142045,
+    0.021280528257290522,
+    0.017308737505227326,
+    0.014470609184354544,
+    0.012110161079714696,
+    0.010406871791929007,
+    0.008898709872737528,
+    0.0077635976920525235,
+    0.006766986387471358,
+    0.006049397330110271,
+    0.005400829361751676,
+    0.004844589385514458,
+    0.0043543103151023384,
+    0.003925335952080786,
+    0.003571561222585539,
+    0.0032537094534685214,
+    0.002977493641277154
+  ],
+  "teacher_shared": true
+}

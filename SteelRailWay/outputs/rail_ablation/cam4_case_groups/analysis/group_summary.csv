@@ -1,0 +1,9 @@
+comparison,anomaly_group,count,median_score_delta,mean_score_delta
+full_vs_no_cf,rgb_only,5,-0.00378796,-0.00529449
+full_vs_no_cf,depth_only,0,0.00000000,0.00000000
+full_vs_no_cf,cross_modal,5,0.00029285,-0.00044212
+full_vs_no_cf,uncertain,0,0.00000000,0.00000000
+full_vs_no_ca,rgb_only,5,0.01027335,0.01106640
+full_vs_no_ca,depth_only,0,0.00000000,0.00000000
+full_vs_no_ca,cross_modal,5,0.02332356,0.02105380
+full_vs_no_ca,uncertain,0,0.00000000,0.00000000

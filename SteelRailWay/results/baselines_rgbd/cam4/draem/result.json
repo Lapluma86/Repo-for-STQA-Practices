@@ -1,0 +1,92 @@
+{
+  "method": "draem",
+  "cam": "cam4",
+  "view_id": 4,
+  "input_mode": "rgbd",
+  "image_auroc": 0.6125,
+  "pixel_auroc": 0.4893749693713876,
+  "img_size": 512,
+  "patch_size": 900,
+  "patch_stride": 850,
+  "train_root": "/data1/Leaddo_data/20260327-resize512",
+  "test_root": "/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test",
+  "train_sample_num": 1500,
+  "train_val_test_split": [
+    0.9,
+    0.1,
+    0.0
+  ],
+  "sampling_mode": "uniform_time",
+  "depth_norm": "zscore",
+  "smoke": false,
+  "train_summary": {
+    "num_images": 1350,
+    "num_good_images": 1350,
+    "num_broken_images": 0,
+    "num_patch_samples": 1350,
+    "num_patches_per_image": 1
+  },
+  "val_summary": {
+    "num_images": 150,
+    "num_good_images": 150,
+    "num_broken_images": 0,
+    "num_patch_samples": 150,
+    "num_patches_per_image": 1
+  },
+  "test_summary": {
+    "num_images": 18,
+    "num_good_images": 8,
+    "num_broken_images": 10,
+    "num_patch_samples": 126,
+    "num_patches_per_image": 7
+  },
+  "scores_csv": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/draem/scores_fusion.csv",
+  "score_source_selected": "fusion",
+  "fusion_rule": "sum",
+  "image_auroc_by_source": {
+    "rgb": 0.7625000000000001,
+    "depth": 0.5,
+    "fusion": 0.6125
+  },
+  "pixel_auroc_by_source": {
+    "rgb": 0.5476253193456266,
+    "depth": 0.4798835710287173,
+    "fusion": 0.4893749693713876
+  },
+  "scores_csv_by_source": {
+    "rgb": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/draem/scores_rgb.csv",
+    "depth": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/draem/scores_depth.csv",
+    "fusion": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/draem/scores_fusion.csv"
+  },
+  "pixel_stats": {
+    "total": 33030144,
+    "positive": 431596,
+    "negative": 32598548
+  },
+  "epochs": 20,
+  "lr": 0.0001,
+  "best_val_loss": 1.6532653632916903,
+  "val_history": [
+    2.420090675354004,
+    1.9354070487775301,
+    1.90928137929816,
+    1.8818042905707109,
+    1.862251181351511,
+    1.8536630868911743,
+    1.8438291047748767,
+    1.8278228295476813,
+    1.812966553788436,
+    1.8020818484456915,
+    1.783342443014446,
+    1.7651714588466443,
+    1.753008955403378,
+    1.7306794932014065,
+    1.7131012364437705,
+    1.6959460095355385,
+    1.6832440715087087,
+    1.664595974119086,
+    1.659059386504324,
+    1.6532653632916903
+  ],
+  "synthetic_anomaly": "shared_perlin_self_cutpaste"
+}

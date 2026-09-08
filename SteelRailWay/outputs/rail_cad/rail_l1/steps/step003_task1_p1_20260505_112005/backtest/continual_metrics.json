@@ -1,0 +1,67 @@
+{
+  "metric_source": "fusion",
+  "task_order": [
+    "4",
+    "5",
+    "1"
+  ],
+  "per_step": [
+    {
+      "step_idx": 1,
+      "task_id": "4",
+      "seen_task_ids": [
+        "4"
+      ],
+      "acc": 0.6625,
+      "bwt": 0.0,
+      "avg_forgetting": 0.0,
+      "max_forgetting": 0.0,
+      "retention": 1.0,
+      "fwt": 0.0
+    },
+    {
+      "step_idx": 2,
+      "task_id": "5",
+      "seen_task_ids": [
+        "4",
+        "5"
+      ],
+      "acc": 0.7292091836734693,
+      "bwt": 0.0,
+      "avg_forgetting": 0.0,
+      "max_forgetting": 0.0,
+      "retention": 1.0,
+      "fwt": 0.0
+    },
+    {
+      "step_idx": 3,
+      "task_id": "1",
+      "seen_task_ids": [
+        "4",
+        "5",
+        "1"
+      ],
+      "acc": 0.7225030921459492,
+      "bwt": 0.0,
+      "avg_forgetting": 0.0,
+      "max_forgetting": 0.0,
+      "retention": 1.0,
+      "fwt": 0.0
+    }
+  ],
+  "current_step": {
+    "step_idx": 3,
+    "task_id": "1",
+    "seen_task_ids": [
+      "4",
+      "5",
+      "1"
+    ],
+    "acc": 0.7225030921459492,
+    "bwt": 0.0,
+    "avg_forgetting": 0.0,
+    "max_forgetting": 0.0,
+    "retention": 1.0,
+    "fwt": 0.0
+  }
+}

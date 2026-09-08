@@ -1,0 +1,7 @@
+scheme,fusion_rule,fusion_auroc,delta_vs_sum_same_scheme,num_images,num_abnormal,num_normal
+cf_ca_repair_final,sum,0.76250000,0.00000000,18,10,8
+cf_ca_repair_final,zscore_sum,0.46250000,-0.30000000,18,10,8
+cf_ca_repair_final,max_norm,0.76875000,0.00625000,18,10,8
+peft_full_then_cf_ca_final,sum,0.65000000,0.00000000,18,10,8
+peft_full_then_cf_ca_final,zscore_sum,0.52500000,-0.12500000,18,10,8
+peft_full_then_cf_ca_final,max_norm,0.64375000,-0.00625000,18,10,8

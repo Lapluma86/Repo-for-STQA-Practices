@@ -1,0 +1,58 @@
+[
+  {
+    "module_ablation": "full",
+    "scheme": "完整模型",
+    "auroc_rgb": "0.60000000",
+    "auroc_depth": "0.67500000",
+    "auroc_fusion": "0.68750000",
+    "delta_fusion_vs_full": "0.00000000",
+    "num_images": 18,
+    "num_abnormal": 10,
+    "num_normal": 8,
+    "note": "CF+CA",
+    "result_json": "outputs/rail_ablation/cam4_cf_ca_peft/full/result.json",
+    "depth_peft_ckpt": "outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth"
+  },
+  {
+    "module_ablation": "no_cf",
+    "scheme": "去除 CF",
+    "auroc_rgb": "0.80000000",
+    "auroc_depth": "0.62500000",
+    "auroc_fusion": "0.77500000",
+    "delta_fusion_vs_full": "0.08750000",
+    "num_images": 18,
+    "num_abnormal": 10,
+    "num_normal": 8,
+    "note": "禁用瓶颈跨模态 filter 融合",
+    "result_json": "outputs/rail_ablation/cam4_cf_ca_peft/no_cf/result.json",
+    "depth_peft_ckpt": "outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth"
+  },
+  {
+    "module_ablation": "no_ca",
+    "scheme": "去除 CA",
+    "auroc_rgb": "0.61250000",
+    "auroc_depth": "0.82500000",
+    "auroc_fusion": "0.73750000",
+    "delta_fusion_vs_full": "0.05000000",
+    "num_images": 18,
+    "num_abnormal": 10,
+    "num_normal": 8,
+    "note": "禁用解码阶段辅助 skip 融合",
+    "result_json": "outputs/rail_ablation/cam4_cf_ca_peft/no_ca/result.json",
+    "depth_peft_ckpt": "outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth"
+  },
+  {
+    "module_ablation": "no_cf_ca",
+    "scheme": "去除 CF+CA",
+    "auroc_rgb": "0.86250000",
+    "auroc_depth": "0.71250000",
+    "auroc_fusion": "0.73750000",
+    "delta_fusion_vs_full": "0.05000000",
+    "num_images": 18,
+    "num_abnormal": 10,
+    "num_normal": 8,
+    "note": "两条跨模态路径均禁用",
+    "result_json": "outputs/rail_ablation/cam4_cf_ca_peft/no_cf_ca/result.json",
+    "depth_peft_ckpt": "outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "metric_source": "fusion",
+  "task_order": [
+    "4",
+    "5"
+  ],
+  "steps": [
+    {
+      "step_idx": 1,
+      "task_id": "4",
+      "scores": {
+        "4": 0.6625,
+        "5": null
+      }
+    },
+    {
+      "step_idx": 2,
+      "task_id": "5",
+      "scores": {
+        "4": 0.6625,
+        "5": 0.7959183673469388
+      }
+    }
+  ]
+}

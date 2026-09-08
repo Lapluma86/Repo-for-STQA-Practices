@@ -1,0 +1,38 @@
+# Stage A 单视角钢轨 baseline 配置（占位，待数据细节确认后填实际路径与超参）
+experiment:
+  name: stage_a_rail_single_view
+  seed: 42
+  device: cuda
+
+data:
+  root: /path/to/rail_root          # TODO
+  view_id: 0                        # 先选一个数据最干净的视角
+  img_size: 256
+  depth_norm: zscore                # zscore | minmax | log
+  num_workers: 4
+  batch_size: 16
+
+model:
+  backbone: wide_resnet50_2         # 与 TRD 原文一致
+  freeze_teacher: true
+
+train:
+  epochs: 200
+  lr: 0.005
+  weight_decay: 0.0005
+  amp: true                         # 混合精度
+
+eval:
+  metrics_academic: [I-AUC, P-AUC, PRO]
+  metrics_engineering:
+    - trainable_params
+    - trainable_ratio
+    - peak_train_memory_MB
+    - infer_latency_ms
+    - infer_peak_memory_MB
+    - FP_per_image@FPR=1%
+
+output:
+  ckpt_dir: outputs/ckpts/stage_a_rail_single_view
+  log_dir:  logs/stage_a_rail_single_view
+  amap_dir: outputs/anomaly_maps/stage_a_rail_single_view

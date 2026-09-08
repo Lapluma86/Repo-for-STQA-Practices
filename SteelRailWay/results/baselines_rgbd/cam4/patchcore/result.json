@@ -1,0 +1,92 @@
+{
+  "method": "patchcore",
+  "cam": "cam4",
+  "view_id": 4,
+  "input_mode": "rgbd",
+  "image_auroc": 0.7,
+  "pixel_auroc": 0.9127987618765931,
+  "img_size": 512,
+  "patch_size": 900,
+  "patch_stride": 850,
+  "train_root": "/data1/Leaddo_data/20260327-resize512",
+  "test_root": "/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test",
+  "train_sample_num": 1500,
+  "train_val_test_split": [
+    0.9,
+    0.1,
+    0.0
+  ],
+  "sampling_mode": "uniform_time",
+  "depth_norm": "zscore",
+  "smoke": false,
+  "train_summary": {
+    "num_images": 1350,
+    "num_good_images": 1350,
+    "num_broken_images": 0,
+    "num_patch_samples": 1350,
+    "num_patches_per_image": 1
+  },
+  "val_summary": {
+    "num_images": 150,
+    "num_good_images": 150,
+    "num_broken_images": 0,
+    "num_patch_samples": 150,
+    "num_patches_per_image": 1
+  },
+  "test_summary": {
+    "num_images": 18,
+    "num_good_images": 8,
+    "num_broken_images": 10,
+    "num_patch_samples": 126,
+    "num_patches_per_image": 7
+  },
+  "scores_csv": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/patchcore/scores_fusion.csv",
+  "score_source_selected": "fusion",
+  "fusion_rule": "sum",
+  "image_auroc_by_source": {
+    "rgb": 0.925,
+    "depth": 0.47500000000000003,
+    "fusion": 0.7
+  },
+  "pixel_auroc_by_source": {
+    "rgb": 0.9169726051224663,
+    "depth": 0.840084005489237,
+    "fusion": 0.9127987618765931
+  },
+  "scores_csv_by_source": {
+    "rgb": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/patchcore/scores_rgb.csv",
+    "depth": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/patchcore/scores_depth.csv",
+    "fusion": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/patchcore/scores_fusion.csv"
+  },
+  "pixel_stats": {
+    "total": 33030144,
+    "positive": 431596,
+    "negative": 32598548
+  },
+  "layers": [
+    1,
+    2
+  ],
+  "target_map_size": 32,
+  "projection_dim_arg": 128,
+  "coreset_ratio": 0.01,
+  "coreset_size_arg": 0,
+  "k_nn": 5,
+  "query_chunk_size": 2048,
+  "branch_meta": {
+    "rgb": {
+      "embedding_dim_before_projection": 1536,
+      "embedding_dim_after_projection": 128,
+      "memory_vectors_full": 1382400,
+      "memory_vectors_coreset": 13824,
+      "memory_coreset_indices_count": 13824
+    },
+    "depth": {
+      "embedding_dim_before_projection": 1536,
+      "embedding_dim_after_projection": 128,
+      "memory_vectors_full": 1382400,
+      "memory_vectors_coreset": 13824,
+      "memory_coreset_indices_count": 13824
+    }
+  }
+}

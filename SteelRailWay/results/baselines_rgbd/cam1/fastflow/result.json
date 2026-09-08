@@ -1,0 +1,92 @@
+{
+  "method": "fastflow",
+  "cam": "cam1",
+  "view_id": 1,
+  "input_mode": "rgbd",
+  "image_auroc": 0.7090909090909091,
+  "pixel_auroc": 0.752028284350651,
+  "img_size": 512,
+  "patch_size": 900,
+  "patch_stride": 850,
+  "train_root": "/data1/Leaddo_data/20260327-resize512",
+  "test_root": "/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test",
+  "train_sample_num": 1500,
+  "train_val_test_split": [
+    0.9,
+    0.1,
+    0.0
+  ],
+  "sampling_mode": "uniform_time",
+  "depth_norm": "zscore",
+  "smoke": false,
+  "train_summary": {
+    "num_images": 1350,
+    "num_good_images": 1350,
+    "num_broken_images": 0,
+    "num_patch_samples": 1350,
+    "num_patches_per_image": 1
+  },
+  "val_summary": {
+    "num_images": 150,
+    "num_good_images": 150,
+    "num_broken_images": 0,
+    "num_patch_samples": 150,
+    "num_patches_per_image": 1
+  },
+  "test_summary": {
+    "num_images": 21,
+    "num_good_images": 10,
+    "num_broken_images": 11,
+    "num_patch_samples": 147,
+    "num_patches_per_image": 7
+  },
+  "scores_csv": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam1/fastflow/scores_fusion.csv",
+  "score_source_selected": "fusion",
+  "fusion_rule": "sum",
+  "image_auroc_by_source": {
+    "rgb": 0.44545454545454544,
+    "depth": 0.7454545454545455,
+    "fusion": 0.7090909090909091
+  },
+  "pixel_auroc_by_source": {
+    "rgb": 0.7115598325500593,
+    "depth": 0.6989142562585244,
+    "fusion": 0.752028284350651
+  },
+  "scores_csv_by_source": {
+    "rgb": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam1/fastflow/scores_rgb.csv",
+    "depth": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam1/fastflow/scores_depth.csv",
+    "fusion": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam1/fastflow/scores_fusion.csv"
+  },
+  "pixel_stats": {
+    "total": 38535168,
+    "positive": 233749,
+    "negative": 38301419
+  },
+  "epochs": 20,
+  "lr": 0.0001,
+  "best_val_fusion_mean": 0.002775664231739938,
+  "val_history": [
+    0.0455627487351497,
+    0.04575054131448269,
+    0.03257893224557241,
+    0.025237677892049153,
+    0.01992374977717797,
+    0.016015826873481274,
+    0.013095266930758954,
+    0.01099375340466698,
+    0.009471547367672126,
+    0.008170258551836014,
+    0.0071194623007128635,
+    0.006251048600922029,
+    0.005591820950309435,
+    0.0050315853332479794,
+    0.004558576098643244,
+    0.004146946440450847,
+    0.0038085890949393314,
+    0.00342016341475149,
+    0.0030792130002131064,
+    0.002775664231739938
+  ],
+  "teacher_shared": true
+}

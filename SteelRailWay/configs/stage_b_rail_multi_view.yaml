@@ -1,0 +1,47 @@
+# Stage B 多视角统一模型配置（占位）
+experiment:
+  name: stage_b_rail_multi_view
+  seed: 42
+  device: cuda
+
+data:
+  root: /path/to/rail_root          # TODO
+  view_ids: [0, 1, 2, 3, 4, 5, 6, 7]
+  img_size: 256
+  depth_norm: zscore
+  batch_size: 16
+  num_workers: 4
+
+model:
+  backbone: wide_resnet50_2
+  freeze_teacher: true
+  peft:
+    type: view_film                 # view_film | adapter | view_prompt | lora
+    inject_layers: [0, 1, 2]        # 解码器中要注入条件化的层位
+    init_identity: true             # gamma=1, beta=0 → 训练初期等价于不做条件化
+
+train:
+  stage1_pretrain:                  # 共享主干 pretrain（不加 PEFT）
+    epochs: 200
+    lr: 0.005
+    weight_decay: 0.0005
+    amp: true
+  stage2_adapt:                     # 冻结主干，仅训 PEFT
+    epochs: 50
+    lr: 0.01
+    weight_decay: 0.0
+    amp: true
+
+eval:
+  metrics_academic: [I-AUC, P-AUC, PRO]
+  metrics_engineering:
+    - trainable_params_per_view
+    - trainable_ratio
+    - infer_latency_ms
+    - infer_peak_memory_MB
+    - FP_per_image@FPR=1%
+
+output:
+  ckpt_dir: outputs/ckpts/stage_b_rail_multi_view
+  log_dir:  logs/stage_b_rail_multi_view
+  amap_dir: outputs/anomaly_maps/stage_b_rail_multi_view

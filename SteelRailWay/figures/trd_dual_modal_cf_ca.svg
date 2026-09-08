@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">TRD dual-modal architecture with CF and CA modules</title>
+  <desc id="desc">A redrawn schematic of a TRD dual-modal anomaly detection architecture. It shows parallel Intensity and Depth teacher-student branches, CF modules at the encoder bottleneck, CA modules at decoder skip fusion, cross-modal injection directions, anomaly maps, and sum fusion.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#ea580c"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 30px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 17px Arial, Helvetica, sans-serif; fill: #475569; }
+      .lane-label { font: 700 20px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .node-title { font: 700 17px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .node-small { font: 400 13px Arial, Helvetica, sans-serif; fill: #475569; }
+      .module-title { font: 700 19px Arial, Helvetica, sans-serif; fill: #7c2d12; }
+      .module-small { font: 400 12px Arial, Helvetica, sans-serif; fill: #7c2d12; }
+      .fusion-title { font: 700 18px Arial, Helvetica, sans-serif; fill: #581c87; }
+      .formula { font: 700 18px Arial, Helvetica, sans-serif; fill: #581c87; }
+      .legend { font: 400 13px Arial, Helvetica, sans-serif; fill: #334155; }
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.8; rx: 14; filter: url(#shadow); }
+      .input-i { fill: #eff6ff; stroke: #60a5fa; stroke-width: 2; rx: 14; }
+      .input-d { fill: #ecfdf5; stroke: #4ade80; stroke-width: 2; rx: 14; }
+      .teacher { fill: #ffffff; stroke: #2563eb; stroke-width: 2.2; rx: 14; }
+      .student { fill: #ffffff; stroke: #16a34a; stroke-width: 2.2; rx: 14; }
+      .cf { fill: #fff7ed; stroke: #ea580c; stroke-width: 2.4; rx: 14; }
+      .ca { fill: #fffbeb; stroke: #f59e0b; stroke-width: 2.4; rx: 14; }
+      .map { fill: #f5f3ff; stroke: #7c3aed; stroke-width: 2.2; rx: 14; }
+      .sum { fill: #faf5ff; stroke: #9333ea; stroke-width: 2.4; }
+      .main-arrow { stroke: #2563eb; stroke-width: 3; fill: none; marker-end: url(#arrow-blue); }
+      .depth-arrow { stroke: #16a34a; stroke-width: 3; fill: none; marker-end: url(#arrow-green); }
+      .cross-arrow { stroke: #ea580c; stroke-width: 3; stroke-dasharray: 9 7; fill: none; marker-end: url(#arrow-orange); }
+      .skip-arrow { stroke: #7c3aed; stroke-width: 2.7; stroke-dasharray: 7 6; fill: none; marker-end: url(#arrow-purple); }
+      .compare-arrow { stroke: #475569; stroke-width: 2.6; fill: none; marker-end: url(#arrow-gray); }
+      .lane { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; rx: 24; }
+      .feature { fill: #e0f2fe; stroke: #38bdf8; stroke-width: 1.6; rx: 10; }
+      .depth-feature { fill: #dcfce7; stroke: #4ade80; stroke-width: 1.6; rx: 10; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1280" height="760"/>
+  <text x="640" y="52" text-anchor="middle" class="title">TRD Dual-Modal Architecture with CF/CA Modules</text>
+  <text x="640" y="82" text-anchor="middle" class="subtitle">Parallel teacher-student distillation branches with cross-modal feature injection and anomaly-map fusion</text>
+
+  <rect x="46" y="112" width="1038" height="238" class="lane"/>
+  <rect x="46" y="400" width="1038" height="238" class="lane"/>
+
+  <text x="76" y="144" class="lane-label">Intensity branch</text>
+  <text x="76" y="432" class="lane-label">Depth branch</text>
+
+  <rect x="86" y="188" width="132" height="82" class="input-i"/>
+  <text x="152" y="220" text-anchor="middle" class="node-title">Input</text>
+  <text x="152" y="246" text-anchor="middle" class="node-small">Intensity x_i</text>
+
+  <rect x="86" y="476" width="132" height="82" class="input-d"/>
+  <text x="152" y="508" text-anchor="middle" class="node-title">Input</text>
+  <text x="152" y="534" text-anchor="middle" class="node-small">Depth x_d</text>
+
+  <rect x="270" y="166" width="158" height="126" class="teacher"/>
+  <text x="349" y="204" text-anchor="middle" class="node-title">Frozen Teacher</text>
+  <text x="349" y="229" text-anchor="middle" class="node-small">encoder</text>
+  <text x="349" y="253" text-anchor="middle" class="node-small">multi-scale features</text>
+
+  <rect x="270" y="454" width="158" height="126" class="teacher"/>
+  <text x="349" y="492" text-anchor="middle" class="node-title">Frozen Teacher</text>
+  <text x="349" y="517" text-anchor="middle" class="node-small">encoder</text>
+  <text x="349" y="541" text-anchor="middle" class="node-small">multi-scale features</text>
+
+  <rect x="472" y="184" width="112" height="88" class="feature"/>
+  <text x="528" y="218" text-anchor="middle" class="node-title">Bottleneck</text>
+  <text x="528" y="243" text-anchor="middle" class="node-small">feature z_i</text>
+
+  <rect x="472" y="472" width="112" height="88" class="depth-feature"/>
+  <text x="528" y="506" text-anchor="middle" class="node-title">Bottleneck</text>
+  <text x="528" y="531" text-anchor="middle" class="node-small">feature z_d</text>
+
+  <rect x="620" y="184" width="118" height="88" class="cf"/>
+  <text x="679" y="213" text-anchor="middle" class="module-title">CF_i</text>
+  <text x="679" y="238" text-anchor="middle" class="module-small">Crossmodal</text>
+  <text x="679" y="256" text-anchor="middle" class="module-small">Filter</text>
+
+  <rect x="620" y="472" width="118" height="88" class="cf"/>
+  <text x="679" y="501" text-anchor="middle" class="module-title">CF_d</text>
+  <text x="679" y="526" text-anchor="middle" class="module-small">Crossmodal</text>
+  <text x="679" y="544" text-anchor="middle" class="module-small">Filter</text>
+
+  <rect x="786" y="166" width="160" height="126" class="student"/>
+  <text x="866" y="204" text-anchor="middle" class="node-title">Student</text>
+  <text x="866" y="229" text-anchor="middle" class="node-small">decoder</text>
+  <text x="866" y="253" text-anchor="middle" class="node-small">reconstructs features</text>
+
+  <rect x="786" y="454" width="160" height="126" class="student"/>
+  <text x="866" y="492" text-anchor="middle" class="node-title">Student</text>
+  <text x="866" y="517" text-anchor="middle" class="node-small">decoder</text>
+  <text x="866" y="541" text-anchor="middle" class="node-small">reconstructs features</text>
+
+  <rect x="804" y="310" width="124" height="58" class="ca"/>
+  <text x="866" y="333" text-anchor="middle" class="module-title">CA_i</text>
+  <text x="866" y="354" text-anchor="middle" class="module-small">skip fusion</text>
+
+  <rect x="804" y="598" width="124" height="58" class="ca"/>
+  <text x="866" y="621" text-anchor="middle" class="module-title">CA_d</text>
+  <text x="866" y="642" text-anchor="middle" class="module-small">skip fusion</text>
+
+  <rect x="1000" y="180" width="132" height="98" class="map"/>
+  <text x="1066" y="216" text-anchor="middle" class="fusion-title">Anomaly</text>
+  <text x="1066" y="241" text-anchor="middle" class="fusion-title">map M_i</text>
+
+  <rect x="1000" y="468" width="132" height="98" class="map"/>
+  <text x="1066" y="504" text-anchor="middle" class="fusion-title">Anomaly</text>
+  <text x="1066" y="529" text-anchor="middle" class="fusion-title">map M_d</text>
+
+  <circle cx="1198" cy="374" r="43" class="sum"/>
+  <text x="1198" y="366" text-anchor="middle" class="formula">+</text>
+  <text x="1198" y="390" text-anchor="middle" class="node-small">sum</text>
+  <text x="1198" y="446" text-anchor="middle" class="fusion-title">Fusion map</text>
+  <text x="1198" y="471" text-anchor="middle" class="node-small">M = norm(M_i) + norm(M_d)</text>
+
+  <path d="M 218 229 L 270 229" class="main-arrow"/>
+  <path d="M 428 229 L 472 229" class="main-arrow"/>
+  <path d="M 584 229 L 620 229" class="main-arrow"/>
+  <path d="M 738 229 L 786 229" class="main-arrow"/>
+  <path d="M 946 229 L 1000 229" class="compare-arrow"/>
+
+  <path d="M 218 517 L 270 517" class="depth-arrow"/>
+  <path d="M 428 517 L 472 517" class="depth-arrow"/>
+  <path d="M 584 517 L 620 517" class="depth-arrow"/>
+  <path d="M 738 517 L 786 517" class="depth-arrow"/>
+  <path d="M 946 517 L 1000 517" class="compare-arrow"/>
+
+  <path d="M 528 472 C 528 390 608 318 674 272" class="cross-arrow"/>
+  <text x="568" y="382" text-anchor="middle" class="module-small">Depth feature to Intensity</text>
+
+  <path d="M 528 272 C 528 354 608 426 674 472" class="cross-arrow"/>
+  <text x="574" y="360" text-anchor="middle" class="module-small">Intensity feature to Depth</text>
+
+  <path d="M 410 181 C 530 122 764 122 846 310" class="skip-arrow"/>
+  <text x="654" y="139" text-anchor="middle" class="node-small">teacher skip features</text>
+
+  <path d="M 410 565 C 530 684 764 684 846 656" class="skip-arrow"/>
+  <text x="654" y="690" text-anchor="middle" class="node-small">teacher skip features</text>
+
+  <path d="M 838 580 C 758 548 748 392 838 368" class="cross-arrow"/>
+  <text x="746" y="475" text-anchor="middle" class="module-small">Depth cue to Intensity CA</text>
+
+  <path d="M 894 292 C 978 330 980 482 894 598" class="cross-arrow"/>
+  <text x="1010" y="390" text-anchor="middle" class="module-small">Intensity cue to Depth CA</text>
+
+  <path d="M 1132 229 C 1178 252 1198 300 1198 331" class="compare-arrow"/>
+  <path d="M 1132 517 C 1178 494 1198 448 1198 417" class="compare-arrow"/>
+
+  <path d="M 300 306 L 300 326 L 1012 326" class="compare-arrow"/>
+  <text x="496" y="320" text-anchor="middle" class="node-small">teacher-student feature difference</text>
+  <path d="M 300 594 L 300 614 L 1012 614" class="compare-arrow"/>
+  <text x="498" y="608" text-anchor="middle" class="node-small">teacher-student feature difference</text>
+
+  <rect x="88" y="668" width="622" height="58" class="box"/>
+  <line x1="118" y1="696" x2="178" y2="696" class="main-arrow"/>
+  <text x="192" y="701" class="legend">same-modal forward flow</text>
+  <line x1="368" y1="696" x2="428" y2="696" class="cross-arrow"/>
+  <text x="444" y="701" class="legend">cross-modal injection</text>
+  <line x1="604" y1="696" x2="664" y2="696" class="skip-arrow"/>
+  <text x="680" y="701" class="legend">skip fusion / feature comparison</text>
+
+  <text x="1110" y="706" text-anchor="middle" class="node-small">Redrawn schematic inspired by the TRD architecture; layout and styling are original.</text>
+</svg>

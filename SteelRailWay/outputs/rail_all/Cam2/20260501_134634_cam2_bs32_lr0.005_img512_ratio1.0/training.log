@@ -1,0 +1,1293 @@
+Training started at 20260501_134634
+Args: Namespace(train_root='/data1/Leaddo_data/20260327-resize512', test_root='/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test', view_id=2, img_size=512, depth_norm='zscore', use_patch=False, patch_size=900, patch_stride=850, test_use_patch=True, test_patch_size=900, test_patch_stride=850, train_sample_ratio=1.0, train_sample_num=1200, random_seed_sample=42, train_val_test_split=[0.9, 0.1, 0.0], sampling_mode='uniform_time', preload=True, preload_workers=32, batch_size=32, epochs=200, lr=0.005, eval_interval=5, num_workers=16, seed=42, device='cuda:0', save_dir='./outputs/rail_all/Cam2', precision='bf16', channels_last=True, compile=True)
+
+
+==================================================
+Epoch 1/200
+==================================================
+Epoch [1] Batch [0/33] Loss_RGB: 7.9397 Loss_Depth: 7.6368
+Epoch 1 - Avg Loss RGB: 4.2814, Avg Loss Depth: 2.9513
+
+==================================================
+Epoch 2/200
+==================================================
+Epoch [2] Batch [0/33] Loss_RGB: 3.0756 Loss_Depth: 1.2253
+Epoch 2 - Avg Loss RGB: 2.6089, Avg Loss Depth: 0.8422
+
+==================================================
+Epoch 3/200
+==================================================
+Epoch [3] Batch [0/33] Loss_RGB: 2.3319 Loss_Depth: 0.5548
+Epoch 3 - Avg Loss RGB: 2.1555, Avg Loss Depth: 0.4828
+
+==================================================
+Epoch 4/200
+==================================================
+Epoch [4] Batch [0/33] Loss_RGB: 2.0907 Loss_Depth: 0.4126
+Epoch 4 - Avg Loss RGB: 2.0114, Avg Loss Depth: 0.3954
+
+==================================================
+Epoch 5/200
+==================================================
+Epoch [5] Batch [0/33] Loss_RGB: 1.9353 Loss_Depth: 0.3709
+Epoch 5 - Avg Loss RGB: 1.9022, Avg Loss Depth: 0.3540
+Epoch 5 - Val Loss RGB: 1.9130, Val Loss Depth: 0.0000, Total: 1.9130
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 6/200
+==================================================
+Epoch [6] Batch [0/33] Loss_RGB: 1.9038 Loss_Depth: 0.3843
+Epoch 6 - Avg Loss RGB: 1.8323, Avg Loss Depth: 0.3358
+
+==================================================
+Epoch 7/200
+==================================================
+Epoch [7] Batch [0/33] Loss_RGB: 1.7736 Loss_Depth: 0.3172
+Epoch 7 - Avg Loss RGB: 1.7823, Avg Loss Depth: 0.3178
+
+==================================================
+Epoch 8/200
+==================================================
+Epoch [8] Batch [0/33] Loss_RGB: 1.7174 Loss_Depth: 0.2973
+Epoch 8 - Avg Loss RGB: 1.7502, Avg Loss Depth: 0.3075
+
+==================================================
+Epoch 9/200
+==================================================
+Epoch [9] Batch [0/33] Loss_RGB: 1.7344 Loss_Depth: 0.3044
+Epoch 9 - Avg Loss RGB: 1.7046, Avg Loss Depth: 0.2988
+
+==================================================
+Epoch 10/200
+==================================================
+Epoch [10] Batch [0/33] Loss_RGB: 1.7097 Loss_Depth: 0.2927
+Epoch 10 - Avg Loss RGB: 1.6737, Avg Loss Depth: 0.2897
+Epoch 10 - Val Loss RGB: 1.7094, Val Loss Depth: 0.0000, Total: 1.7094
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 11/200
+==================================================
+Epoch [11] Batch [0/33] Loss_RGB: 1.6763 Loss_Depth: 0.2863
+Epoch 11 - Avg Loss RGB: 1.6408, Avg Loss Depth: 0.2840
+
+==================================================
+Epoch 12/200
+==================================================
+Epoch [12] Batch [0/33] Loss_RGB: 1.6455 Loss_Depth: 0.3025
+Epoch 12 - Avg Loss RGB: 1.6136, Avg Loss Depth: 0.2786
+
+==================================================
+Epoch 13/200
+==================================================
+Epoch [13] Batch [0/33] Loss_RGB: 1.5960 Loss_Depth: 0.2666
+Epoch 13 - Avg Loss RGB: 1.5945, Avg Loss Depth: 0.2724
+
+==================================================
+Epoch 14/200
+==================================================
+Epoch [14] Batch [0/33] Loss_RGB: 1.5871 Loss_Depth: 0.2561
+Epoch 14 - Avg Loss RGB: 1.5764, Avg Loss Depth: 0.2691
+
+==================================================
+Epoch 15/200
+==================================================
+Epoch [15] Batch [0/33] Loss_RGB: 1.5608 Loss_Depth: 0.2609
+Epoch 15 - Avg Loss RGB: 1.5600, Avg Loss Depth: 0.2681
+Epoch 15 - Val Loss RGB: 1.5819, Val Loss Depth: 0.0000, Total: 1.5819
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 16/200
+==================================================
+Epoch [16] Batch [0/33] Loss_RGB: 1.5721 Loss_Depth: 0.2854
+Epoch 16 - Avg Loss RGB: 1.5450, Avg Loss Depth: 0.2643
+
+==================================================
+Epoch 17/200
+==================================================
+Epoch [17] Batch [0/33] Loss_RGB: 1.4940 Loss_Depth: 0.2555
+Epoch 17 - Avg Loss RGB: 1.5303, Avg Loss Depth: 0.2599
+
+==================================================
+Epoch 18/200
+==================================================
+Epoch [18] Batch [0/33] Loss_RGB: 1.5115 Loss_Depth: 0.2492
+Epoch 18 - Avg Loss RGB: 1.5197, Avg Loss Depth: 0.2599
+
+==================================================
+Epoch 19/200
+==================================================
+Epoch [19] Batch [0/33] Loss_RGB: 1.5236 Loss_Depth: 0.2518
+Epoch 19 - Avg Loss RGB: 1.5098, Avg Loss Depth: 0.2549
+
+==================================================
+Epoch 20/200
+==================================================
+Epoch [20] Batch [0/33] Loss_RGB: 1.4964 Loss_Depth: 0.2621
+Epoch 20 - Avg Loss RGB: 1.4961, Avg Loss Depth: 0.2529
+Epoch 20 - Val Loss RGB: 1.5105, Val Loss Depth: 0.0000, Total: 1.5105
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 21/200
+==================================================
+Epoch [21] Batch [0/33] Loss_RGB: 1.4921 Loss_Depth: 0.2467
+Epoch 21 - Avg Loss RGB: 1.4866, Avg Loss Depth: 0.2509
+
+==================================================
+Epoch 22/200
+==================================================
+Epoch [22] Batch [0/33] Loss_RGB: 1.4806 Loss_Depth: 0.2437
+Epoch 22 - Avg Loss RGB: 1.4741, Avg Loss Depth: 0.2485
+
+==================================================
+Epoch 23/200
+==================================================
+Epoch [23] Batch [0/33] Loss_RGB: 1.4849 Loss_Depth: 0.2430
+Epoch 23 - Avg Loss RGB: 1.4659, Avg Loss Depth: 0.2472
+
+==================================================
+Epoch 24/200
+==================================================
+Epoch [24] Batch [0/33] Loss_RGB: 1.4513 Loss_Depth: 0.2475
+Epoch 24 - Avg Loss RGB: 1.4528, Avg Loss Depth: 0.2456
+
+==================================================
+Epoch 25/200
+==================================================
+Epoch [25] Batch [0/33] Loss_RGB: 1.4713 Loss_Depth: 0.2485
+Epoch 25 - Avg Loss RGB: 1.4457, Avg Loss Depth: 0.2443
+Epoch 25 - Val Loss RGB: 1.4663, Val Loss Depth: 0.0000, Total: 1.4663
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 26/200
+==================================================
+Epoch [26] Batch [0/33] Loss_RGB: 1.4247 Loss_Depth: 0.2381
+Epoch 26 - Avg Loss RGB: 1.4336, Avg Loss Depth: 0.2421
+
+==================================================
+Epoch 27/200
+==================================================
+Epoch [27] Batch [0/33] Loss_RGB: 1.4087 Loss_Depth: 0.2276
+Epoch 27 - Avg Loss RGB: 1.4267, Avg Loss Depth: 0.2403
+
+==================================================
+Epoch 28/200
+==================================================
+Epoch [28] Batch [0/33] Loss_RGB: 1.4214 Loss_Depth: 0.2335
+Epoch 28 - Avg Loss RGB: 1.4170, Avg Loss Depth: 0.2391
+
+==================================================
+Epoch 29/200
+==================================================
+Epoch [29] Batch [0/33] Loss_RGB: 1.4321 Loss_Depth: 0.2423
+Epoch 29 - Avg Loss RGB: 1.4118, Avg Loss Depth: 0.2379
+
+==================================================
+Epoch 30/200
+==================================================
+Epoch [30] Batch [0/33] Loss_RGB: 1.3960 Loss_Depth: 0.2655
+Epoch 30 - Avg Loss RGB: 1.4036, Avg Loss Depth: 0.2369
+Epoch 30 - Val Loss RGB: 1.4271, Val Loss Depth: 0.0000, Total: 1.4271
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 31/200
+==================================================
+Epoch [31] Batch [0/33] Loss_RGB: 1.4064 Loss_Depth: 0.2475
+Epoch 31 - Avg Loss RGB: 1.3985, Avg Loss Depth: 0.2363
+
+==================================================
+Epoch 32/200
+==================================================
+Epoch [32] Batch [0/33] Loss_RGB: 1.3834 Loss_Depth: 0.2386
+Epoch 32 - Avg Loss RGB: 1.3926, Avg Loss Depth: 0.2355
+
+==================================================
+Epoch 33/200
+==================================================
+Epoch [33] Batch [0/33] Loss_RGB: 1.4019 Loss_Depth: 0.2380
+Epoch 33 - Avg Loss RGB: 1.3881, Avg Loss Depth: 0.2341
+
+==================================================
+Epoch 34/200
+==================================================
+Epoch [34] Batch [0/33] Loss_RGB: 1.3579 Loss_Depth: 0.2274
+Epoch 34 - Avg Loss RGB: 1.3819, Avg Loss Depth: 0.2320
+
+==================================================
+Epoch 35/200
+==================================================
+Epoch [35] Batch [0/33] Loss_RGB: 1.3769 Loss_Depth: 0.2289
+Epoch 35 - Avg Loss RGB: 1.3755, Avg Loss Depth: 0.2301
+Epoch 35 - Val Loss RGB: 1.4017, Val Loss Depth: 0.0000, Total: 1.4017
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 36/200
+==================================================
+Epoch [36] Batch [0/33] Loss_RGB: 1.4054 Loss_Depth: 0.2253
+Epoch 36 - Avg Loss RGB: 1.3717, Avg Loss Depth: 0.2277
+
+==================================================
+Epoch 37/200
+==================================================
+Epoch [37] Batch [0/33] Loss_RGB: 1.3683 Loss_Depth: 0.2319
+Epoch 37 - Avg Loss RGB: 1.3675, Avg Loss Depth: 0.2236
+
+==================================================
+Epoch 38/200
+==================================================
+Epoch [38] Batch [0/33] Loss_RGB: 1.3886 Loss_Depth: 0.2201
+Epoch 38 - Avg Loss RGB: 1.3628, Avg Loss Depth: 0.2217
+
+==================================================
+Epoch 39/200
+==================================================
+Epoch [39] Batch [0/33] Loss_RGB: 1.3238 Loss_Depth: 0.2164
+Epoch 39 - Avg Loss RGB: 1.3586, Avg Loss Depth: 0.2209
+
+==================================================
+Epoch 40/200
+==================================================
+Epoch [40] Batch [0/33] Loss_RGB: 1.3486 Loss_Depth: 0.2204
+Epoch 40 - Avg Loss RGB: 1.3548, Avg Loss Depth: 0.2197
+Epoch 40 - Val Loss RGB: 1.3764, Val Loss Depth: 0.0000, Total: 1.3764
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 41/200
+==================================================
+Epoch [41] Batch [0/33] Loss_RGB: 1.3184 Loss_Depth: 0.2126
+Epoch 41 - Avg Loss RGB: 1.3506, Avg Loss Depth: 0.2194
+
+==================================================
+Epoch 42/200
+==================================================
+Epoch [42] Batch [0/33] Loss_RGB: 1.3490 Loss_Depth: 0.2184
+Epoch 42 - Avg Loss RGB: 1.3456, Avg Loss Depth: 0.2188
+
+==================================================
+Epoch 43/200
+==================================================
+Epoch [43] Batch [0/33] Loss_RGB: 1.3256 Loss_Depth: 0.2195
+Epoch 43 - Avg Loss RGB: 1.3415, Avg Loss Depth: 0.2180
+
+==================================================
+Epoch 44/200
+==================================================
+Epoch [44] Batch [0/33] Loss_RGB: 1.3133 Loss_Depth: 0.2136
+Epoch 44 - Avg Loss RGB: 1.3381, Avg Loss Depth: 0.2173
+
+==================================================
+Epoch 45/200
+==================================================
+Epoch [45] Batch [0/33] Loss_RGB: 1.3315 Loss_Depth: 0.2108
+Epoch 45 - Avg Loss RGB: 1.3340, Avg Loss Depth: 0.2165
+Epoch 45 - Val Loss RGB: 1.3598, Val Loss Depth: 0.0000, Total: 1.3598
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 46/200
+==================================================
+Epoch [46] Batch [0/33] Loss_RGB: 1.3150 Loss_Depth: 0.2102
+Epoch 46 - Avg Loss RGB: 1.3319, Avg Loss Depth: 0.2165
+
+==================================================
+Epoch 47/200
+==================================================
+Epoch [47] Batch [0/33] Loss_RGB: 1.3327 Loss_Depth: 0.2149
+Epoch 47 - Avg Loss RGB: 1.3284, Avg Loss Depth: 0.2160
+
+==================================================
+Epoch 48/200
+==================================================
+Epoch [48] Batch [0/33] Loss_RGB: 1.3337 Loss_Depth: 0.2157
+Epoch 48 - Avg Loss RGB: 1.3251, Avg Loss Depth: 0.2157
+
+==================================================
+Epoch 49/200
+==================================================
+Epoch [49] Batch [0/33] Loss_RGB: 1.3257 Loss_Depth: 0.2236
+Epoch 49 - Avg Loss RGB: 1.3243, Avg Loss Depth: 0.2153
+
+==================================================
+Epoch 50/200
+==================================================
+Epoch [50] Batch [0/33] Loss_RGB: 1.3724 Loss_Depth: 0.2258
+Epoch 50 - Avg Loss RGB: 1.3192, Avg Loss Depth: 0.2145
+Epoch 50 - Val Loss RGB: 1.3438, Val Loss Depth: 0.0000, Total: 1.3438
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 51/200
+==================================================
+Epoch [51] Batch [0/33] Loss_RGB: 1.3103 Loss_Depth: 0.2047
+Epoch 51 - Avg Loss RGB: 1.3170, Avg Loss Depth: 0.2141
+
+==================================================
+Epoch 52/200
+==================================================
+Epoch [52] Batch [0/33] Loss_RGB: 1.3300 Loss_Depth: 0.2164
+Epoch 52 - Avg Loss RGB: 1.3148, Avg Loss Depth: 0.2139
+
+==================================================
+Epoch 53/200
+==================================================
+Epoch [53] Batch [0/33] Loss_RGB: 1.2894 Loss_Depth: 0.2053
+Epoch 53 - Avg Loss RGB: 1.3122, Avg Loss Depth: 0.2137
+
+==================================================
+Epoch 54/200
+==================================================
+Epoch [54] Batch [0/33] Loss_RGB: 1.2956 Loss_Depth: 0.2131
+Epoch 54 - Avg Loss RGB: 1.3091, Avg Loss Depth: 0.2130
+
+==================================================
+Epoch 55/200
+==================================================
+Epoch [55] Batch [0/33] Loss_RGB: 1.3075 Loss_Depth: 0.2134
+Epoch 55 - Avg Loss RGB: 1.3078, Avg Loss Depth: 0.2129
+Epoch 55 - Val Loss RGB: 1.3346, Val Loss Depth: 0.0000, Total: 1.3346
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 56/200
+==================================================
+Epoch [56] Batch [0/33] Loss_RGB: 1.3055 Loss_Depth: 0.2071
+Epoch 56 - Avg Loss RGB: 1.3047, Avg Loss Depth: 0.2121
+
+==================================================
+Epoch 57/200
+==================================================
+Epoch [57] Batch [0/33] Loss_RGB: 1.2975 Loss_Depth: 0.2244
+Epoch 57 - Avg Loss RGB: 1.3026, Avg Loss Depth: 0.2123
+
+==================================================
+Epoch 58/200
+==================================================
+Epoch [58] Batch [0/33] Loss_RGB: 1.3231 Loss_Depth: 0.2161
+Epoch 58 - Avg Loss RGB: 1.3011, Avg Loss Depth: 0.2118
+
+==================================================
+Epoch 59/200
+==================================================
+Epoch [59] Batch [0/33] Loss_RGB: 1.2899 Loss_Depth: 0.2139
+Epoch 59 - Avg Loss RGB: 1.2996, Avg Loss Depth: 0.2112
+
+==================================================
+Epoch 60/200
+==================================================
+Epoch [60] Batch [0/33] Loss_RGB: 1.2787 Loss_Depth: 0.2046
+Epoch 60 - Avg Loss RGB: 1.2982, Avg Loss Depth: 0.2115
+Epoch 60 - Val Loss RGB: 1.3234, Val Loss Depth: 0.0000, Total: 1.3234
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 61/200
+==================================================
+Epoch [61] Batch [0/33] Loss_RGB: 1.2894 Loss_Depth: 0.2050
+Epoch 61 - Avg Loss RGB: 1.2954, Avg Loss Depth: 0.2111
+
+==================================================
+Epoch 62/200
+==================================================
+Epoch [62] Batch [0/33] Loss_RGB: 1.3224 Loss_Depth: 0.2157
+Epoch 62 - Avg Loss RGB: 1.2955, Avg Loss Depth: 0.2108
+
+==================================================
+Epoch 63/200
+==================================================
+Epoch [63] Batch [0/33] Loss_RGB: 1.2883 Loss_Depth: 0.2120
+Epoch 63 - Avg Loss RGB: 1.2948, Avg Loss Depth: 0.2107
+
+==================================================
+Epoch 64/200
+==================================================
+Epoch [64] Batch [0/33] Loss_RGB: 1.3119 Loss_Depth: 0.2124
+Epoch 64 - Avg Loss RGB: 1.2923, Avg Loss Depth: 0.2102
+
+==================================================
+Epoch 65/200
+==================================================
+Epoch [65] Batch [0/33] Loss_RGB: 1.2941 Loss_Depth: 0.2123
+Epoch 65 - Avg Loss RGB: 1.2913, Avg Loss Depth: 0.2095
+Epoch 65 - Val Loss RGB: 1.3164, Val Loss Depth: 0.0000, Total: 1.3164
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 66/200
+==================================================
+Epoch [66] Batch [0/33] Loss_RGB: 1.2963 Loss_Depth: 0.2103
+Epoch 66 - Avg Loss RGB: 1.2892, Avg Loss Depth: 0.2092
+
+==================================================
+Epoch 67/200
+==================================================
+Epoch [67] Batch [0/33] Loss_RGB: 1.3058 Loss_Depth: 0.2121
+Epoch 67 - Avg Loss RGB: 1.2871, Avg Loss Depth: 0.2092
+
+==================================================
+Epoch 68/200
+==================================================
+Epoch [68] Batch [0/33] Loss_RGB: 1.2766 Loss_Depth: 0.2091
+Epoch 68 - Avg Loss RGB: 1.2863, Avg Loss Depth: 0.2089
+
+==================================================
+Epoch 69/200
+==================================================
+Epoch [69] Batch [0/33] Loss_RGB: 1.2726 Loss_Depth: 0.2429
+Epoch 69 - Avg Loss RGB: 1.2864, Avg Loss Depth: 0.2089
+
+==================================================
+Epoch 70/200
+==================================================
+Epoch [70] Batch [0/33] Loss_RGB: 1.2840 Loss_Depth: 0.2328
+Epoch 70 - Avg Loss RGB: 1.2844, Avg Loss Depth: 0.2085
+Epoch 70 - Val Loss RGB: 1.3121, Val Loss Depth: 0.0000, Total: 1.3121
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 71/200
+==================================================
+Epoch [71] Batch [0/33] Loss_RGB: 1.2734 Loss_Depth: 0.2091
+Epoch 71 - Avg Loss RGB: 1.2838, Avg Loss Depth: 0.2085
+
+==================================================
+Epoch 72/200
+==================================================
+Epoch [72] Batch [0/33] Loss_RGB: 1.2923 Loss_Depth: 0.2058
+Epoch 72 - Avg Loss RGB: 1.2816, Avg Loss Depth: 0.2081
+
+==================================================
+Epoch 73/200
+==================================================
+Epoch [73] Batch [0/33] Loss_RGB: 1.2632 Loss_Depth: 0.2105
+Epoch 73 - Avg Loss RGB: 1.2808, Avg Loss Depth: 0.2082
+
+==================================================
+Epoch 74/200
+==================================================
+Epoch [74] Batch [0/33] Loss_RGB: 1.2773 Loss_Depth: 0.2022
+Epoch 74 - Avg Loss RGB: 1.2799, Avg Loss Depth: 0.2072
+
+==================================================
+Epoch 75/200
+==================================================
+Epoch [75] Batch [0/33] Loss_RGB: 1.2739 Loss_Depth: 0.2067
+Epoch 75 - Avg Loss RGB: 1.2795, Avg Loss Depth: 0.2078
+Epoch 75 - Val Loss RGB: 1.3077, Val Loss Depth: 0.0000, Total: 1.3077
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 76/200
+==================================================
+Epoch [76] Batch [0/33] Loss_RGB: 1.2671 Loss_Depth: 0.2034
+Epoch 76 - Avg Loss RGB: 1.2791, Avg Loss Depth: 0.2079
+
+==================================================
+Epoch 77/200
+==================================================
+Epoch [77] Batch [0/33] Loss_RGB: 1.2743 Loss_Depth: 0.2094
+Epoch 77 - Avg Loss RGB: 1.2764, Avg Loss Depth: 0.2074
+
+==================================================
+Epoch 78/200
+==================================================
+Epoch [78] Batch [0/33] Loss_RGB: 1.2826 Loss_Depth: 0.2090
+Epoch 78 - Avg Loss RGB: 1.2757, Avg Loss Depth: 0.2078
+
+==================================================
+Epoch 79/200
+==================================================
+Epoch [79] Batch [0/33] Loss_RGB: 1.2676 Loss_Depth: 0.2003
+Epoch 79 - Avg Loss RGB: 1.2751, Avg Loss Depth: 0.2075
+
+==================================================
+Epoch 80/200
+==================================================
+Epoch [80] Batch [0/33] Loss_RGB: 1.2897 Loss_Depth: 0.2083
+Epoch 80 - Avg Loss RGB: 1.2752, Avg Loss Depth: 0.2074
+Epoch 80 - Val Loss RGB: 1.3051, Val Loss Depth: 0.0000, Total: 1.3051
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 81/200
+==================================================
+Epoch [81] Batch [0/33] Loss_RGB: 1.2628 Loss_Depth: 0.2021
+Epoch 81 - Avg Loss RGB: 1.2741, Avg Loss Depth: 0.2074
+
+==================================================
+Epoch 82/200
+==================================================
+Epoch [82] Batch [0/33] Loss_RGB: 1.2637 Loss_Depth: 0.2060
+Epoch 82 - Avg Loss RGB: 1.2733, Avg Loss Depth: 0.2071
+
+==================================================
+Epoch 83/200
+==================================================
+Epoch [83] Batch [0/33] Loss_RGB: 1.2718 Loss_Depth: 0.2033
+Epoch 83 - Avg Loss RGB: 1.2718, Avg Loss Depth: 0.2069
+
+==================================================
+Epoch 84/200
+==================================================
+Epoch [84] Batch [0/33] Loss_RGB: 1.2654 Loss_Depth: 0.2065
+Epoch 84 - Avg Loss RGB: 1.2723, Avg Loss Depth: 0.2069
+
+==================================================
+Epoch 85/200
+==================================================
+Epoch [85] Batch [0/33] Loss_RGB: 1.2777 Loss_Depth: 0.1982
+Epoch 85 - Avg Loss RGB: 1.2720, Avg Loss Depth: 0.2067
+Epoch 85 - Val Loss RGB: 1.3028, Val Loss Depth: 0.0000, Total: 1.3028
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 86/200
+==================================================
+Epoch [86] Batch [0/33] Loss_RGB: 1.2672 Loss_Depth: 0.2296
+Epoch 86 - Avg Loss RGB: 1.2703, Avg Loss Depth: 0.2066
+
+==================================================
+Epoch 87/200
+==================================================
+Epoch [87] Batch [0/33] Loss_RGB: 1.2712 Loss_Depth: 0.2068
+Epoch 87 - Avg Loss RGB: 1.2705, Avg Loss Depth: 0.2067
+
+==================================================
+Epoch 88/200
+==================================================
+Epoch [88] Batch [0/33] Loss_RGB: 1.2562 Loss_Depth: 0.2000
+Epoch 88 - Avg Loss RGB: 1.2699, Avg Loss Depth: 0.2067
+
+==================================================
+Epoch 89/200
+==================================================
+Epoch [89] Batch [0/33] Loss_RGB: 1.2598 Loss_Depth: 0.1996
+Epoch 89 - Avg Loss RGB: 1.2694, Avg Loss Depth: 0.2065
+
+==================================================
+Epoch 90/200
+==================================================
+Epoch [90] Batch [0/33] Loss_RGB: 1.2478 Loss_Depth: 0.1982
+Epoch 90 - Avg Loss RGB: 1.2689, Avg Loss Depth: 0.2065
+Epoch 90 - Val Loss RGB: 1.3008, Val Loss Depth: 0.0000, Total: 1.3008
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 91/200
+==================================================
+Epoch [91] Batch [0/33] Loss_RGB: 1.2425 Loss_Depth: 0.1984
+Epoch 91 - Avg Loss RGB: 1.2683, Avg Loss Depth: 0.2065
+
+==================================================
+Epoch 92/200
+==================================================
+Epoch [92] Batch [0/33] Loss_RGB: 1.2504 Loss_Depth: 0.2055
+Epoch 92 - Avg Loss RGB: 1.2687, Avg Loss Depth: 0.2060
+
+==================================================
+Epoch 93/200
+==================================================
+Epoch [93] Batch [0/33] Loss_RGB: 1.2654 Loss_Depth: 0.2035
+Epoch 93 - Avg Loss RGB: 1.2668, Avg Loss Depth: 0.2060
+
+==================================================
+Epoch 94/200
+==================================================
+Epoch [94] Batch [0/33] Loss_RGB: 1.2581 Loss_Depth: 0.2081
+Epoch 94 - Avg Loss RGB: 1.2664, Avg Loss Depth: 0.2062
+
+==================================================
+Epoch 95/200
+==================================================
+Epoch [95] Batch [0/33] Loss_RGB: 1.2293 Loss_Depth: 0.2026
+Epoch 95 - Avg Loss RGB: 1.2675, Avg Loss Depth: 0.2063
+Epoch 95 - Val Loss RGB: 1.2992, Val Loss Depth: 0.0000, Total: 1.2992
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 96/200
+==================================================
+Epoch [96] Batch [0/33] Loss_RGB: 1.2498 Loss_Depth: 0.1971
+Epoch 96 - Avg Loss RGB: 1.2659, Avg Loss Depth: 0.2058
+
+==================================================
+Epoch 97/200
+==================================================
+Epoch [97] Batch [0/33] Loss_RGB: 1.2482 Loss_Depth: 0.1975
+Epoch 97 - Avg Loss RGB: 1.2651, Avg Loss Depth: 0.2059
+
+==================================================
+Epoch 98/200
+==================================================
+Epoch [98] Batch [0/33] Loss_RGB: 1.2937 Loss_Depth: 0.2083
+Epoch 98 - Avg Loss RGB: 1.2646, Avg Loss Depth: 0.2059
+
+==================================================
+Epoch 99/200
+==================================================
+Epoch [99] Batch [0/33] Loss_RGB: 1.2538 Loss_Depth: 0.2002
+Epoch 99 - Avg Loss RGB: 1.2647, Avg Loss Depth: 0.2060
+
+==================================================
+Epoch 100/200
+==================================================
+Epoch [100] Batch [0/33] Loss_RGB: 1.3136 Loss_Depth: 0.2101
+Epoch 100 - Avg Loss RGB: 1.2647, Avg Loss Depth: 0.2056
+Epoch 100 - Val Loss RGB: 1.2976, Val Loss Depth: 0.0000, Total: 1.2976
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 101/200
+==================================================
+Epoch [101] Batch [0/33] Loss_RGB: 1.2633 Loss_Depth: 0.2017
+Epoch 101 - Avg Loss RGB: 1.2636, Avg Loss Depth: 0.2058
+
+==================================================
+Epoch 102/200
+==================================================
+Epoch [102] Batch [0/33] Loss_RGB: 1.2594 Loss_Depth: 0.2001
+Epoch 102 - Avg Loss RGB: 1.2642, Avg Loss Depth: 0.2059
+
+==================================================
+Epoch 103/200
+==================================================
+Epoch [103] Batch [0/33] Loss_RGB: 1.2781 Loss_Depth: 0.2064
+Epoch 103 - Avg Loss RGB: 1.2633, Avg Loss Depth: 0.2058
+
+==================================================
+Epoch 104/200
+==================================================
+Epoch [104] Batch [0/33] Loss_RGB: 1.2744 Loss_Depth: 0.2072
+Epoch 104 - Avg Loss RGB: 1.2634, Avg Loss Depth: 0.2058
+
+==================================================
+Epoch 105/200
+==================================================
+Epoch [105] Batch [0/33] Loss_RGB: 1.2669 Loss_Depth: 0.2024
+Epoch 105 - Avg Loss RGB: 1.2624, Avg Loss Depth: 0.2058
+Epoch 105 - Val Loss RGB: 1.2966, Val Loss Depth: 0.0000, Total: 1.2966
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 106/200
+==================================================
+Epoch [106] Batch [0/33] Loss_RGB: 1.2611 Loss_Depth: 0.1945
+Epoch 106 - Avg Loss RGB: 1.2628, Avg Loss Depth: 0.2057
+
+==================================================
+Epoch 107/200
+==================================================
+Epoch [107] Batch [0/33] Loss_RGB: 1.2635 Loss_Depth: 0.2053
+Epoch 107 - Avg Loss RGB: 1.2621, Avg Loss Depth: 0.2056
+
+==================================================
+Epoch 108/200
+==================================================
+Epoch [108] Batch [0/33] Loss_RGB: 1.2469 Loss_Depth: 0.1989
+Epoch 108 - Avg Loss RGB: 1.2623, Avg Loss Depth: 0.2057
+
+==================================================
+Epoch 109/200
+==================================================
+Epoch [109] Batch [0/33] Loss_RGB: 1.2595 Loss_Depth: 0.2008
+Epoch 109 - Avg Loss RGB: 1.2624, Avg Loss Depth: 0.2058
+
+==================================================
+Epoch 110/200
+==================================================
+Epoch [110] Batch [0/33] Loss_RGB: 1.2450 Loss_Depth: 0.2149
+Epoch 110 - Avg Loss RGB: 1.2612, Avg Loss Depth: 0.2053
+Epoch 110 - Val Loss RGB: 1.2961, Val Loss Depth: 0.0000, Total: 1.2961
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 111/200
+==================================================
+Epoch [111] Batch [0/33] Loss_RGB: 1.2810 Loss_Depth: 0.2081
+Epoch 111 - Avg Loss RGB: 1.2610, Avg Loss Depth: 0.2055
+
+==================================================
+Epoch 112/200
+==================================================
+Epoch [112] Batch [0/33] Loss_RGB: 1.2775 Loss_Depth: 0.2127
+Epoch 112 - Avg Loss RGB: 1.2610, Avg Loss Depth: 0.2056
+
+==================================================
+Epoch 113/200
+==================================================
+Epoch [113] Batch [0/33] Loss_RGB: 1.2396 Loss_Depth: 0.1982
+Epoch 113 - Avg Loss RGB: 1.2613, Avg Loss Depth: 0.2054
+
+==================================================
+Epoch 114/200
+==================================================
+Epoch [114] Batch [0/33] Loss_RGB: 1.2779 Loss_Depth: 0.2046
+Epoch 114 - Avg Loss RGB: 1.2612, Avg Loss Depth: 0.2054
+
+==================================================
+Epoch 115/200
+==================================================
+Epoch [115] Batch [0/33] Loss_RGB: 1.2467 Loss_Depth: 0.1970
+Epoch 115 - Avg Loss RGB: 1.2608, Avg Loss Depth: 0.2054
+Epoch 115 - Val Loss RGB: 1.2957, Val Loss Depth: 0.0000, Total: 1.2957
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 116/200
+==================================================
+Epoch [116] Batch [0/33] Loss_RGB: 1.2566 Loss_Depth: 0.2040
+Epoch 116 - Avg Loss RGB: 1.2605, Avg Loss Depth: 0.2053
+
+==================================================
+Epoch 117/200
+==================================================
+Epoch [117] Batch [0/33] Loss_RGB: 1.2643 Loss_Depth: 0.2125
+Epoch 117 - Avg Loss RGB: 1.2599, Avg Loss Depth: 0.2053
+
+==================================================
+Epoch 118/200
+==================================================
+Epoch [118] Batch [0/33] Loss_RGB: 1.2708 Loss_Depth: 0.2004
+Epoch 118 - Avg Loss RGB: 1.2605, Avg Loss Depth: 0.2054
+
+==================================================
+Epoch 119/200
+==================================================
+Epoch [119] Batch [0/33] Loss_RGB: 1.2564 Loss_Depth: 0.2047
+Epoch 119 - Avg Loss RGB: 1.2597, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 120/200
+==================================================
+Epoch [120] Batch [0/33] Loss_RGB: 1.2660 Loss_Depth: 0.2056
+Epoch 120 - Avg Loss RGB: 1.2597, Avg Loss Depth: 0.2051
+Epoch 120 - Val Loss RGB: 1.2951, Val Loss Depth: 0.0000, Total: 1.2951
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 121/200
+==================================================
+Epoch [121] Batch [0/33] Loss_RGB: 1.2729 Loss_Depth: 0.2119
+Epoch 121 - Avg Loss RGB: 1.2598, Avg Loss Depth: 0.2054
+
+==================================================
+Epoch 122/200
+==================================================
+Epoch [122] Batch [0/33] Loss_RGB: 1.2444 Loss_Depth: 0.2039
+Epoch 122 - Avg Loss RGB: 1.2596, Avg Loss Depth: 0.2053
+
+==================================================
+Epoch 123/200
+==================================================
+Epoch [123] Batch [0/33] Loss_RGB: 1.2453 Loss_Depth: 0.2011
+Epoch 123 - Avg Loss RGB: 1.2594, Avg Loss Depth: 0.2052
+
+==================================================
+Epoch 124/200
+==================================================
+Epoch [124] Batch [0/33] Loss_RGB: 1.2346 Loss_Depth: 0.1993
+Epoch 124 - Avg Loss RGB: 1.2597, Avg Loss Depth: 0.2053
+
+==================================================
+Epoch 125/200
+==================================================
+Epoch [125] Batch [0/33] Loss_RGB: 1.2513 Loss_Depth: 0.2045
+Epoch 125 - Avg Loss RGB: 1.2589, Avg Loss Depth: 0.2052
+Epoch 125 - Val Loss RGB: 1.2947, Val Loss Depth: 0.0000, Total: 1.2947
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 126/200
+==================================================
+Epoch [126] Batch [0/33] Loss_RGB: 1.2569 Loss_Depth: 0.2093
+Epoch 126 - Avg Loss RGB: 1.2590, Avg Loss Depth: 0.2053
+
+==================================================
+Epoch 127/200
+==================================================
+Epoch [127] Batch [0/33] Loss_RGB: 1.2557 Loss_Depth: 0.2081
+Epoch 127 - Avg Loss RGB: 1.2593, Avg Loss Depth: 0.2053
+
+==================================================
+Epoch 128/200
+==================================================
+Epoch [128] Batch [0/33] Loss_RGB: 1.3008 Loss_Depth: 0.2072
+Epoch 128 - Avg Loss RGB: 1.2588, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 129/200
+==================================================
+Epoch [129] Batch [0/33] Loss_RGB: 1.2641 Loss_Depth: 0.2049
+Epoch 129 - Avg Loss RGB: 1.2586, Avg Loss Depth: 0.2051
+
+==================================================
+Epoch 130/200
+==================================================
+Epoch [130] Batch [0/33] Loss_RGB: 1.2450 Loss_Depth: 0.2007
+Epoch 130 - Avg Loss RGB: 1.2596, Avg Loss Depth: 0.2052
+Epoch 130 - Val Loss RGB: 1.2944, Val Loss Depth: 0.0000, Total: 1.2944
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 131/200
+==================================================
+Epoch [131] Batch [0/33] Loss_RGB: 1.2415 Loss_Depth: 0.2030
+Epoch 131 - Avg Loss RGB: 1.2583, Avg Loss Depth: 0.2052
+
+==================================================
+Epoch 132/200
+==================================================
+Epoch [132] Batch [0/33] Loss_RGB: 1.2503 Loss_Depth: 0.2052
+Epoch 132 - Avg Loss RGB: 1.2584, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 133/200
+==================================================
+Epoch [133] Batch [0/33] Loss_RGB: 1.2404 Loss_Depth: 0.2011
+Epoch 133 - Avg Loss RGB: 1.2584, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 134/200
+==================================================
+Epoch [134] Batch [0/33] Loss_RGB: 1.3100 Loss_Depth: 0.2210
+Epoch 134 - Avg Loss RGB: 1.2594, Avg Loss Depth: 0.2053
+
+==================================================
+Epoch 135/200
+==================================================
+Epoch [135] Batch [0/33] Loss_RGB: 1.2634 Loss_Depth: 0.2008
+Epoch 135 - Avg Loss RGB: 1.2578, Avg Loss Depth: 0.2050
+Epoch 135 - Val Loss RGB: 1.2944, Val Loss Depth: 0.0000, Total: 1.2944
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 136/200
+==================================================
+Epoch [136] Batch [0/33] Loss_RGB: 1.2645 Loss_Depth: 0.2081
+Epoch 136 - Avg Loss RGB: 1.2588, Avg Loss Depth: 0.2049
+
+==================================================
+Epoch 137/200
+==================================================
+Epoch [137] Batch [0/33] Loss_RGB: 1.2600 Loss_Depth: 0.2078
+Epoch 137 - Avg Loss RGB: 1.2583, Avg Loss Depth: 0.2052
+
+==================================================
+Epoch 138/200
+==================================================
+Epoch [138] Batch [0/33] Loss_RGB: 1.2743 Loss_Depth: 0.2010
+Epoch 138 - Avg Loss RGB: 1.2591, Avg Loss Depth: 0.2046
+
+==================================================
+Epoch 139/200
+==================================================
+Epoch [139] Batch [0/33] Loss_RGB: 1.2860 Loss_Depth: 0.2043
+Epoch 139 - Avg Loss RGB: 1.2579, Avg Loss Depth: 0.2052
+
+==================================================
+Epoch 140/200
+==================================================
+Epoch [140] Batch [0/33] Loss_RGB: 1.2790 Loss_Depth: 0.2009
+Epoch 140 - Avg Loss RGB: 1.2588, Avg Loss Depth: 0.2050
+Epoch 140 - Val Loss RGB: 1.2941, Val Loss Depth: 0.0000, Total: 1.2941
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 141/200
+==================================================
+Epoch [141] Batch [0/33] Loss_RGB: 1.2422 Loss_Depth: 0.2261
+Epoch 141 - Avg Loss RGB: 1.2572, Avg Loss Depth: 0.2051
+
+==================================================
+Epoch 142/200
+==================================================
+Epoch [142] Batch [0/33] Loss_RGB: 1.2556 Loss_Depth: 0.2001
+Epoch 142 - Avg Loss RGB: 1.2589, Avg Loss Depth: 0.2043
+
+==================================================
+Epoch 143/200
+==================================================
+Epoch [143] Batch [0/33] Loss_RGB: 1.2773 Loss_Depth: 0.2089
+Epoch 143 - Avg Loss RGB: 1.2590, Avg Loss Depth: 0.2052
+
+==================================================
+Epoch 144/200
+==================================================
+Epoch [144] Batch [0/33] Loss_RGB: 1.2537 Loss_Depth: 0.2053
+Epoch 144 - Avg Loss RGB: 1.2577, Avg Loss Depth: 0.2051
+
+==================================================
+Epoch 145/200
+==================================================
+Epoch [145] Batch [0/33] Loss_RGB: 1.2459 Loss_Depth: 0.1974
+Epoch 145 - Avg Loss RGB: 1.2572, Avg Loss Depth: 0.2051
+Epoch 145 - Val Loss RGB: 1.2940, Val Loss Depth: 0.0000, Total: 1.2940
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 146/200
+==================================================
+Epoch [146] Batch [0/33] Loss_RGB: 1.2616 Loss_Depth: 0.2018
+Epoch 146 - Avg Loss RGB: 1.2574, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 147/200
+==================================================
+Epoch [147] Batch [0/33] Loss_RGB: 1.2536 Loss_Depth: 0.2034
+Epoch 147 - Avg Loss RGB: 1.2580, Avg Loss Depth: 0.2051
+
+==================================================
+Epoch 148/200
+==================================================
+Epoch [148] Batch [0/33] Loss_RGB: 1.2525 Loss_Depth: 0.2042
+Epoch 148 - Avg Loss RGB: 1.2577, Avg Loss Depth: 0.2049
+
+==================================================
+Epoch 149/200
+==================================================
+Epoch [149] Batch [0/33] Loss_RGB: 1.2702 Loss_Depth: 0.1940
+Epoch 149 - Avg Loss RGB: 1.2570, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 150/200
+==================================================
+Epoch [150] Batch [0/33] Loss_RGB: 1.2676 Loss_Depth: 0.2071
+Epoch 150 - Avg Loss RGB: 1.2583, Avg Loss Depth: 0.2051
+Epoch 150 - Val Loss RGB: 1.2938, Val Loss Depth: 0.0000, Total: 1.2938
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 151/200
+==================================================
+Epoch [151] Batch [0/33] Loss_RGB: 1.2729 Loss_Depth: 0.2143
+Epoch 151 - Avg Loss RGB: 1.2583, Avg Loss Depth: 0.2044
+
+==================================================
+Epoch 152/200
+==================================================
+Epoch [152] Batch [0/33] Loss_RGB: 1.2814 Loss_Depth: 0.2027
+Epoch 152 - Avg Loss RGB: 1.2573, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 153/200
+==================================================
+Epoch [153] Batch [0/33] Loss_RGB: 1.2622 Loss_Depth: 0.2037
+Epoch 153 - Avg Loss RGB: 1.2586, Avg Loss Depth: 0.2052
+
+==================================================
+Epoch 154/200
+==================================================
+Epoch [154] Batch [0/33] Loss_RGB: 1.2615 Loss_Depth: 0.2024
+Epoch 154 - Avg Loss RGB: 1.2575, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 155/200
+==================================================
+Epoch [155] Batch [0/33] Loss_RGB: 1.2775 Loss_Depth: 0.2048
+Epoch 155 - Avg Loss RGB: 1.2576, Avg Loss Depth: 0.2050
+Epoch 155 - Val Loss RGB: 1.2939, Val Loss Depth: 0.0000, Total: 1.2939
+No improvement for 1 evaluation(s)
+
+==================================================
+Epoch 156/200
+==================================================
+Epoch [156] Batch [0/33] Loss_RGB: 1.2440 Loss_Depth: 0.2021
+Epoch 156 - Avg Loss RGB: 1.2576, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 157/200
+==================================================
+Epoch [157] Batch [0/33] Loss_RGB: 1.2669 Loss_Depth: 0.2078
+Epoch 157 - Avg Loss RGB: 1.2576, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 158/200
+==================================================
+Epoch [158] Batch [0/33] Loss_RGB: 1.2416 Loss_Depth: 0.1956
+Epoch 158 - Avg Loss RGB: 1.2576, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 159/200
+==================================================
+Epoch [159] Batch [0/33] Loss_RGB: 1.2454 Loss_Depth: 0.2038
+Epoch 159 - Avg Loss RGB: 1.2575, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 160/200
+==================================================
+Epoch [160] Batch [0/33] Loss_RGB: 1.2286 Loss_Depth: 0.2225
+Epoch 160 - Avg Loss RGB: 1.2568, Avg Loss Depth: 0.2048
+Epoch 160 - Val Loss RGB: 1.2935, Val Loss Depth: 0.0000, Total: 1.2935
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 161/200
+==================================================
+Epoch [161] Batch [0/33] Loss_RGB: 1.2497 Loss_Depth: 0.2025
+Epoch 161 - Avg Loss RGB: 1.2574, Avg Loss Depth: 0.2051
+
+==================================================
+Epoch 162/200
+==================================================
+Epoch [162] Batch [0/33] Loss_RGB: 1.2694 Loss_Depth: 0.2047
+Epoch 162 - Avg Loss RGB: 1.2574, Avg Loss Depth: 0.2048
+
+==================================================
+Epoch 163/200
+==================================================
+Epoch [163] Batch [0/33] Loss_RGB: 1.2724 Loss_Depth: 0.2092
+Epoch 163 - Avg Loss RGB: 1.2574, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 164/200
+==================================================
+Epoch [164] Batch [0/33] Loss_RGB: 1.2547 Loss_Depth: 0.2012
+Epoch 164 - Avg Loss RGB: 1.2578, Avg Loss Depth: 0.2051
+
+==================================================
+Epoch 165/200
+==================================================
+Epoch [165] Batch [0/33] Loss_RGB: 1.2469 Loss_Depth: 0.1968
+Epoch 165 - Avg Loss RGB: 1.2563, Avg Loss Depth: 0.2049
+Epoch 165 - Val Loss RGB: 1.2933, Val Loss Depth: 0.0000, Total: 1.2933
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 166/200
+==================================================
+Epoch [166] Batch [0/33] Loss_RGB: 1.2536 Loss_Depth: 0.2009
+Epoch 166 - Avg Loss RGB: 1.2571, Avg Loss Depth: 0.2049
+
+==================================================
+Epoch 167/200
+==================================================
+Epoch [167] Batch [0/33] Loss_RGB: 1.2655 Loss_Depth: 0.1988
+Epoch 167 - Avg Loss RGB: 1.2569, Avg Loss Depth: 0.2051
+
+==================================================
+Epoch 168/200
+==================================================
+Epoch [168] Batch [0/33] Loss_RGB: 1.2712 Loss_Depth: 0.2016
+Epoch 168 - Avg Loss RGB: 1.2568, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 169/200
+==================================================
+Epoch [169] Batch [0/33] Loss_RGB: 1.2378 Loss_Depth: 0.2029
+Epoch 169 - Avg Loss RGB: 1.2571, Avg Loss Depth: 0.2049
+
+==================================================
+Epoch 170/200
+==================================================
+Epoch [170] Batch [0/33] Loss_RGB: 1.2700 Loss_Depth: 0.2067
+Epoch 170 - Avg Loss RGB: 1.2566, Avg Loss Depth: 0.2047
+Epoch 170 - Val Loss RGB: 1.2927, Val Loss Depth: 0.0000, Total: 1.2927
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 171/200
+==================================================
+Epoch [171] Batch [0/33] Loss_RGB: 1.2464 Loss_Depth: 0.1998
+Epoch 171 - Avg Loss RGB: 1.2576, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 172/200
+==================================================
+Epoch [172] Batch [0/33] Loss_RGB: 1.2879 Loss_Depth: 0.2110
+Epoch 172 - Avg Loss RGB: 1.2564, Avg Loss Depth: 0.2049
+
+==================================================
+Epoch 173/200
+==================================================
+Epoch [173] Batch [0/33] Loss_RGB: 1.2687 Loss_Depth: 0.2099
+Epoch 173 - Avg Loss RGB: 1.2565, Avg Loss Depth: 0.2051
+
+==================================================
+Epoch 174/200
+==================================================
+Epoch [174] Batch [0/33] Loss_RGB: 1.2843 Loss_Depth: 0.2191
+Epoch 174 - Avg Loss RGB: 1.2567, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 175/200
+==================================================
+Epoch [175] Batch [0/33] Loss_RGB: 1.2420 Loss_Depth: 0.2036
+Epoch 175 - Avg Loss RGB: 1.2557, Avg Loss Depth: 0.2049
+Epoch 175 - Val Loss RGB: 1.2923, Val Loss Depth: 0.0000, Total: 1.2923
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 176/200
+==================================================
+Epoch [176] Batch [0/33] Loss_RGB: 1.2257 Loss_Depth: 0.2022
+Epoch 176 - Avg Loss RGB: 1.2558, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 177/200
+==================================================
+Epoch [177] Batch [0/33] Loss_RGB: 1.2373 Loss_Depth: 0.1994
+Epoch 177 - Avg Loss RGB: 1.2544, Avg Loss Depth: 0.2045
+
+==================================================
+Epoch 178/200
+==================================================
+Epoch [178] Batch [0/33] Loss_RGB: 1.2345 Loss_Depth: 0.2009
+Epoch 178 - Avg Loss RGB: 1.2564, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 179/200
+==================================================
+Epoch [179] Batch [0/33] Loss_RGB: 1.2569 Loss_Depth: 0.2026
+Epoch 179 - Avg Loss RGB: 1.2556, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 180/200
+==================================================
+Epoch [180] Batch [0/33] Loss_RGB: 1.2720 Loss_Depth: 0.2063
+Epoch 180 - Avg Loss RGB: 1.2551, Avg Loss Depth: 0.2045
+Epoch 180 - Val Loss RGB: 1.2919, Val Loss Depth: 0.0000, Total: 1.2919
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 181/200
+==================================================
+Epoch [181] Batch [0/33] Loss_RGB: 1.2508 Loss_Depth: 0.2021
+Epoch 181 - Avg Loss RGB: 1.2558, Avg Loss Depth: 0.2049
+
+==================================================
+Epoch 182/200
+==================================================
+Epoch [182] Batch [0/33] Loss_RGB: 1.2684 Loss_Depth: 0.2133
+Epoch 182 - Avg Loss RGB: 1.2555, Avg Loss Depth: 0.2048
+
+==================================================
+Epoch 183/200
+==================================================
+Epoch [183] Batch [0/33] Loss_RGB: 1.2454 Loss_Depth: 0.1997
+Epoch 183 - Avg Loss RGB: 1.2555, Avg Loss Depth: 0.2049
+
+==================================================
+Epoch 184/200
+==================================================
+Epoch [184] Batch [0/33] Loss_RGB: 1.2363 Loss_Depth: 0.1992
+Epoch 184 - Avg Loss RGB: 1.2562, Avg Loss Depth: 0.2050
+
+==================================================
+Epoch 185/200
+==================================================
+Epoch [185] Batch [0/33] Loss_RGB: 1.2503 Loss_Depth: 0.2128
+Epoch 185 - Avg Loss RGB: 1.2557, Avg Loss Depth: 0.2044
+Epoch 185 - Val Loss RGB: 1.2918, Val Loss Depth: 0.0000, Total: 1.2918
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 186/200
+==================================================
+Epoch [186] Batch [0/33] Loss_RGB: 1.2662 Loss_Depth: 0.2025
+Epoch 186 - Avg Loss RGB: 1.2548, Avg Loss Depth: 0.2048
+
+==================================================
+Epoch 187/200
+==================================================
+Epoch [187] Batch [0/33] Loss_RGB: 1.2586 Loss_Depth: 0.2031
+Epoch 187 - Avg Loss RGB: 1.2547, Avg Loss Depth: 0.2049
+
+==================================================
+Epoch 188/200
+==================================================
+Epoch [188] Batch [0/33] Loss_RGB: 1.2608 Loss_Depth: 0.2011
+Epoch 188 - Avg Loss RGB: 1.2558, Avg Loss Depth: 0.2051
+
+==================================================
+Epoch 189/200
+==================================================
+Epoch [189] Batch [0/33] Loss_RGB: 1.2447 Loss_Depth: 0.2024
+Epoch 189 - Avg Loss RGB: 1.2553, Avg Loss Depth: 0.2048
+
+==================================================
+Epoch 190/200
+==================================================
+Epoch [190] Batch [0/33] Loss_RGB: 1.2486 Loss_Depth: 0.1984
+Epoch 190 - Avg Loss RGB: 1.2553, Avg Loss Depth: 0.2050
+Epoch 190 - Val Loss RGB: 1.2916, Val Loss Depth: 0.0000, Total: 1.2916
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 191/200
+==================================================
+Epoch [191] Batch [0/33] Loss_RGB: 1.2646 Loss_Depth: 0.2043
+Epoch 191 - Avg Loss RGB: 1.2550, Avg Loss Depth: 0.2049
+
+==================================================
+Epoch 192/200
+==================================================
+Epoch [192] Batch [0/33] Loss_RGB: 1.2671 Loss_Depth: 0.2064
+Epoch 192 - Avg Loss RGB: 1.2551, Avg Loss Depth: 0.2046
+
+==================================================
+Epoch 193/200
+==================================================
+Epoch [193] Batch [0/33] Loss_RGB: 1.2521 Loss_Depth: 0.2080
+Epoch 193 - Avg Loss RGB: 1.2551, Avg Loss Depth: 0.2049
+
+==================================================
+Epoch 194/200
+==================================================
+Epoch [194] Batch [0/33] Loss_RGB: 1.2630 Loss_Depth: 0.1972
+Epoch 194 - Avg Loss RGB: 1.2553, Avg Loss Depth: 0.2049
+
+==================================================
+Epoch 195/200
+==================================================
+Epoch [195] Batch [0/33] Loss_RGB: 1.2922 Loss_Depth: 0.2158
+Epoch 195 - Avg Loss RGB: 1.2549, Avg Loss Depth: 0.2051
+Epoch 195 - Val Loss RGB: 1.2916, Val Loss Depth: 0.0000, Total: 1.2916
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+==================================================
+Epoch 196/200
+==================================================
+Epoch [196] Batch [0/33] Loss_RGB: 1.2458 Loss_Depth: 0.2013
+Epoch 196 - Avg Loss RGB: 1.2551, Avg Loss Depth: 0.2049
+
+==================================================
+Epoch 197/200
+==================================================
+Epoch [197] Batch [0/33] Loss_RGB: 1.2655 Loss_Depth: 0.1995
+Epoch 197 - Avg Loss RGB: 1.2548, Avg Loss Depth: 0.2042
+
+==================================================
+Epoch 198/200
+==================================================
+Epoch [198] Batch [0/33] Loss_RGB: 1.2863 Loss_Depth: 0.2181
+Epoch 198 - Avg Loss RGB: 1.2556, Avg Loss Depth: 0.2051
+
+==================================================
+Epoch 199/200
+==================================================
+Epoch [199] Batch [0/33] Loss_RGB: 1.2743 Loss_Depth: 0.2079
+Epoch 199 - Avg Loss RGB: 1.2559, Avg Loss Depth: 0.2051
+
+==================================================
+Epoch 200/200
+==================================================
+Epoch [200] Batch [0/33] Loss_RGB: 1.2478 Loss_Depth: 0.2142
+Epoch 200 - Avg Loss RGB: 1.2556, Avg Loss Depth: 0.2045
+Epoch 200 - Val Loss RGB: 1.2914, Val Loss Depth: 0.0000, Total: 1.2914
+Saved best model to ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+
+Training finished! Best Val Loss: 1.2914
+
+==================================================
+Final Result - Cam 2
+  Best epoch: 200
+  Best Val Loss: 1.2914
+  Test AUROC: 0.6667
+  Model: ./outputs/rail_all/Cam2/20260501_134634_cam2_bs32_lr0.005_img512_ratio1.0/best_cam2.pth
+==================================================

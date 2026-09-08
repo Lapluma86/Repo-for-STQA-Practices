@@ -1,0 +1,93 @@
+{
+  "method": "stfpm",
+  "cam": "cam1",
+  "view_id": 1,
+  "input_mode": "rgbd",
+  "image_auroc": 0.35454545454545455,
+  "pixel_auroc": 0.4860689525265678,
+  "img_size": 512,
+  "patch_size": 900,
+  "patch_stride": 850,
+  "train_root": "/data1/Leaddo_data/20260327-resize512",
+  "test_root": "/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test",
+  "train_sample_num": 1500,
+  "train_val_test_split": [
+    0.9,
+    0.1,
+    0.0
+  ],
+  "sampling_mode": "uniform_time",
+  "depth_norm": "zscore",
+  "smoke": false,
+  "train_summary": {
+    "num_images": 1350,
+    "num_good_images": 1350,
+    "num_broken_images": 0,
+    "num_patch_samples": 1350,
+    "num_patches_per_image": 1
+  },
+  "val_summary": {
+    "num_images": 150,
+    "num_good_images": 150,
+    "num_broken_images": 0,
+    "num_patch_samples": 150,
+    "num_patches_per_image": 1
+  },
+  "test_summary": {
+    "num_images": 21,
+    "num_good_images": 10,
+    "num_broken_images": 11,
+    "num_patch_samples": 147,
+    "num_patches_per_image": 7
+  },
+  "scores_csv": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam1/stfpm/scores_fusion.csv",
+  "score_source_selected": "fusion",
+  "fusion_rule": "sum",
+  "image_auroc_by_source": {
+    "rgb": 0.19999999999999996,
+    "depth": 0.9,
+    "fusion": 0.35454545454545455
+  },
+  "pixel_auroc_by_source": {
+    "rgb": 0.5313543970880313,
+    "depth": 0.42768415535336735,
+    "fusion": 0.4860689525265678
+  },
+  "scores_csv_by_source": {
+    "rgb": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam1/stfpm/scores_rgb.csv",
+    "depth": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam1/stfpm/scores_depth.csv",
+    "fusion": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam1/stfpm/scores_fusion.csv"
+  },
+  "pixel_stats": {
+    "total": 38535168,
+    "positive": 233749,
+    "negative": 38301419
+  },
+  "epochs": 20,
+  "lr": 0.0001,
+  "best_val_fusion_mean": 0.5059266412258148,
+  "val_history": [
+    0.5059266412258148,
+    0.5624594668547312,
+    0.6058529961109161,
+    0.6124269274870554,
+    0.6284324598312377,
+    0.6526242903868358,
+    0.6549821555614471,
+    0.6557288142045339,
+    0.6524675782521566,
+    0.6660412804285685,
+    0.6633540109793346,
+    0.6525923025608062,
+    0.674986025094986,
+    0.6716270864009857,
+    0.6593468741575876,
+    0.6635806035995483,
+    0.6767109056313833,
+    0.6770052707195282,
+    0.69412104845047,
+    0.7032937955856323
+  ],
+  "train_loss_mode": "stfpm",
+  "teacher_shared": true
+}

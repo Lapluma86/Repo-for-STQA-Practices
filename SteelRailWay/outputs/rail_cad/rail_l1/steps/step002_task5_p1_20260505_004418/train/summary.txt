@@ -1,0 +1,14 @@
+Cam5 DepthAffinePEFT P1 (CAD task 5)
+created_at: 2026-05-05 01:14:18
+task_id: 5
+view_id: 5
+ckpt: /home/root123/LF/WYM/SteelRailWay/outputs/rail_all/Cam5/20260501_180045_cam5_bs32_lr0.005_img512_ratio1.0/best_cam5.pth
+train_root: /data1/Leaddo_data/20260327-resize512
+test_root: /home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test
+baseline_auroc: 0.734694
+cv_auroc_mean: 0.785714
+cv_auroc_std: 0.101015
+final_peft_auroc_on_original_test: 0.795918
+final_gain: 0.83373439
+final_bias: 0.03981014
+final_peft_ckpt: /home/root123/LF/WYM/SteelRailWay/outputs/rail_cad/rail_l1/steps/step002_task5_p1_20260505_004418/train/final/final_peft_cam5.pth

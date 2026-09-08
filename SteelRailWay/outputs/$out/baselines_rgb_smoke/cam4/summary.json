@@ -1,0 +1,70 @@
+{
+  "rows": [
+    {
+      "method": "padim",
+      "view_id": 4,
+      "image_auroc": 1.0,
+      "pixel_auroc": null,
+      "smoke": true,
+      "train_images": 5,
+      "val_images": 1,
+      "test_images": 6,
+      "result_json": "G:\\SteelRailWay\\$out\\baselines_rgb_smoke\\cam4\\padim\\result.json"
+    },
+    {
+      "method": "patchcore",
+      "view_id": 4,
+      "image_auroc": 0.6666666666666667,
+      "pixel_auroc": null,
+      "smoke": true,
+      "train_images": 5,
+      "val_images": 1,
+      "test_images": 6,
+      "result_json": "G:\\SteelRailWay\\$out\\baselines_rgb_smoke\\cam4\\patchcore\\result.json"
+    },
+    {
+      "method": "fastflow",
+      "view_id": 4,
+      "image_auroc": 0.0,
+      "pixel_auroc": null,
+      "smoke": true,
+      "train_images": 5,
+      "val_images": 1,
+      "test_images": 6,
+      "result_json": "G:\\SteelRailWay\\$out\\baselines_rgb_smoke\\cam4\\fastflow\\result.json"
+    },
+    {
+      "method": "draem",
+      "view_id": 4,
+      "image_auroc": 0.888888888888889,
+      "pixel_auroc": null,
+      "smoke": true,
+      "train_images": 5,
+      "val_images": 1,
+      "test_images": 6,
+      "result_json": "G:\\SteelRailWay\\$out\\baselines_rgb_smoke\\cam4\\draem\\result.json"
+    },
+    {
+      "method": "stfpm",
+      "view_id": 4,
+      "image_auroc": 0.888888888888889,
+      "pixel_auroc": null,
+      "smoke": true,
+      "train_images": 5,
+      "val_images": 1,
+      "test_images": 6,
+      "result_json": "G:\\SteelRailWay\\$out\\baselines_rgb_smoke\\cam4\\stfpm\\result.json"
+    },
+    {
+      "method": "rd4ad_i",
+      "view_id": 4,
+      "image_auroc": 1.0,
+      "pixel_auroc": null,
+      "smoke": true,
+      "train_images": 5,
+      "val_images": 1,
+      "test_images": 6,
+      "result_json": "G:\\SteelRailWay\\$out\\baselines_rgb_smoke\\cam4\\rd4ad_i\\result.json"
+    }
+  ]
+}

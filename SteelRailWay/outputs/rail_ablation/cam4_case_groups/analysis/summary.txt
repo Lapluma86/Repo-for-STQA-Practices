@@ -1,0 +1,13 @@
+Cam4 case-group analysis
+created_at: 2026-05-04 15:48:18
+scores_root: outputs/rail_ablation/cam4_cf_ca_peft
+frame_groups: outputs/rail_ablation/cam4_case_groups/frame_groups.csv
+
+full_vs_no_cf | rgb_only: count=5 median=-0.00378796 mean=-0.00529449
+full_vs_no_cf | depth_only: count=0 median=0.00000000 mean=0.00000000
+full_vs_no_cf | cross_modal: count=5 median=0.00029285 mean=-0.00044212
+full_vs_no_cf | uncertain: count=0 median=0.00000000 mean=0.00000000
+full_vs_no_ca | rgb_only: count=5 median=0.01027335 mean=0.01106640
+full_vs_no_ca | depth_only: count=0 median=0.00000000 mean=0.00000000
+full_vs_no_ca | cross_modal: count=5 median=0.02332356 mean=0.02105380
+full_vs_no_ca | uncertain: count=0 median=0.00000000 mean=0.00000000

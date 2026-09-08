@@ -1,0 +1,9 @@
+module_ablation,fusion_rule,fusion_auroc,delta_vs_full_sum,result_json
+full,sum,0.68750000,0.00000000,outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/sum/full/result.json
+no_cf,sum,0.77500000,0.08750000,outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/sum/no_cf/result.json
+no_ca,sum,0.73750000,0.05000000,outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/sum/no_ca/result.json
+no_cf_ca,sum,0.73750000,0.05000000,outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/sum/no_cf_ca/result.json
+full,max_norm,0.67500000,-0.01250000,outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/max_norm/full/result.json
+no_cf,max_norm,0.78750000,0.10000000,outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/max_norm/no_cf/result.json
+no_ca,max_norm,0.73750000,0.05000000,outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/max_norm/no_ca/result.json
+no_cf_ca,max_norm,0.86250000,0.17500000,outputs/rail_ablation/cam4_cf_ca_peft_fusion_rules/max_norm/no_cf_ca/result.json

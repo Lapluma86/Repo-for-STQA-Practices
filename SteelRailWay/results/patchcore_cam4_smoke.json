@@ -1,0 +1,50 @@
+{
+  "method": "PatchCore",
+  "cam": "cam4",
+  "view_id": 4,
+  "image_auroc": 0.9375,
+  "pixel_auroc": 0.8780592048984429,
+  "layers": [
+    1,
+    2
+  ],
+  "target_map_size": 32,
+  "embedding_dim_before_projection": 1536,
+  "embedding_dim_after_projection": 64,
+  "projection_dim_arg": 64,
+  "coreset_ratio": 0.005,
+  "coreset_size_arg": 0,
+  "memory_vectors_full": 301056,
+  "memory_vectors_coreset": 1505,
+  "memory_coreset_indices_count": 1505,
+  "k_nn": 5,
+  "img_size": 512,
+  "patch_size": 900,
+  "patch_stride": 850,
+  "query_chunk_size": 2048,
+  "random_seed": 42,
+  "eval_root": "G:\\SteelRailWay\\rail_mvtec_gt_test",
+  "bank_root": "G:\\SteelRailWay\\rail_mvtec_gt_test_aug_cam4_normal50",
+  "bank_selection": "manifest_added_good",
+  "eval_selection": "all",
+  "bank_manifest": "G:\\SteelRailWay\\rail_mvtec_gt_test_aug_cam4_normal50\\cam4_augmented_manifest.json",
+  "eval_manifest": "",
+  "bank_summary": {
+    "num_images": 42,
+    "num_good_images": 42,
+    "num_broken_images": 0,
+    "num_patch_samples": 294,
+    "num_patches_per_image": 7
+  },
+  "eval_summary": {
+    "num_images": 18,
+    "num_good_images": 8,
+    "num_broken_images": 10,
+    "num_patch_samples": 126,
+    "num_patches_per_image": 7
+  },
+  "num_eval_images": 18,
+  "num_eval_abnormal": 10,
+  "num_eval_normal": 8,
+  "scores_csv": "results\\patchcore_cam4_smoke_scores.csv"
+}

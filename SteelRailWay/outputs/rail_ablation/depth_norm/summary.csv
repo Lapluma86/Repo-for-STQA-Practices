@@ -1,0 +1,4 @@
+depth_norm,auroc_rgb,auroc_depth,auroc_fusion,best_epoch,best_val_loss,num_images,num_abnormal,num_normal,note,result_json
+zscore,0.43750000,0.38750000,0.43750000,195,1.327157437801361,18,10,8,当前主方案,outputs/rail_ablation/depth_norm/Cam4/zscore/eval/result.json
+minmax,0.73750000,0.60000000,0.72500000,160,1.367185354232788,18,10,8,对极值敏感,outputs/rail_ablation/depth_norm/Cam4/minmax/eval/result.json
+log,0.76250000,0.77500000,0.82500000,200,1.415087729692459,18,10,8,压缩大深度值动态范围,outputs/rail_ablation/depth_norm/Cam4/log/eval/result.json

@@ -1,0 +1,9 @@
+section,table,scheme,module_ablation,depth_norm,rgb_auroc,depth_auroc,fusion_auroc,fusion_delta,best_epoch,best_val_loss,trainable_params,train_time,inference_overhead,deployment_risk,note,source_path
+6.6.2,CF/CA 模块消融,完整模型,full,,0.70000000,0.36250000,0.35000000,0.00000000,,,,,,,CF+CA,outputs\rail_ablation\cam4_cf_ca\full\result.json
+6.6.2,CF/CA 模块消融,去除 CF,no_cf,,0.73750000,0.36250000,0.35000000,0.00000000,,,,,,,禁用瓶颈跨模态 filter 融合,outputs\rail_ablation\cam4_cf_ca\no_cf\result.json
+6.6.2,CF/CA 模块消融,去除 CA,no_ca,,0.76250000,0.33750000,0.35000000,-0.00000000,,,,,,,禁用解码阶段辅助 skip 融合,outputs\rail_ablation\cam4_cf_ca\no_ca\result.json
+6.6.2,CF/CA 模块消融,去除 CF+CA,no_cf_ca,,0.86250000,0.33750000,0.32500000,-0.02500000,,,,,,,两条跨模态路径均禁用,outputs\rail_ablation\cam4_cf_ca\no_cf_ca\result.json
+6.6.4,工程指标对比,不更新 (baseline),,,,,,,,,0,—,0,—,固定已有 ckpt，仅评估,outputs/rail_all/Cam4/20260501_014226_cam4_bs32_lr0.005_img512_ratio1.0/best_cam4.pth
+6.6.4,工程指标对比,DepthAffinePEFT (本文),,,,,,,,,2,< 2 min,可忽略,极低,仅训练 depth affine gain/bias,outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth
+6.6.4,工程指标对比,全量微调 Depth 分支,,,,,,,,,193356806,数小时,0,中,训练 student_depth 全部参数,outputs/rail_all/Cam4/20260501_014226_cam4_bs32_lr0.005_img512_ratio1.0/best_cam4.pth
+6.6.4,工程指标对比,全量重训整体模型,,,,,,,,,386713612,数小时-一天,0,高,重新训练 student_rgb + student_depth,outputs/rail_all/Cam4/20260501_014226_cam4_bs32_lr0.005_img512_ratio1.0/best_cam4.pth

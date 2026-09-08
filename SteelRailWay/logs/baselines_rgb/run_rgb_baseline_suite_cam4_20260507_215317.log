@@ -1,0 +1,46 @@
+[INFO] TRAIN_ROOT=/data1/Leaddo_data/20260327-resize512
+[INFO] TEST_ROOT=/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test
+[INFO] METHOD=draem stfpm rd4ad_i
+[INFO] VIEW_ID=4
+[INFO] sample plan: 1500 -> 1350 train / 150 val
+[INFO] img_size=512
+[INFO] sampling_mode=uniform_time
+[INFO] test patch=900/850
+usage: run_rgb_baseline.py [-h]
+                           [--method {padim,patchcore,fastflow,draem,stfpm,rd4ad_i,all}]
+                           [--train_root TRAIN_ROOT] [--test_root TEST_ROOT]
+                           [--view_id VIEW_ID] [--img_size IMG_SIZE]
+                           [--train_sample_num TRAIN_SAMPLE_NUM]
+                           [--train_val_test_split TRAIN_VAL_TEST_SPLIT TRAIN_VAL_TEST_SPLIT TRAIN_VAL_TEST_SPLIT]
+                           [--sampling_mode {uniform_time,random}]
+                           [--patch_size PATCH_SIZE]
+                           [--patch_stride PATCH_STRIDE] [--device DEVICE]
+                           [--precision {bf16,fp16,fp32}] [--seed SEED]
+                           [--batch_size BATCH_SIZE]
+                           [--eval_batch_size EVAL_BATCH_SIZE]
+                           [--num_workers NUM_WORKERS] [--preload]
+                           [--preload_workers PRELOAD_WORKERS] [--smoke]
+                           [--smoke_train_images SMOKE_TRAIN_IMAGES]
+                           [--smoke_train_img_size SMOKE_TRAIN_IMG_SIZE]
+                           [--save_ckpt] [--save_maps] [--export_bank]
+                           [--output_root OUTPUT_ROOT]
+                           [--results_root RESULTS_ROOT]
+                           [--result_json RESULT_JSON]
+                           [--scores_csv SCORES_CSV]
+                           [--summary_csv SUMMARY_CSV]
+                           [--summary_json SUMMARY_JSON]
+                           [--patchcore_layers PATCHCORE_LAYERS [PATCHCORE_LAYERS ...]]
+                           [--patchcore_target_map_size PATCHCORE_TARGET_MAP_SIZE]
+                           [--patchcore_projection_dim PATCHCORE_PROJECTION_DIM]
+                           [--patchcore_coreset_ratio PATCHCORE_CORESET_RATIO]
+                           [--patchcore_coreset_size PATCHCORE_CORESET_SIZE]
+                           [--patchcore_k PATCHCORE_K]
+                           [--patchcore_query_chunk_size PATCHCORE_QUERY_CHUNK_SIZE]
+                           [--padim_layers PADIM_LAYERS [PADIM_LAYERS ...]]
+                           [--padim_target_map_size PADIM_TARGET_MAP_SIZE]
+                           [--rd4ad_epochs RD4AD_EPOCHS] [--rd4ad_lr RD4AD_LR]
+                           [--stfpm_epochs STFPM_EPOCHS] [--stfpm_lr STFPM_LR]
+                           [--fastflow_epochs FASTFLOW_EPOCHS]
+                           [--fastflow_lr FASTFLOW_LR]
+                           [--draem_epochs DRAEM_EPOCHS] [--draem_lr DRAEM_LR]
+run_rgb_baseline.py: error: argument --method: invalid choice: 'draem stfpm rd4ad_i' (choose from 'padim', 'patchcore', 'fastflow', 'draem', 'stfpm', 'rd4ad_i', 'all')

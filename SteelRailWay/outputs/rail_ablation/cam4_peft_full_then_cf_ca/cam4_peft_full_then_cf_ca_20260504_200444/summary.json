@@ -1,0 +1,38 @@
+[
+  {
+    "scheme": "baseline_full",
+    "rgb_auroc": "",
+    "depth_auroc": "",
+    "fusion_auroc": "0.35000000",
+    "delta_vs_peft_full": "-0.33750000",
+    "delta_vs_cf_ca_repair": "-0.42500000",
+    "ckpt": "outputs/rail_all/Cam4/20260501_014226_cam4_bs32_lr0.005_img512_ratio1.0/best_cam4.pth"
+  },
+  {
+    "scheme": "peft_full",
+    "rgb_auroc": "0.60000000",
+    "depth_auroc": "0.67500000",
+    "fusion_auroc": "0.68750000",
+    "delta_vs_peft_full": "0.00000000",
+    "delta_vs_cf_ca_repair": "-0.08750000",
+    "ckpt": "outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth"
+  },
+  {
+    "scheme": "cf_ca_repair_final",
+    "rgb_auroc": "0.67500000",
+    "depth_auroc": "0.80000000",
+    "fusion_auroc": "0.77500000",
+    "delta_vs_peft_full": "0.08750000",
+    "delta_vs_cf_ca_repair": "0.00000000",
+    "ckpt": ""
+  },
+  {
+    "scheme": "peft_full_then_cf_ca_final",
+    "rgb_auroc": "0.68750000",
+    "depth_auroc": "0.83750000",
+    "fusion_auroc": "0.65000000",
+    "delta_vs_peft_full": "-0.03750000",
+    "delta_vs_cf_ca_repair": "-0.12500000",
+    "ckpt": "outputs/rail_ablation/cam4_peft_full_then_cf_ca/cam4_peft_full_then_cf_ca_20260504_200444/peft_full_then_cf_ca/final/peft_full_then_cf_ca_cam4.pth"
+  }
+]

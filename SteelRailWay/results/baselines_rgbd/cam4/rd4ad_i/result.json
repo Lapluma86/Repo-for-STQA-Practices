@@ -1,0 +1,93 @@
+{
+  "method": "rd4ad_i",
+  "cam": "cam4",
+  "view_id": 4,
+  "input_mode": "rgbd",
+  "image_auroc": 0.6125,
+  "pixel_auroc": 0.7315092574634078,
+  "img_size": 512,
+  "patch_size": 900,
+  "patch_stride": 850,
+  "train_root": "/data1/Leaddo_data/20260327-resize512",
+  "test_root": "/home/root123/LF/WYM/SteelRailWay/rail_mvtec_gt_test",
+  "train_sample_num": 1500,
+  "train_val_test_split": [
+    0.9,
+    0.1,
+    0.0
+  ],
+  "sampling_mode": "uniform_time",
+  "depth_norm": "zscore",
+  "smoke": false,
+  "train_summary": {
+    "num_images": 1350,
+    "num_good_images": 1350,
+    "num_broken_images": 0,
+    "num_patch_samples": 1350,
+    "num_patches_per_image": 1
+  },
+  "val_summary": {
+    "num_images": 150,
+    "num_good_images": 150,
+    "num_broken_images": 0,
+    "num_patch_samples": 150,
+    "num_patches_per_image": 1
+  },
+  "test_summary": {
+    "num_images": 18,
+    "num_good_images": 8,
+    "num_broken_images": 10,
+    "num_patch_samples": 126,
+    "num_patches_per_image": 7
+  },
+  "scores_csv": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/rd4ad_i/scores_fusion.csv",
+  "score_source_selected": "fusion",
+  "fusion_rule": "sum",
+  "image_auroc_by_source": {
+    "rgb": 0.9625,
+    "depth": 0.6000000000000001,
+    "fusion": 0.6125
+  },
+  "pixel_auroc_by_source": {
+    "rgb": 0.8382539521200832,
+    "depth": 0.6591250490644488,
+    "fusion": 0.7315092574634078
+  },
+  "scores_csv_by_source": {
+    "rgb": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/rd4ad_i/scores_rgb.csv",
+    "depth": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/rd4ad_i/scores_depth.csv",
+    "fusion": "/home/root123/LF/WYM/SteelRailWay/results/baselines_rgbd/cam4/rd4ad_i/scores_fusion.csv"
+  },
+  "pixel_stats": {
+    "total": 33030144,
+    "positive": 431596,
+    "negative": 32598548
+  },
+  "epochs": 20,
+  "lr": 0.0001,
+  "best_val_fusion_mean": 0.032098629145572585,
+  "val_history": [
+    0.16631087770064673,
+    0.09727594768007597,
+    0.08037461097041766,
+    0.07262176968157291,
+    0.06779525930682818,
+    0.06340611360967159,
+    0.059454110898077485,
+    0.057220071579019226,
+    0.054323578017453356,
+    0.05042939061919848,
+    0.04701311180988948,
+    0.04513617366552353,
+    0.04438372887050112,
+    0.04214001222203175,
+    0.04151462418337663,
+    0.03829844937970241,
+    0.03675480323533217,
+    0.0361519306153059,
+    0.033787060001244144,
+    0.032098629145572585
+  ],
+  "train_loss_mode": "rd4ad",
+  "teacher_shared": true
+}

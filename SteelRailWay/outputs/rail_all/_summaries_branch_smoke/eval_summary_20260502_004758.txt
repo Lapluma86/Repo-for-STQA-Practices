@@ -1,0 +1,9 @@
+Evaluation started at 2026-05-02 00:47:58
+Runs root: outputs\rail_all
+Train root: G:/SteelRailWay/data_20260327
+Test root: G:/SteelRailWay/rail_mvtec_gt_test
+Views: 4
+
+Score source: depth
+
+Cam4: status=ok, score_source=depth, AUROC=0.3625, best_epoch=100, best_val_loss=1.3359, images=18, abnormal=10, normal=8

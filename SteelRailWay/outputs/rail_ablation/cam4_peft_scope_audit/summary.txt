@@ -1,0 +1,11 @@
+Cam4 PEFT scope audit
+created_at: 2026-05-04 15:39:01
+baseline_ckpt: outputs/rail_all/Cam4/20260501_014226_cam4_bs32_lr0.005_img512_ratio1.0/best_cam4.pth
+peft_ckpt: outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth
+reference_stats: outputs/rail_peft/cam4_p1_20260501_225618/stats/reference_stats.pt
+optimizer_param_names: ['peft.gain', 'peft.bias']
+optimizer_unique_trainable_ok: True
+smoke_batches: 1
+smoke_loss: 0.00299025
+CF max_abs_diff: rgb=0.00000000e+00, depth=0.00000000e+00
+CA max_abs_diff: rgb=0.00000000e+00, depth=0.00000000e+00

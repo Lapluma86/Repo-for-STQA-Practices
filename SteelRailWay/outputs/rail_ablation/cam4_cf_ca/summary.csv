@@ -1,0 +1,5 @@
+module_ablation,scheme,auroc_rgb,auroc_depth,auroc_fusion,delta_fusion_vs_full,num_images,num_abnormal,num_normal,note,result_json
+full,完整模型,0.70000000,0.36250000,0.35000000,0.00000000,18,10,8,CF+CA,outputs\rail_ablation\cam4_cf_ca\full\result.json
+no_cf,去除 CF,0.73750000,0.36250000,0.35000000,0.00000000,18,10,8,禁用瓶颈跨模态 filter 融合,outputs\rail_ablation\cam4_cf_ca\no_cf\result.json
+no_ca,去除 CA,0.76250000,0.33750000,0.35000000,-0.00000000,18,10,8,禁用解码阶段辅助 skip 融合,outputs\rail_ablation\cam4_cf_ca\no_ca\result.json
+no_cf_ca,去除 CF+CA,0.86250000,0.33750000,0.32500000,-0.02500000,18,10,8,两条跨模态路径均禁用,outputs\rail_ablation\cam4_cf_ca\no_cf_ca\result.json

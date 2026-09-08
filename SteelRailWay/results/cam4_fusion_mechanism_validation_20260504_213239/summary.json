@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-05-04 21:32:39",
+  "note": "zscore_sum uses per-image map-level z-score before fusion; not the paper main metric.",
+  "args": {
+    "train_root": "data_20260327",
+    "test_root": "rail_mvtec_gt_test",
+    "view_id": 4,
+    "img_size": 512,
+    "depth_norm": "zscore",
+    "patch_size": 900,
+    "patch_stride": 850,
+    "precision": "fp32"
+  },
+  "schemes": [
+    {
+      "scheme": "cf_ca_repair_final",
+      "status": "missing_checkpoint",
+      "error": "cf_ca_repair_final checkpoint not found: outputs\\rail_ablation\\cam4_cfca_repair\\cf_ca\\cam4_cf_ca_20260504_170923\\final\\repair_cam4.pth",
+      "requested_ckpt": "outputs/rail_ablation/cam4_cfca_repair/cf_ca/cam4_cf_ca_20260504_170923/final/repair_cam4.pth",
+      "requested_depth_peft_ckpt": "outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth"
+    },
+    {
+      "scheme": "peft_full_then_cf_ca_final",
+      "status": "missing_checkpoint",
+      "error": "peft_full_then_cf_ca_final checkpoint not found: outputs\\rail_ablation\\cam4_peft_full_then_cf_ca\\cam4_peft_full_then_cf_ca_20260504_200444\\peft_full_then_cf_ca\\final\\peft_full_then_cf_ca_cam4.pth",
+      "requested_ckpt": "outputs/rail_ablation/cam4_peft_full_then_cf_ca/cam4_peft_full_then_cf_ca_20260504_200444/peft_full_then_cf_ca/final/peft_full_then_cf_ca_cam4.pth",
+      "requested_depth_peft_ckpt": ""
+    }
+  ],
+  "status": "partial_missing",
+  "missing": [
+    "cf_ca_repair_final checkpoint not found: outputs\\rail_ablation\\cam4_cfca_repair\\cf_ca\\cam4_cf_ca_20260504_170923\\final\\repair_cam4.pth",
+    "peft_full_then_cf_ca_final checkpoint not found: outputs\\rail_ablation\\cam4_peft_full_then_cf_ca\\cam4_peft_full_then_cf_ca_20260504_200444\\peft_full_then_cf_ca\\final\\peft_full_then_cf_ca_cam4.pth"
+  ]
+}

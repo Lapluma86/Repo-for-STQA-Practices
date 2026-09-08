@@ -1,0 +1,2 @@
+ckpt,depth_peft_ckpt,module_ablation,view_id,smooth_sigma,n_images,n_abnormal,n_normal,n_patches,n_pixels,pixel_auroc_fused,pixel_auroc_rgb,pixel_auroc_depth,image_auroc_fused,image_auroc_rgb,image_auroc_depth
+outputs/rail_all/Cam4/20260501_014226_cam4_bs32_lr0.005_img512_ratio1.0/best_cam4.pth,outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth,full,4,4.0,18,10,8,126,33030144,0.6614835904098803,0.6372773062176251,0.671262091586745,0.6375000000000001,0.55,0.725

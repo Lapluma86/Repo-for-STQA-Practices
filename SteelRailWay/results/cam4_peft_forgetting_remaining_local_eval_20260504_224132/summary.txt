@@ -1,0 +1,16 @@
+Cam4 PEFT anti-forgetting check (remaining local views)
+created_at: 2026-05-04 22:46:55
+peft_ckpt: outputs/rail_peft/cam4_p1_20260501_225618/final/final_peft_cam4.pth
+views_requested: 2 3 6 7 8
+assist_fill: zeros
+
+Cam2 baseline: status=ok, fusion=0.66666667, rgb=0.66666667, depth=0.83333333, d_fusion=0.00000000, d_rgb=0.00000000, d_depth=0.00000000, reason=
+Cam2 with_cam4peft: status=ok, fusion=0.81250000, rgb=0.66666667, depth=0.66666667, d_fusion=0.14583333, d_rgb=0.00000000, d_depth=-0.16666666, reason=
+Cam3 baseline: status=ok, fusion=0.62857143, rgb=0.85714286, depth=0.60000000, d_fusion=0.00000000, d_rgb=0.00000000, d_depth=0.00000000, reason=
+Cam3 with_cam4peft: status=ok, fusion=0.60000000, rgb=0.88571429, depth=0.65714286, d_fusion=-0.02857143, d_rgb=0.02857143, d_depth=0.05714286, reason=
+Cam6 baseline: status=ok, fusion=1.00000000, rgb=0.82142857, depth=1.00000000, d_fusion=0.00000000, d_rgb=0.00000000, d_depth=0.00000000, reason=
+Cam6 with_cam4peft: status=ok, fusion=1.00000000, rgb=0.75000000, depth=1.00000000, d_fusion=0.00000000, d_rgb=-0.07142857, d_depth=0.00000000, reason=
+Cam7 baseline: status=skipped, fusion=, rgb=, depth=, d_fusion=, d_rgb=, d_depth=, reason=local test set only contains cam1-cam6
+Cam7 with_cam4peft: status=skipped, fusion=, rgb=, depth=, d_fusion=, d_rgb=, d_depth=, reason=local test set only contains cam1-cam6
+Cam8 baseline: status=skipped, fusion=, rgb=, depth=, d_fusion=, d_rgb=, d_depth=, reason=local test set only contains cam1-cam6
+Cam8 with_cam4peft: status=skipped, fusion=, rgb=, depth=, d_fusion=, d_rgb=, d_depth=, reason=local test set only contains cam1-cam6
