@@ -1,0 +1,83 @@
+feature_root: /data1/AdoDas
+manifest_dir: /data1/AdoDas
+output_dir: ./output
+
+feature_selection:
+  audio_features:
+    - mel_mfcc
+    - vad
+    - egemaps
+    - ssl_embed
+  video_features:
+    - headpose_geom
+    - face_behavior
+    - qc_stats
+    - vad_agg
+    - body_pose
+    - global_motion
+    - vision_ssl_embed
+  audio_ssl_model_tag: chinese-hubert-large
+  video_ssl_model_tag: vit-mae-base
+
+mask_policy: and_core
+core_audio: [mel_mfcc, ssl_embed]
+core_video: [vision_ssl_embed, qc_stats]
+
+d_adapter: 64
+d_model: 256
+tcn_layers: 6
+tcn_kernel_size: 3
+asp_alpha: 0.5
+asp_beta: 0.5
+dropout: 0.2
+d_shared: 256
+
+aggregator: mlp
+use_coral: true
+use_aux_attrs: true
+aux_embed_dim: 8
+batch_size: 64
+lr: 0.001
+weight_decay: 0.01
+warmup_epochs: 3
+epochs: 25
+seed: 325799
+num_workers: 8
+preload_workers: 16
+amp: true
+preload: true
+use_hdf5: false
+grad_clip: 1.0
+use_pos_weight: true
+patience: 6
+session_loss_weight: 0.5
+session_type_loss_weight: 0.15
+submission_level: participant
+decode_method: auto
+label_smoothing: 0.05
+feature_noise_std: 0.01
+session_drop_prob: 0.1
+early_stop_metric: primary
+early_stop_min_delta: 0.005
+
+use_corn_loss: 1
+use_qwk_aux: 1
+qwk_weight: 0.3
+
+# LUPI: Learning Using Privileged Information
+aux_lupi:
+  enabled: false
+  aux_heads:                        # 从 participant_repr 预测 5 个辅助属性
+    enabled: false
+    hidden: 64
+    weights:
+      aux_family: 0.05
+      aux_only_child: 0.05
+      aux_favoritism: 0.05
+      aux_academic: 0.15
+      aux_emotional: 0.20
+  sample_reweight:                  # 基于 aux_emotional 一致性做样本加权
+    enabled: false
+    method: emotional_consistency
+    weight_low: 0.7
+    weight_high: 1.2

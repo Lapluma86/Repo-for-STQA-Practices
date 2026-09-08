@@ -1,0 +1,131 @@
+# A1 任务第一阶段优化配置
+# 基于 default.yaml，增加优化参数
+
+feature_root: /data1/AdoDas
+manifest_dir: /data1/AdoDas
+output_dir: ./output
+
+feature_selection:
+  audio_features:
+    - mel_mfcc
+    - vad
+    - egemaps
+    - ssl_embed
+  video_features:
+    - headpose_geom
+    - face_behavior
+    - qc_stats
+    - vad_agg
+    - vision_ssl_embed
+  audio_ssl_model_tag: wav2vec2-chinese-xlsr
+  video_ssl_model_tag: dinov2-large
+
+mask_policy: and_core
+core_audio: [mel_mfcc, ssl_embed]
+core_video: [vision_ssl_embed, qc_stats]
+
+# ============================================================
+# 模型架构参数
+# ============================================================
+d_adapter: 64
+d_model: 256
+tcn_layers: 6
+tcn_kernel_size: 3
+asp_alpha: 0.5
+asp_beta: 0.5
+dropout: 0.2
+d_shared: 256
+
+aggregator: mlp
+
+# ============================================================
+# 跨模态交叉注意力（P1）
+# ============================================================
+use_cross_modal: false             # 启用双向跨模态注意力（TCN后、ASP前）
+cm_n_heads: 1                      # 跨模态注意力头数（小数据集建议1-2）
+
+# ============================================================
+# GPU 显存预占
+# ============================================================
+gpu_prealloc_gb: 27                # 启动时预占显存（GB），0=禁用
+
+# ============================================================
+# 辅助属性（Auxiliary Attributes）- 已有功能
+# ============================================================
+# 这是项目原本就支持的功能，数据已在 CSV manifest 中
+# 包含5个维度：家庭结构、独生子女、父母偏爱、成绩变动、情绪变动
+use_aux_attrs: true              # 启用辅助属性编码
+aux_embed_dim: 8                 # 每个属性的 embedding 维度
+
+# ============================================================
+# 第一阶段优化：类别平衡损失函数（ASL + Soft-F1）
+# ============================================================
+use_combined_loss: 1             # 启用 ASL + Soft-F1 联合损失
+gamma_neg: 2.0                   # ASL 负样本 focusing 参数（抑制简单负样本）
+gamma_pos: 0.0                   # ASL 正样本 focusing 参数（0=不抑制稀有正样本）
+clip: 0.05                       # ASL 概率截断阈值
+soft_f1_weight: 0.3              # Soft-F1 损失权重
+
+# ============================================================
+# 不确定性加权多任务学习（Auxiliary Tasks）
+# ============================================================
+# emotion_dims (valence/arousal) 由 DASS-21 推导，保留为弱正则化项 (weight ≤ 0.05)
+# emotion_cls 和 AU 预测已删除：前者与主标签同源无新增信号，后者为占位实现
+use_uncertainty_weighting: true
+enable_auxiliary_tasks: true
+enable_emotion_dims: true
+
+# 固定任务权重（仅在 use_uncertainty_weighting=false 时生效）
+session_loss_weight: 0.5
+session_type_loss_weight: 0.15
+emotion_dims_weight: 0.05
+
+# ============================================================
+# 训练超参数
+# ============================================================
+batch_size: 64
+lr: 0.001
+weight_decay: 0.01
+warmup_epochs: 1
+epochs: 30
+seed: 42
+num_workers: 8
+amp: true
+preload: true
+use_hdf5: false
+grad_clip: 1.0
+use_pos_weight: true
+patience: 8                       # 增加耐心，因为优化损失可能需要更多epoch收敛
+early_stop_metric: primary        # 使用主指标（F1）作为早停依据
+
+# ============================================================
+# 数据增强与正则化
+# ============================================================
+label_smoothing: 0.05             # 标签平滑（从0.0增加到0.05）
+feature_noise_std: 0.01           # 特征高斯噪声（从0.0增加到0.01）
+session_drop_prob: 0.1            # 会话级dropout（从0.0增加到0.1）
+
+# ============================================================
+# 提交配置
+# ============================================================
+submission_level: participant
+decode_method: auto
+run_inference_after_train: true
+
+# LUPI: 辅助属性预测头 + 样本一致性加权
+aux_lupi:
+  enabled: false                     # 默认关闭，通过 --lupi 独立控制
+  aux_heads:                        # 从 participant_repr 预测 5 个辅助属性
+    enabled: false
+    hidden: 64
+    weights:
+      aux_family: 0.05
+      aux_only_child: 0.05
+      aux_favoritism: 0.05
+      aux_academic: 0.15
+      aux_emotional: 0.20
+  sample_reweight:                  # 基于 aux_emotional 一致性做样本加权
+    enabled: false
+    method: emotional_consistency
+    weight_low: 0.7
+    weight_high: 1.2
