@@ -28,6 +28,10 @@ def loss_l2(feature_s, feature_t):
     feature_s: 学生多尺度特征列表（已与教师对齐尺寸）
     feature_t: 教师多尺度特征列表
     """
+    # DEF-WB-001 修复: 处理空列表情况
+    if not feature_s or not feature_t:
+        return torch.tensor(0.0, dtype=torch.float32)
+
     loss_type = torch.nn.MSELoss()
     loss = 0.0
     for i in range(len(feature_s)):
@@ -43,6 +47,10 @@ def loss_distil(feature_s, feature_t):
     优点：尺度不变、对整体结构一致性敏感；
     缺点：丢失空间信息，对局部异常不够敏感。
     """
+    # 修复: 处理空列表情况
+    if not feature_s or not feature_t:
+        return torch.tensor(0.0, dtype=torch.float32)
+
     loss_type = torch.nn.CosineSimilarity()
     loss = 0.0
     for i in range(len(feature_s)):
@@ -61,6 +69,10 @@ def loss_distil_p(feature_s, feature_t):
     CosineSimilarity 的默认 dim=1 对应通道维，所以相当于在每个像素位置上
     把学生/教师的通道向量做余弦相似度，再对所有像素求均值。
     """
+    # 修复: 处理空列表情况
+    if not feature_s or not feature_t:
+        return torch.tensor(0.0, dtype=torch.float32)
+
     loss_type = torch.nn.CosineSimilarity()
     loss = 0.0
     for i in range(len(feature_s)):
@@ -79,6 +91,10 @@ def loss_distil_pixel(feature_s, feature_t):
     为了控制显存：前两级特征先做 AvgPool 下采样（分别 4×、2×），只有最深的第三级
     在原始分辨率下计算。
     """
+    # 修复: 处理空列表情况
+    if not feature_s or not feature_t:
+        return torch.tensor(0.0, dtype=torch.float32)
+
     loss = 0.0
     loss_type = torch.nn.MSELoss()
     # 对浅层特征做不同倍率的池化：第 0 尺度池化 4 倍，第 1 尺度池化 2 倍，

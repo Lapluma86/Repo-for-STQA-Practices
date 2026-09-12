@@ -5,7 +5,7 @@
 """
 
 import time
-from typing import Tuple
+from typing import Tuple, Union
 
 import numpy as np
 import torch
@@ -16,6 +16,7 @@ def count_trainable_params(model: nn.Module) -> Tuple[int, int, float]:
     """返回 (总参数量, 可训练参数量, 可训练比例)。"""
     total = sum(p.numel() for p in model.parameters())
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    # DEF-WB-003 修复: 加强除零保护
     ratio = trainable / total if total > 0 else 0.0
     return total, trainable, ratio
 

@@ -1,0 +1,29 @@
+# 测试依赖包
+
+# 核心测试框架
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.1
+pytest-timeout>=2.1.0
+pytest-xdist>=3.3.1  # 并行测试
+
+# 代码质量和覆盖率
+coverage>=7.3.0
+pytest-html>=3.2.0  # HTML测试报告
+
+# 性能测试
+pytest-benchmark>=4.0.0
+memory-profiler>=0.61.0
+line-profiler>=4.1.0
+
+# 安全测试
+bandit>=1.7.5  # 安全漏洞扫描
+safety>=2.3.5  # 依赖安全检查
+
+# Mock 和数据生成
+faker>=19.0.0
+hypothesis>=6.82.0  # 基于属性的测试
+
+# 辅助工具
+colorama>=0.4.6  # 彩色输出
+tabulate>=0.9.0  # 表格输出
