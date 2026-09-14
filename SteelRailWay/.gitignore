@@ -178,7 +178,6 @@ article/
 *.pth
 *.ckpt
 *.safetensors
-*.md
 
 # 训练输出 - 忽略模型但保留日志
 outputs/**/*.pt
