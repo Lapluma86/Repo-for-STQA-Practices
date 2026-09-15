@@ -16,7 +16,6 @@ def count_trainable_params(model: nn.Module) -> Tuple[int, int, float]:
     """返回 (总参数量, 可训练参数量, 可训练比例)。"""
     total = sum(p.numel() for p in model.parameters())
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    # DEF-WB-003 修复: 加强除零保护
     ratio = trainable / total if total > 0 else 0.0
     return total, trainable, ratio
 
@@ -30,6 +29,10 @@ def measure_inference_latency(
 ) -> float:
     """单图前向耗时（毫秒/图）。sample_input 必须是 tuple。"""
     assert isinstance(sample_input, (tuple, list)), "sample_input 需为 tuple/list"
+    if isinstance(n_run, bool) or not isinstance(n_run, int) or n_run <= 0:
+        raise ValueError("n_run must be a positive integer")
+    if isinstance(n_warmup, bool) or not isinstance(n_warmup, int) or n_warmup < 0:
+        raise ValueError("n_warmup must be a non-negative integer")
     model.eval()
     use_cuda = device.type == "cuda"
     with torch.no_grad():
@@ -37,12 +40,12 @@ def measure_inference_latency(
             _ = model(*sample_input)
         if use_cuda:
             torch.cuda.synchronize()
-        t0 = time.time()
+        t0 = time.perf_counter()
         for _ in range(n_run):
             _ = model(*sample_input)
         if use_cuda:
             torch.cuda.synchronize()
-        elapsed = time.time() - t0
+        elapsed = time.perf_counter() - t0
     return elapsed / n_run * 1000.0
 
 

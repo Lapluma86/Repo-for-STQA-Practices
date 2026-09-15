@@ -656,25 +656,26 @@ class RailDualModalDataset(Dataset):
         if path in self.depth_cache:
             depth = self.depth_cache[path].copy().astype(np.float32)
         else:
-            depth = cv2.imread(path, cv2.IMREAD_UNCHANGED).astype(np.float32)
+            depth = cv2.imread(path, cv2.IMREAD_UNCHANGED)
             if depth is None:
                 raise FileNotFoundError(path)
+            depth = depth.astype(np.float32)
 
-        # 如果使用 patch，提取对应的 patch
+        # zscore 始终基于全图有效像素，与预加载统计保持一致。
+        # 必须在裁剪前计算；否则第一个访问的 patch 会污染同帧缓存。
+        if self.depth_norm == "zscore" and path not in self.depth_stats:
+            valid = depth[depth > 0]
+            self.depth_stats[path] = (
+                (float(valid.mean()), float(valid.std()))
+                if valid.size > 0 else (0.0, 1.0)
+            )
+
         if self.use_patch:
             depth = self._extract_patch(depth, patch_idx)
 
-        # 深度归一化（预加载时已计算全图统计量，直接应用）
         if self.depth_norm == "zscore":
-            if path in self.depth_stats:
-                d_mean, d_std = self.depth_stats[path]
-                depth = (depth - d_mean) / (d_std + 1e-6)
-            else:
-                valid = depth[depth > 0]
-                if valid.size > 0:
-                    d_mean, d_std = float(valid.mean()), float(valid.std())
-                    self.depth_stats[path] = (d_mean, d_std)
-                    depth = (depth - d_mean) / (d_std + 1e-6)
+            d_mean, d_std = self.depth_stats[path]
+            depth = (depth - d_mean) / (d_std + 1e-6)
         elif self.depth_norm == "minmax":
             d_min, d_max = float(depth.min()), float(depth.max())
             depth = (depth - d_min) / (d_max - d_min + 1e-6)
