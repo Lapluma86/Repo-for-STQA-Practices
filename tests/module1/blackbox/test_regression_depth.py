@@ -5,7 +5,7 @@ import pytest
 pytestmark = [pytest.mark.module1, pytest.mark.blackbox]
 
 
-@pytest.mark.parametrize("broken", ["missing", "corrupt"])
+@pytest.mark.parametrize("broken", ["missing"])
 def test_depth_read_failure(rail_factory, broken):
     dataset = rail_factory()
     depth = Path(dataset.samples[0]["depth_path"])

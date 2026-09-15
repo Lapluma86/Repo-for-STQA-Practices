@@ -1,0 +1,102 @@
+pageType: content
+background:
+  type: solid
+  color: "$bodybg"
+elements:
+  - elementId: kicker
+    elementType: text
+    bounds: [48, 26, 400, 18]
+    content: {style: "$kicker", wrap: false, text: "04 · 结果 · 覆盖率 · 缺陷"}
+  - elementId: title
+    elementType: text
+    bounds: [48, 46, 720, 34]
+    content: {style: "$pagetitle", wrap: false, text: 缺陷清单：3 项产品缺陷，全部修复闭环}
+  - elementId: secnum
+    elementType: text
+    bounds: [832, 22, 80, 38]
+    content: {fontSize: 28, bold: true, color: "$soft", align: [right, middle], wrap: false, text: "04"}
+  - elementId: hrule
+    elementType: shape
+    bounds: [48, 92, 864, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: hrule-accent
+    elementType: shape
+    bounds: [48, 90, 56, 2]
+    shapeName: rect
+    fill: {type: solid, color: "$accent"}
+  - elementId: defect-table
+    elementType: table
+    bounds: [48, 112, 864, 268]
+    columnWidths: [0.15, 0.19, 0.33, 0.33]
+    rowHeights: [0.13, 0.29, 0.29, 0.29]
+    style: "$three"
+    rows:
+      - - text: 编号（严重性：中）
+        - text: 模块 · 函数
+        - text: 现象与根因
+        - text: 修复与回归验证
+      - - text: DEF-20260915-01
+          fontSize: 10
+        - text: metrics_engineering · measure_inference_latency
+          fontSize: 10
+          align: [left, middle]
+        - text: 短循环时延返回 0 ms；墙钟分辨率不足且可能受系统校时影响
+          fontSize: 10.5
+          align: [left, middle]
+        - text: 改用 time.perf_counter()；回归用例先红后绿，真实时延 > 0 断言保持通过
+          fontSize: 10.5
+          align: [left, middle]
+      - - text: DEF-20260915-02
+          fontSize: 10
+        - text: rail_dataset · _load_depth
+          fontSize: 10
+          align: [left, middle]
+        - text: 深度文件缺失 / 损坏时对 None 调用 astype，抛 AttributeError
+          fontSize: 10.5
+          align: [left, middle]
+        - text: 先检查读取结果再转换，改抛带路径的 FileNotFoundError；missing / corrupt 两项先红后绿
+          fontSize: 10.5
+          align: [left, middle]
+      - - text: DEF-20260915-03
+          fontSize: 10
+          bold: false
+        - text: metrics_engineering · measure_inference_latency
+          fontSize: 10
+          align: [left, middle]
+          bold: false
+        - text: n_run 取 0 / -1 / 1.5 / True：除零、空循环、TypeError、隐式接受布尔
+          fontSize: 10.5
+          align: [left, middle]
+          bold: false
+        - text: n_run 要求正整数、n_warmup 非负整数，均拒绝 bool；7 项非法输入回归先红后绿
+          fontSize: 10.5
+          align: [left, middle]
+          bold: false
+  - elementId: loop-title
+    elementType: text
+    bounds: [48, 396, 200, 18]
+    content: {fontSize: 11, bold: true, color: "$primary", wrap: false, text: 修复闭环方法}
+  - elementId: loop-text
+    elementType: text
+    bounds: [48, 418, 864, 70]
+    content:
+      fontSize: 11
+      color: "$ink"
+      lineHeight: 1.7
+      text: |
+        <p>先写回归用例并在修复前执行（7 项全部失败）→ 修改产品代码 → 同一回归随全量 199 项通过；只修正错误，不改变合法调用的返回结构与行为。</p>
+        <p>三项均为产品缺陷，测试脚本工程问题另行记录不混计；模块二另发现 1 项高严重性缺陷（patch 归一化缓存随访问顺序变化），不计入模块一。</p>
+  - elementId: frule
+    elementType: shape
+    bounds: [48, 508, 864, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: fleft
+    elementType: text
+    bounds: [48, 514, 400, 14]
+    content: {fontSize: 9, color: "$muted", wrap: false, text: 软件测试与质量保证实践 · 模块一成果汇报}
+  - elementId: fright
+    elementType: text
+    bounds: [812, 514, 100, 14]
+    content: {fontSize: 9, color: "$muted", align: [right, top], wrap: false, text: "10 / 12"}

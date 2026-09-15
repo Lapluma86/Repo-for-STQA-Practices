@@ -1,0 +1,134 @@
+pageType: content
+background:
+  type: solid
+  color: "$bodybg"
+elements:
+  - elementId: kicker
+    elementType: text
+    bounds: [48, 26, 400, 18]
+    content: {style: "$kicker", wrap: false, text: "02 · 测试策略"}
+  - elementId: title
+    elementType: text
+    bounds: [48, 46, 720, 34]
+    content: {style: "$pagetitle", wrap: false, text: 策略组合：黑盒 + 白盒 + 最小集成}
+  - elementId: secnum
+    elementType: text
+    bounds: [832, 22, 80, 38]
+    content: {fontSize: 28, bold: true, color: "$soft", align: [right, middle], wrap: false, text: "02"}
+  - elementId: hrule
+    elementType: shape
+    bounds: [48, 92, 864, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: hrule-accent
+    elementType: shape
+    bounds: [48, 90, 56, 2]
+    shapeName: rect
+    fill: {type: solid, color: "$accent"}
+  - elementId: g1-label
+    elementType: text
+    bounds: [48, 110, 440, 20]
+    content: {fontSize: 13, bold: true, color: "$ink", wrap: false, text: 黑盒测试 · 数据集（95 项）}
+  - elementId: g1-text
+    elementType: text
+    bounds: [48, 132, 440, 88]
+    content:
+      style: "$body"
+      fontSize: 12
+      text: |
+        <p>等价类划分 29 · 边界值 35 · 场景法 24 · 判定表 / 状态转换等 7；</p>
+        <p>覆盖参数验证、模态文件配对、采样与训练 / 验证划分、patch 与 GT 空间对齐、加载异常恢复。</p>
+  - elementId: g1-line
+    elementType: shape
+    bounds: [48, 230, 440, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: g2-label
+    elementType: text
+    bounds: [48, 244, 440, 20]
+    content: {fontSize: 13, bold: true, color: "$ink", wrap: false, text: 白盒测试 · 损失与指标（103 项）}
+  - elementId: g2-text
+    elementType: text
+    bounds: [48, 266, 440, 66]
+    content:
+      style: "$body"
+      fontSize: 12
+      text: 按语句、分支、条件、路径四级覆盖组织；损失函数做精确数值与梯度验证，指标函数做参数校验与单位换算验证。
+  - elementId: g2-line
+    elementType: shape
+    bounds: [48, 342, 440, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: g3-label
+    elementType: text
+    bounds: [48, 356, 440, 20]
+    content: {fontSize: 13, bold: true, color: "$ink", wrap: false, text: 最小集成（1 项）}
+  - elementId: g3-text
+    elementType: text
+    bounds: [48, 378, 440, 66]
+    content:
+      style: "$body"
+      fontSize: 12
+      text: 数据集 → DataLoader → 小型 Conv2d → 损失反向传播，验证批处理到损失的接口连通；不代表完整 TRD 训练。
+  - elementId: chart-title
+    elementType: text
+    bounds: [540, 110, 372, 18]
+    content: {fontSize: 11, bold: true, color: "$primary", wrap: false, text: 用例分布（按功能组，单位：项）}
+  - elementId: dist-chart
+    elementType: chart
+    bounds: [520, 132, 392, 170]
+    fontFamily: {latin: "Liter", ea: "MiSans"}
+    data:
+      cols: [功能组, 用例数]
+      rows:
+        - [数据集黑盒, 95]
+        - [损失与指标白盒, 103]
+        - [最小集成, 1]
+    series:
+      - type: bar
+        encode: {x: 用例数, y: 功能组}
+        fill: "$primary"
+        dataLabels: {show: true, fontSize: 10, color: "#FFFFFF"}
+    legend: false
+    barWidth: 0.55
+    xAxis: {type: value, max: 120, gridLine: {style: dot, color: "$hairline"}, label: {fontSize: 9, color: "$muted"}}
+    yAxis: {type: category, reverse: true, gridLine: false, label: {fontSize: 10, color: "$ink"}}
+  - elementId: map-line
+    elementType: shape
+    bounds: [540, 316, 372, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: map-title
+    elementType: text
+    bounds: [540, 328, 372, 18]
+    content: {fontSize: 11, bold: true, color: "$primary", wrap: false, text: 需求 → 用例映射（示例）}
+  - elementId: map-text
+    elementType: text
+    bounds: [540, 350, 372, 108]
+    content:
+      fontSize: 10.5
+      color: "$ink"
+      lineHeight: 1.65
+      text: |
+        <p>「数量参数优先于比例」→ test_count_overrides_ratio</p>
+        <p>「patch 与 GT 空间一致」→ test_rgb_depth_gt_alignment[4/8/16]</p>
+        <p>「测量次数须有效」→ test_latency_invalid_runs[0/-1/1.5/True]</p>
+  - elementId: strategy-note
+    elementType: text
+    bounds: [48, 460, 864, 36]
+    content:
+      style: "$small"
+      text: 方法选择依据：输入空间复杂 → 等价类与边界值；多参数组合 → 判定表；加载过程有状态 → 状态转换；数值正确性 → 精确值与梯度断言。199 项用例均建立需求到用例的对应关系。
+  - elementId: frule
+    elementType: shape
+    bounds: [48, 508, 864, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: fleft
+    elementType: text
+    bounds: [48, 514, 400, 14]
+    content: {fontSize: 9, color: "$muted", wrap: false, text: 软件测试与质量保证实践 · 模块一成果汇报}
+  - elementId: fright
+    elementType: text
+    bounds: [812, 514, 100, 14]
+    content: {fontSize: 9, color: "$muted", align: [right, top], wrap: false, text: "05 / 12"}

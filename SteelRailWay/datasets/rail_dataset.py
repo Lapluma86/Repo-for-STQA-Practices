@@ -82,70 +82,6 @@ class RailDualModalDataset(Dataset):
         sampling_mode: str = "uniform_time",
     ):
         super().__init__()
-
-        # ========== 参数验证 ==========
-        # view_id: 有效范围 1-8
-        if not isinstance(view_id, int) or view_id < 1 or view_id > 8:
-            raise ValueError(f"view_id must be an integer between 1 and 8, got {view_id}")
-
-        # split: 必须是有效值
-        valid_splits = ["train", "val", "test"]
-        if split not in valid_splits:
-            raise ValueError(f"split must be one of {valid_splits}, got '{split}'")
-
-        # img_size: 必须为正整数
-        if not isinstance(img_size, int) or img_size <= 0:
-            raise ValueError(f"img_size must be a positive integer, got {img_size}")
-
-        # depth_norm: 必须是有效值
-        valid_depth_norms = ["zscore", "minmax", "log"]
-        if depth_norm not in valid_depth_norms:
-            raise ValueError(f"depth_norm must be one of {valid_depth_norms}, got '{depth_norm}'")
-
-        # patch_size: 必须为正整数
-        if not isinstance(patch_size, int) or patch_size <= 0:
-            raise ValueError(f"patch_size must be a positive integer, got {patch_size}")
-
-        # DEF-004: patch_stride 必须为正整数（防止无限循环）
-        if not isinstance(patch_stride, int) or patch_stride <= 0:
-            raise ValueError(f"patch_stride must be a positive integer (>0), got {patch_stride}")
-
-        # train_sample_ratio: 必须在 [0, 1] 范围内
-        if not isinstance(train_sample_ratio, (int, float)) or train_sample_ratio < 0 or train_sample_ratio > 1:
-            raise ValueError(f"train_sample_ratio must be in [0, 1], got {train_sample_ratio}")
-
-        # train_sample_num: 如果提供必须是正整数
-        if train_sample_num is not None:
-            if not isinstance(train_sample_num, int) or train_sample_num <= 0:
-                raise ValueError(f"train_sample_num must be a positive integer, got {train_sample_num}")
-
-        # preload_workers: 必须为正整数
-        if preload_workers <= 0:
-            raise ValueError(f"preload_workers must be a positive integer, got {preload_workers}")
-
-        # train_val_test_split: 必须是有效的比例列表
-        if train_val_test_split is not None:
-            if not isinstance(train_val_test_split, (list, tuple)) or len(train_val_test_split) != 3:
-                raise ValueError(f"train_val_test_split must be a list/tuple of 3 floats, got {train_val_test_split}")
-            if not all(isinstance(x, (int, float)) and x >= 0 for x in train_val_test_split):
-                raise ValueError(f"train_val_test_split values must be non-negative, got {train_val_test_split}")
-
-        # sampling_mode: 必须是有效值
-        valid_sampling_modes = ["random", "uniform_time"]
-        if sampling_mode not in valid_sampling_modes:
-            raise ValueError(f"sampling_mode must be one of {valid_sampling_modes}, got '{sampling_mode}'")
-
-        # 路径验证: 目录必须存在（对于 train/val split）
-        if split in ["train", "val"]:
-            cam_dir = os.path.join(train_root, f"Cam{view_id}")
-            if not os.path.isdir(cam_dir):
-                raise FileNotFoundError(f"Training directory not found: {cam_dir}")
-        elif split == "test":
-            cam_dir = os.path.join(test_root, "rail_mvtec", f"cam{view_id}")
-            if not os.path.isdir(cam_dir):
-                raise FileNotFoundError(f"Test directory not found: {cam_dir}")
-        # ========== 参数验证结束 ==========
-
         self.train_root = train_root
         self.test_root = test_root
         self.view_id = view_id
@@ -193,12 +129,7 @@ class RailDualModalDataset(Dataset):
         # 动态检测图像尺寸（从第一个样本读取）
         if self.use_patch and len(self.samples) > 0:
             self.img_height, self.img_width = self._detect_image_size()
-            # DEF-004 补充: 确保 num_patches 计算安全
-            if self.patch_size > self.img_height:
-                raise ValueError(f"patch_size ({self.patch_size}) cannot be larger than image height ({self.img_height})")
             self.num_patches = (self.img_height - self.patch_size) // self.patch_stride + 1
-            if self.num_patches <= 0:
-                raise ValueError(f"Invalid patch configuration: img_height={self.img_height}, patch_size={self.patch_size}, patch_stride={self.patch_stride} results in num_patches={self.num_patches}")
             print(f"[RailDataset] Detected image: {self.img_height}×{self.img_width}, "
                   f"{self.num_patches} patches per image")
         else:
@@ -656,26 +587,25 @@ class RailDualModalDataset(Dataset):
         if path in self.depth_cache:
             depth = self.depth_cache[path].copy().astype(np.float32)
         else:
-            depth = cv2.imread(path, cv2.IMREAD_UNCHANGED)
+            depth = cv2.imread(path, cv2.IMREAD_UNCHANGED).astype(np.float32)
             if depth is None:
                 raise FileNotFoundError(path)
-            depth = depth.astype(np.float32)
 
-        # zscore 始终基于全图有效像素，与预加载统计保持一致。
-        # 必须在裁剪前计算；否则第一个访问的 patch 会污染同帧缓存。
-        if self.depth_norm == "zscore" and path not in self.depth_stats:
-            valid = depth[depth > 0]
-            self.depth_stats[path] = (
-                (float(valid.mean()), float(valid.std()))
-                if valid.size > 0 else (0.0, 1.0)
-            )
-
+        # 如果使用 patch，提取对应的 patch
         if self.use_patch:
             depth = self._extract_patch(depth, patch_idx)
 
+        # 深度归一化（预加载时已计算全图统计量，直接应用）
         if self.depth_norm == "zscore":
-            d_mean, d_std = self.depth_stats[path]
-            depth = (depth - d_mean) / (d_std + 1e-6)
+            if path in self.depth_stats:
+                d_mean, d_std = self.depth_stats[path]
+                depth = (depth - d_mean) / (d_std + 1e-6)
+            else:
+                valid = depth[depth > 0]
+                if valid.size > 0:
+                    d_mean, d_std = float(valid.mean()), float(valid.std())
+                    self.depth_stats[path] = (d_mean, d_std)
+                    depth = (depth - d_mean) / (d_std + 1e-6)
         elif self.depth_norm == "minmax":
             d_min, d_max = float(depth.min()), float(depth.max())
             depth = (depth - d_min) / (d_max - d_min + 1e-6)

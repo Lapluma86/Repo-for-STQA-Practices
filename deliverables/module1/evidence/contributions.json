@@ -1,0 +1,29 @@
+{
+  "basis": "HEAD现存Python行git blame（包括注释空行）",
+  "head": "2e40c0cef1e01e8f0cdd8e15aab56c6c4f557846",
+  "members": [
+    {
+      "code": "A",
+      "git_author": "EdwinNull",
+      "lines": 28179,
+      "share": 1.0,
+      "commits": 5
+    },
+    {
+      "code": "B",
+      "git_author": "sundowner",
+      "lines": 0,
+      "share": 0.0,
+      "commits": 3
+    },
+    {
+      "code": "C",
+      "git_author": null,
+      "lines": 0,
+      "share": 0.0,
+      "commits": 0
+    }
+  ],
+  "uncommitted": "excluded",
+  "overall_workload": "not inferred"
+}

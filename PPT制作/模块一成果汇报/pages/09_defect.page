@@ -1,0 +1,137 @@
+pageType: content
+background:
+  type: solid
+  color: "$bodybg"
+elements:
+  - elementId: kicker
+    elementType: text
+    bounds: [48, 26, 400, 18]
+    content: {style: "$kicker", wrap: false, text: "04 · 结果 · 覆盖率 · 缺陷"}
+  - elementId: title
+    elementType: text
+    bounds: [48, 46, 720, 34]
+    content: {style: "$pagetitle", wrap: false, text: 典型缺陷：推理时延为何测出 0 ms}
+  - elementId: secnum
+    elementType: text
+    bounds: [832, 22, 80, 38]
+    content: {fontSize: 28, bold: true, color: "$soft", align: [right, middle], wrap: false, text: "04"}
+  - elementId: hrule
+    elementType: shape
+    bounds: [48, 92, 864, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: hrule-accent
+    elementType: shape
+    bounds: [48, 90, 56, 2]
+    shapeName: rect
+    fill: {type: solid, color: "$accent"}
+  - elementId: s1-label
+    elementType: text
+    bounds: [48, 112, 400, 18]
+    content: {fontSize: 11, bold: true, color: "$fail", wrap: false, text: 现象 · DEF-20260915-01}
+  - elementId: s1-text
+    elementType: text
+    bounds: [48, 132, 400, 62]
+    content:
+      style: "$body"
+      fontSize: 12
+      text: CPU 上小模型 4 次推理总耗时不足 1 ms，time.time() 两次读数相同，函数报告时延 0.0 ms——而预期为 0.5 ms。
+  - elementId: s2-label
+    elementType: text
+    bounds: [48, 202, 400, 18]
+    content: {fontSize: 11, bold: true, color: "$fail", wrap: false, text: 根因}
+  - elementId: s2-text
+    elementType: text
+    bounds: [48, 222, 400, 62]
+    content:
+      style: "$body"
+      fontSize: 12
+      text: 使用分辨率不足的墙钟测量短耗时；墙钟还可能受系统校时影响，测量结果既不可信也不稳定。
+  - elementId: s3-label
+    elementType: text
+    bounds: [48, 292, 400, 18]
+    content: {fontSize: 11, bold: true, color: "$pass", wrap: false, text: 修复}
+  - elementId: s3-text
+    elementType: text
+    bounds: [48, 312, 400, 62]
+    content:
+      style: "$body"
+      fontSize: 12
+      text: 改用 time.perf_counter() 高分辨率单调时钟；保留 warmup、设备同步与毫秒换算，返回结构不变。
+  - elementId: s4-label
+    elementType: text
+    bounds: [48, 382, 400, 18]
+    content: {fontSize: 11, bold: true, color: "$pass", wrap: false, text: 回归验证（先红后绿）}
+  - elementId: s4-text
+    elementType: text
+    bounds: [48, 402, 400, 62]
+    content:
+      style: "$body"
+      fontSize: 12
+      text: 先写回归：墙钟固定 100 s、受控时钟差 0.002 s；修复前 7 项回归全部失败，修复后随全量 199 项转绿。
+  - elementId: log-img
+    elementType: image
+    bounds: [480, 112, 432, 215]
+    src: media/regression_before.png
+    fit: {mode: cover}
+    crop: {right: 0.30, bottom: 0.38}
+    border: {style: solid, width: 1, color: "$hairline"}
+  - elementId: log-caption
+    elementType: text
+    bounds: [480, 333, 432, 32]
+    content:
+      style: "$small"
+      text: 图 3　修复前原始日志：collected 7 items，7 项回归全部 FAILED（含 test_latency_* 与 test_depth_read_failure）。
+  - elementId: takeaway-rule
+    elementType: shape
+    bounds: [480, 378, 432, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: takeaway
+    elementType: text
+    bounds: [480, 390, 432, 100]
+    content:
+      fontSize: 11
+      color: "$ink"
+      lineHeight: 1.6
+      text: |
+        <p>同一函数连带发现 DEF-03：n_run 取 0 / -1 / 1.5 / True 时分别除零、空循环或隐式接受布尔值，已补充参数校验。</p>
+        <p><strong>经验：测量代码本身也必须被测；回归用例先红后绿，修复才算被证明。</strong></p>
+  - elementId: frule
+    elementType: shape
+    bounds: [48, 508, 864, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: fleft
+    elementType: text
+    bounds: [48, 514, 400, 14]
+    content: {fontSize: 9, color: "$muted", wrap: false, text: 软件测试与质量保证实践 · 模块一成果汇报}
+  - elementId: fright
+    elementType: text
+    bounds: [812, 514, 100, 14]
+    content: {fontSize: 9, color: "$muted", align: [right, top], wrap: false, text: "09 / 12"}
+animations:
+  - elementId: s1-label
+    effect: fade-in
+    trigger: onClick
+  - elementId: s1-text
+    effect: fade-in
+    trigger: withPrevious
+  - elementId: s2-label
+    effect: fade-in
+    trigger: afterPrevious
+  - elementId: s2-text
+    effect: fade-in
+    trigger: withPrevious
+  - elementId: s3-label
+    effect: fade-in
+    trigger: afterPrevious
+  - elementId: s3-text
+    effect: fade-in
+    trigger: withPrevious
+  - elementId: s4-label
+    effect: fade-in
+    trigger: afterPrevious
+  - elementId: s4-text
+    effect: fade-in
+    trigger: withPrevious

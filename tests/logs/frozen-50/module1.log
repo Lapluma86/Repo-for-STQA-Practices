@@ -1,0 +1,160 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.20, pytest-9.1.1, pluggy-1.6.0 -- D:\Anaconda\envs\AI_common\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+metadata: {'Python': '3.10.20', 'Platform': 'Windows-10-10.0.26200-SP0', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.12.1', 'hypothesis': '6.168.0', 'cov': '7.1.0', 'html': '4.2.0', 'metadata': '3.1.1'}}
+rootdir: D:\projects\Repo-for-STQA-Practices
+configfile: pytest.ini
+plugins: anyio-4.12.1, hypothesis-6.168.0, cov-7.1.0, html-4.2.0, metadata-3.1.1
+collecting ... collected 50 items
+
+tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_img_size_minimum_value PASSED [  2%]
+tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_img_size_zero_boundary FAILED [  4%]
+tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_patch_stride_zero_invalid FAILED [  6%]
+tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_train_sample_ratio_zero PASSED [  8%]
+tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_train_sample_ratio_one PASSED [ 10%]
+tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_view_id_maximum PASSED [ 12%]
+tests/module1/blackbox/test_decision_table.py::TestDecisionTable::test_combination_patch_true_split_train PASSED [ 14%]
+tests/module1/blackbox/test_decision_table.py::TestDecisionTable::test_combination_patch_false_split_test PASSED [ 16%]
+tests/module1/blackbox/test_decision_table.py::TestDecisionTable::test_combination_log_patch_true PASSED [ 18%]
+tests/module1/blackbox/test_decision_table.py::TestDecisionTable::test_combination_sample_ratio_with_num PASSED [ 20%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_view_id_valid_range PASSED [ 22%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_view_id_invalid_zero FAILED [ 24%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_split_valid_train PASSED [ 26%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_split_invalid_unknown FAILED [ 28%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_depth_norm_valid_minmax PASSED [ 30%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_depth_norm_invalid FAILED [ 32%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_train_sample_ratio_invalid_greater_than_one FAILED [ 34%]
+tests/module1/blackbox/test_regression_depth.py::test_depth_read_failure[missing] FAILED [ 36%]
+tests/module1/blackbox/test_sampling_behavior.py::test_count_overrides_ratio PASSED [ 38%]
+tests/module1/blackbox/test_sampling_behavior.py::test_random_sampling_reproducible_unique PASSED [ 40%]
+tests/module1/blackbox/test_spatial_alignment.py::test_rgb_depth_gt_alignment[8] PASSED [ 42%]
+tests/module1/blackbox/test_state_transition.py::test_scan_then_read PASSED [ 44%]
+tests/module1/blackbox/test_state_transition.py::test_lazy_preload_equivalence PASSED [ 46%]
+tests/module1/blackbox/test_state_transition.py::test_state_transition_error_recovery PASSED [ 48%]
+tests/module1/test_pipeline.py::test_dataset_batch_loss_backward PASSED  [ 50%]
+tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_count_trainable_params_total_greater_than_zero_true PASSED [ 52%]
+tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_count_trainable_params_total_greater_than_zero_false PASSED [ 54%]
+tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_measure_peak_gpu_memory_not_cuda_false SKIPPED [ 56%]
+tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_compute_fp_per_image_n_normal_zero_true PASSED [ 58%]
+tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_compute_fp_per_image_n_normal_zero_false PASSED [ 60%]
+tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_loss_distil_pixel_all_branches PASSED [ 62%]
+tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_i_equals_0_true_i_equals_1_false PASSED [ 64%]
+tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_i_equals_0_false_i_equals_1_true PASSED [ 66%]
+tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_i_equals_0_false_i_equals_1_false PASSED [ 68%]
+tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_isinstance_tuple_true FAILED [ 70%]
+tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_isinstance_both_false PASSED [ 72%]
+tests/module1/whitebox/test_loss_values.py::test_l2_multiscale_value_and_gradient PASSED [ 74%]
+tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_measure_peak_gpu_memory_path_1 PASSED [ 76%]
+tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_measure_inference_latency_path_1 PASSED [ 78%]
+tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_loss_distil_pixel_path_5 PASSED [ 80%]
+tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_loss_l2_path_zero_iterations PASSED [ 82%]
+tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_loss_l2_path_multiple_iterations PASSED [ 84%]
+tests/module1/whitebox/test_regression_metrics.py::test_latency_uses_monotonic_high_resolution_clock FAILED [ 86%]
+tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[0] FAILED [ 88%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_l2_basic PASSED [ 90%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_distil_basic PASSED [ 92%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_distil_p_basic PASSED [ 94%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_calculate_pixel_similarity_f_2_basic PASSED [ 96%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_count_trainable_params_frozen_layers PASSED [ 98%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_compute_fp_per_image_list_input PASSED [100%]
+
+================================== FAILURES ===================================
+____________ TestBoundaryValueAnalysis.test_img_size_zero_boundary ____________
+tests\module1\blackbox\test_boundary_value.py:45: in test_img_size_zero_boundary
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: D:\projects\Repo-for-STQA-Practices\tests\artifacts\frozen-verified-temp\test_img_size_zero_boundary0\train\Cam1\rgb
+__________ TestBoundaryValueAnalysis.test_patch_stride_zero_invalid ___________
+tests\module1\blackbox\test_boundary_value.py:60: in test_patch_stride_zero_invalid
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: D:\projects\Repo-for-STQA-Practices\tests\artifacts\frozen-verified-temp\test_patch_stride_zero_invalid0\train\Cam1\rgb
+____________ TestEquivalencePartitioning.test_view_id_invalid_zero ____________
+tests\module1\blackbox\test_equivalence_partitioning.py:42: in test_view_id_invalid_zero
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: D:\projects\Repo-for-STQA-Practices\tests\artifacts\frozen-verified-temp\test_view_id_invalid_zero0\train\Cam0\rgb
+___________ TestEquivalencePartitioning.test_split_invalid_unknown ____________
+tests\module1\blackbox\test_equivalence_partitioning.py:73: in test_split_invalid_unknown
+    with pytest.raises(ValueError, match="split must be one of"):
+E   Failed: DID NOT RAISE ValueError
+_____________ TestEquivalencePartitioning.test_depth_norm_invalid _____________
+tests\module1\blackbox\test_equivalence_partitioning.py:107: in test_depth_norm_invalid
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: D:\projects\Repo-for-STQA-Practices\tests\artifacts\frozen-verified-temp\test_depth_norm_invalid0\train\Cam1\rgb
+_ TestEquivalencePartitioning.test_train_sample_ratio_invalid_greater_than_one _
+tests\module1\blackbox\test_equivalence_partitioning.py:122: in test_train_sample_ratio_invalid_greater_than_one
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: D:\projects\Repo-for-STQA-Practices\tests\artifacts\frozen-verified-temp\test_train_sample_ratio_invali0\train\Cam1\rgb
+______________________ test_depth_read_failure[missing] _______________________
+tests\module1\blackbox\test_regression_depth.py:17: in test_depth_read_failure
+    dataset[0]
+SteelRailWay\datasets\rail_dataset.py:639: in __getitem__
+    "depth": self._load_depth(s["depth_path"], patch_idx),
+SteelRailWay\datasets\rail_dataset.py:590: in _load_depth
+    depth = cv2.imread(path, cv2.IMREAD_UNCHANGED).astype(np.float32)
+E   AttributeError: 'NoneType' object has no attribute 'astype'
+---------------------------- Captured stdout call -----------------------------
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+_________ TestConditionCoverage.test_condition_isinstance_tuple_true __________
+tests\module1\whitebox\test_condition_coverage.py:112: in test_condition_isinstance_tuple_true
+    assert latency > 0
+E   assert 0.0 > 0
+______________ test_latency_uses_monotonic_high_resolution_clock ______________
+tests\module1\whitebox\test_regression_metrics.py:19: in test_latency_uses_monotonic_high_resolution_clock
+    assert result == pytest.approx(0.5)
+E   assert 0.0 == 0.5 �� 5.0e-07
+E     
+E     comparison failed
+E     Obtained: 0.0
+E     Expected: 0.5 �� 5.0e-07
+________________________ test_latency_invalid_runs[0] _________________________
+tests\module1\whitebox\test_regression_metrics.py:26: in test_latency_invalid_runs
+    metrics.measure_inference_latency(torch.nn.Identity(), (torch.ones(1),), torch.device("cpu"), n_run=runs)
+SteelRailWay\eval\metrics_engineering.py:45: in measure_inference_latency
+    return elapsed / n_run * 1000.0
+E   ZeroDivisionError: float division by zero
+- generated xml file: D:\projects\Repo-for-STQA-Practices\tests\logs\frozen-50\module1.xml -
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.10.20-final-0 _______________
+
+Name                                       Stmts   Miss Branch BrPart   Cover   Missing
+---------------------------------------------------------------------------------------
+SteelRailWay\datasets\rail_dataset.py        327    103    134     31  65.29%   175-198, 213, 227, 234-239, 251, 258-259, 270-281, 298, 308, 335, 351-354, 373, 381, 388-410, 449->448, 454, 456->448, 461, 474-498, 508, 514, 527-528, 536-537, 556, 568-576, 592, 605->618, 610-611, 615, 618->622, 650, 654->656
+SteelRailWay\eval\metrics_engineering.py      38      3     12      3  88.00%   38, 43, 52
+SteelRailWay\utils\losses.py                  70      7     18      0  89.77%   153-161
+---------------------------------------------------------------------------------------
+TOTAL                                        435    113    164     34  70.78%
+Coverage JSON written to file tests/logs/frozen-50/coverage.json
+- Generated html report: file:///D:/projects/Repo-for-STQA-Practices/tests/logs/frozen-50/module1.html -
+=========================== short test summary info ===========================
+FAILED tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_img_size_zero_boundary
+FAILED tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_patch_stride_zero_invalid
+FAILED tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_view_id_invalid_zero
+FAILED tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_split_invalid_unknown
+FAILED tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_depth_norm_invalid
+FAILED tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_train_sample_ratio_invalid_greater_than_one
+FAILED tests/module1/blackbox/test_regression_depth.py::test_depth_read_failure[missing]
+FAILED tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_isinstance_tuple_true
+FAILED tests/module1/whitebox/test_regression_metrics.py::test_latency_uses_monotonic_high_resolution_clock
+FAILED tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[0]
+================== 10 failed, 39 passed, 1 skipped in 32.10s ==================

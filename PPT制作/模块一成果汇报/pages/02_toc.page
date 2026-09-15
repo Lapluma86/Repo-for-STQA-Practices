@@ -1,0 +1,122 @@
+pageType: table_of_contents
+background:
+  type: solid
+  color: "$paper"
+elements:
+  - elementId: toc-title
+    elementType: text
+    bounds: [48, 120, 280, 44]
+    content:
+      fontSize: 30
+      bold: true
+      color: "$ink"
+      wrap: false
+      text: 汇报框架
+  - elementId: toc-title-en
+    elementType: text
+    bounds: [48, 168, 280, 18]
+    content:
+      fontSize: 11
+      color: "$muted"
+      letterSpacing: 2
+      fontFamily: {latin: "Liter", ea: "MiSans"}
+      wrap: false
+      text: OUTLINE
+  - elementId: vline
+    elementType: shape
+    bounds: [368, 96, 1, 372]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: item1-num
+    elementType: text
+    bounds: [408, 92, 52, 30]
+    content: {fontSize: 20, bold: true, color: "$accent", fontFamily: {latin: "Liter", ea: "MiSans"}, wrap: false, text: "01"}
+  - elementId: item1-title
+    elementType: text
+    bounds: [468, 92, 444, 22]
+    content: {fontSize: 16, bold: true, color: "$ink", wrap: false, text: 被测对象与测试范围}
+  - elementId: item1-desc
+    elementType: text
+    bounds: [468, 116, 444, 18]
+    content: {fontSize: 11, color: "$muted", wrap: false, text: TRD 双模态检测系统核心功能；三个被测模块，486 条可执行语句}
+  - elementId: item1-line
+    elementType: shape
+    bounds: [408, 148, 504, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: item2-num
+    elementType: text
+    bounds: [408, 162, 52, 30]
+    content: {fontSize: 20, bold: true, color: "$accent", fontFamily: {latin: "Liter", ea: "MiSans"}, wrap: false, text: "02"}
+  - elementId: item2-title
+    elementType: text
+    bounds: [468, 162, 444, 22]
+    content: {fontSize: 16, bold: true, color: "$ink", wrap: false, text: 测试策略与用例设计}
+  - elementId: item2-desc
+    elementType: text
+    bounds: [468, 186, 444, 18]
+    content: {fontSize: 11, color: "$muted", wrap: false, text: 黑盒 95 项 + 白盒 103 项 + 最小集成 1 项的方法组合与需求映射}
+  - elementId: item2-line
+    elementType: shape
+    bounds: [408, 218, 504, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: item3-num
+    elementType: text
+    bounds: [408, 232, 52, 30]
+    content: {fontSize: 20, bold: true, color: "$accent", fontFamily: {latin: "Liter", ea: "MiSans"}, wrap: false, text: "03"}
+  - elementId: item3-title
+    elementType: text
+    bounds: [468, 232, 444, 22]
+    content: {fontSize: 16, bold: true, color: "$ink", wrap: false, text: 自动化测试设计与实施}
+  - elementId: item3-desc
+    elementType: text
+    bounds: [468, 256, 444, 18]
+    content: {fontSize: 11, color: "$muted", wrap: false, text: pytest 工程、合成数据、一键运行与可复现证据链}
+  - elementId: item3-line
+    elementType: shape
+    bounds: [408, 288, 504, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: item4-num
+    elementType: text
+    bounds: [408, 302, 52, 30]
+    content: {fontSize: 20, bold: true, color: "$accent", fontFamily: {latin: "Liter", ea: "MiSans"}, wrap: false, text: "04"}
+  - elementId: item4-title
+    elementType: text
+    bounds: [468, 302, 444, 22]
+    content: {fontSize: 16, bold: true, color: "$ink", wrap: false, text: 执行结果、覆盖率与缺陷}
+  - elementId: item4-desc
+    elementType: text
+    bounds: [468, 326, 444, 18]
+    content: {fontSize: 11, color: "$muted", wrap: false, text: 188 通过 / 0 失败；综合覆盖 79.43%；3 项缺陷修复闭环}
+  - elementId: item4-line
+    elementType: shape
+    bounds: [408, 358, 504, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: item5-num
+    elementType: text
+    bounds: [408, 372, 52, 30]
+    content: {fontSize: 20, bold: true, color: "$accent", fontFamily: {latin: "Liter", ea: "MiSans"}, wrap: false, text: "05"}
+  - elementId: item5-title
+    elementType: text
+    bounds: [468, 372, 444, 22]
+    content: {fontSize: 16, bold: true, color: "$ink", wrap: false, text: 测试结论}
+  - elementId: item5-desc
+    elementType: text
+    bounds: [468, 396, 444, 18]
+    content: {fontSize: 11, color: "$muted", wrap: false, text: 关键数字、适用边界与后续工作}
+  - elementId: frule
+    elementType: shape
+    bounds: [48, 508, 864, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: fleft
+    elementType: text
+    bounds: [48, 514, 400, 14]
+    content: {fontSize: 9, color: "$muted", wrap: false, text: 软件测试与质量保证实践 · 模块一成果汇报}
+  - elementId: fright
+    elementType: text
+    bounds: [812, 514, 100, 14]
+    content: {fontSize: 9, color: "$muted", align: [right, top], wrap: false, text: "02 / 12"}

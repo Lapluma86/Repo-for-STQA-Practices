@@ -1,0 +1,402 @@
+[
+  {
+    "id": "M1-S01",
+    "original_id": "M1-001",
+    "node": "tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_img_size_minimum_value",
+    "method": "边界值",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S02",
+    "original_id": "M1-005",
+    "node": "tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_img_size_zero_boundary",
+    "method": "边界值",
+    "status": "失败",
+    "message": "FileNotFoundError: RGB directory not found: D:\\projects\\Repo-for-STQA-Practices\\tests\\artifacts\\frozen-verified-temp\\test_img_size_zero_boundary0\\train\\Cam1\\rgb"
+  },
+  {
+    "id": "M1-S03",
+    "original_id": "M1-011",
+    "node": "tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_patch_stride_zero_invalid",
+    "method": "边界值",
+    "status": "失败",
+    "message": "FileNotFoundError: RGB directory not found: D:\\projects\\Repo-for-STQA-Practices\\tests\\artifacts\\frozen-verified-temp\\test_patch_stride_zero_invalid0\\train\\Cam1\\rgb"
+  },
+  {
+    "id": "M1-S04",
+    "original_id": "M1-014",
+    "node": "tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_train_sample_ratio_zero",
+    "method": "边界值",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S05",
+    "original_id": "M1-018",
+    "node": "tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_train_sample_ratio_one",
+    "method": "边界值",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S06",
+    "original_id": "M1-023",
+    "node": "tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_view_id_maximum",
+    "method": "边界值",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S07",
+    "original_id": "M1-028",
+    "node": "tests/module1/blackbox/test_decision_table.py::TestDecisionTable::test_combination_patch_true_split_train",
+    "method": "判定表",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S08",
+    "original_id": "M1-031",
+    "node": "tests/module1/blackbox/test_decision_table.py::TestDecisionTable::test_combination_patch_false_split_test",
+    "method": "判定表",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S09",
+    "original_id": "M1-034",
+    "node": "tests/module1/blackbox/test_decision_table.py::TestDecisionTable::test_combination_log_patch_true",
+    "method": "判定表",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S10",
+    "original_id": "M1-040",
+    "node": "tests/module1/blackbox/test_decision_table.py::TestDecisionTable::test_combination_sample_ratio_with_num",
+    "method": "判定表",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S11",
+    "original_id": "M1-044",
+    "node": "tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_view_id_valid_range",
+    "method": "等价类",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S12",
+    "original_id": "M1-047",
+    "node": "tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_view_id_invalid_zero",
+    "method": "等价类",
+    "status": "失败",
+    "message": "FileNotFoundError: RGB directory not found: D:\\projects\\Repo-for-STQA-Practices\\tests\\artifacts\\frozen-verified-temp\\test_view_id_invalid_zero0\\train\\Cam0\\rgb"
+  },
+  {
+    "id": "M1-S13",
+    "original_id": "M1-050",
+    "node": "tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_split_valid_train",
+    "method": "等价类",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S14",
+    "original_id": "M1-054",
+    "node": "tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_split_invalid_unknown",
+    "method": "等价类",
+    "status": "失败",
+    "message": "Failed: DID NOT RAISE ValueError"
+  },
+  {
+    "id": "M1-S15",
+    "original_id": "M1-060",
+    "node": "tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_depth_norm_valid_minmax",
+    "method": "等价类",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S16",
+    "original_id": "M1-062",
+    "node": "tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_depth_norm_invalid",
+    "method": "等价类",
+    "status": "失败",
+    "message": "FileNotFoundError: RGB directory not found: D:\\projects\\Repo-for-STQA-Practices\\tests\\artifacts\\frozen-verified-temp\\test_depth_norm_invalid0\\train\\Cam1\\rgb"
+  },
+  {
+    "id": "M1-S17",
+    "original_id": "M1-067",
+    "node": "tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_train_sample_ratio_invalid_greater_than_one",
+    "method": "等价类",
+    "status": "失败",
+    "message": "FileNotFoundError: RGB directory not found: D:\\projects\\Repo-for-STQA-Practices\\tests\\artifacts\\frozen-verified-temp\\test_train_sample_ratio_invali0\\train\\Cam1\\rgb"
+  },
+  {
+    "id": "M1-S18",
+    "original_id": "M1-071",
+    "node": "tests/module1/blackbox/test_regression_depth.py::test_depth_read_failure[missing]",
+    "method": "等价类",
+    "status": "失败",
+    "message": "AttributeError: 'NoneType' object has no attribute 'astype'"
+  },
+  {
+    "id": "M1-S19",
+    "original_id": "M1-073",
+    "node": "tests/module1/blackbox/test_sampling_behavior.py::test_count_overrides_ratio",
+    "method": "场景法",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S20",
+    "original_id": "M1-076",
+    "node": "tests/module1/blackbox/test_sampling_behavior.py::test_random_sampling_reproducible_unique",
+    "method": "场景法",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S21",
+    "original_id": "M1-082",
+    "node": "tests/module1/blackbox/test_spatial_alignment.py::test_rgb_depth_gt_alignment[8]",
+    "method": "场景法",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S22",
+    "original_id": "M1-086",
+    "node": "tests/module1/blackbox/test_state_transition.py::test_scan_then_read",
+    "method": "场景法",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S23",
+    "original_id": "M1-091",
+    "node": "tests/module1/blackbox/test_state_transition.py::test_lazy_preload_equivalence",
+    "method": "场景法",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S24",
+    "original_id": "M1-095",
+    "node": "tests/module1/blackbox/test_state_transition.py::test_state_transition_error_recovery",
+    "method": "场景法",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S25",
+    "original_id": "M1-096",
+    "node": "tests/module1/test_pipeline.py::test_dataset_batch_loss_backward",
+    "method": "场景法",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S26",
+    "original_id": "M1-097",
+    "node": "tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_count_trainable_params_total_greater_than_zero_true",
+    "method": "分支覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S27",
+    "original_id": "M1-098",
+    "node": "tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_count_trainable_params_total_greater_than_zero_false",
+    "method": "分支覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S28",
+    "original_id": "M1-102",
+    "node": "tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_measure_peak_gpu_memory_not_cuda_false",
+    "method": "分支覆盖",
+    "status": "跳过",
+    "message": "CUDA not available"
+  },
+  {
+    "id": "M1-S29",
+    "original_id": "M1-103",
+    "node": "tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_compute_fp_per_image_n_normal_zero_true",
+    "method": "分支覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S30",
+    "original_id": "M1-104",
+    "node": "tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_compute_fp_per_image_n_normal_zero_false",
+    "method": "分支覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S31",
+    "original_id": "M1-108",
+    "node": "tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_loss_distil_pixel_all_branches",
+    "method": "分支覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S32",
+    "original_id": "M1-121",
+    "node": "tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_i_equals_0_true_i_equals_1_false",
+    "method": "条件覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S33",
+    "original_id": "M1-122",
+    "node": "tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_i_equals_0_false_i_equals_1_true",
+    "method": "条件覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S34",
+    "original_id": "M1-123",
+    "node": "tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_i_equals_0_false_i_equals_1_false",
+    "method": "条件覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S35",
+    "original_id": "M1-127",
+    "node": "tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_isinstance_tuple_true",
+    "method": "条件覆盖",
+    "status": "失败",
+    "message": "assert 0.0 > 0"
+  },
+  {
+    "id": "M1-S36",
+    "original_id": "M1-129",
+    "node": "tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_isinstance_both_false",
+    "method": "条件覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S37",
+    "original_id": "M1-141",
+    "node": "tests/module1/whitebox/test_loss_values.py::test_l2_multiscale_value_and_gradient",
+    "method": "数值校验",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S38",
+    "original_id": "M1-148",
+    "node": "tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_measure_peak_gpu_memory_path_1",
+    "method": "路径覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S39",
+    "original_id": "M1-152",
+    "node": "tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_measure_inference_latency_path_1",
+    "method": "路径覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S40",
+    "original_id": "M1-159",
+    "node": "tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_loss_distil_pixel_path_5",
+    "method": "路径覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S41",
+    "original_id": "M1-160",
+    "node": "tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_loss_l2_path_zero_iterations",
+    "method": "路径覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S42",
+    "original_id": "M1-162",
+    "node": "tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_loss_l2_path_multiple_iterations",
+    "method": "路径覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S43",
+    "original_id": "M1-168",
+    "node": "tests/module1/whitebox/test_regression_metrics.py::test_latency_uses_monotonic_high_resolution_clock",
+    "method": "边界值",
+    "status": "失败",
+    "message": "assert 0.0 == 0.5 ± 5.0e-07\n  \n  comparison failed\n  Obtained: 0.0\n  Expected: 0.5 ± 5.0e-07"
+  },
+  {
+    "id": "M1-S44",
+    "original_id": "M1-169",
+    "node": "tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[0]",
+    "method": "边界值",
+    "status": "失败",
+    "message": "ZeroDivisionError: float division by zero"
+  },
+  {
+    "id": "M1-S45",
+    "original_id": "M1-176",
+    "node": "tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_l2_basic",
+    "method": "语句覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S46",
+    "original_id": "M1-179",
+    "node": "tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_distil_basic",
+    "method": "语句覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S47",
+    "original_id": "M1-181",
+    "node": "tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_distil_p_basic",
+    "method": "语句覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S48",
+    "original_id": "M1-187",
+    "node": "tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_calculate_pixel_similarity_f_2_basic",
+    "method": "语句覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S49",
+    "original_id": "M1-189",
+    "node": "tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_count_trainable_params_frozen_layers",
+    "method": "语句覆盖",
+    "status": "通过",
+    "message": ""
+  },
+  {
+    "id": "M1-S50",
+    "original_id": "M1-199",
+    "node": "tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_compute_fp_per_image_list_input",
+    "method": "语句覆盖",
+    "status": "通过",
+    "message": ""
+  }
+]

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="16" time="59.999" timestamp="2026-09-15T12:21:20.294925+08:00" hostname="LAPTOP-8I0HB4PO"><properties><property name="hypothesis-statistics-tests/module2/ai_assisted/test_depth_properties.py::test_minmax_constant_is_zero" value="dGVzdHMvbW9kdWxlMi9haV9hc3Npc3RlZC90ZXN0X2RlcHRoX3Byb3BlcnRpZXMucHk6OnRlc3RfbWlubWF4X2NvbnN0YW50X2lzX3plcm86CgogIC0gZHVyaW5nIGdlbmVyYXRlIHBoYXNlICgwLjE3IHNlY29uZHMpOgogICAgLSBUeXBpY2FsIHJ1bnRpbWVzOiB+IDctMjIgbXMsIG9mIHdoaWNoIDwgMW1zIGluIGRhdGEgZ2VuZXJhdGlvbgogICAgLSAxMiBwYXNzaW5nLCAwIGZhaWxpbmcsIGFuZCAwIGludmFsaWQgdGVzdCBjYXNlcwoKICAtIFN0b3BwZWQgYmVjYXVzZSBzZXR0aW5ncy5tYXhfZXhhbXBsZXM9MTI=" /><property name="hypothesis-statistics-tests/module2/ai_assisted/test_depth_properties.py::test_zscore_constant_is_finite_zero" value="dGVzdHMvbW9kdWxlMi9haV9hc3Npc3RlZC90ZXN0X2RlcHRoX3Byb3BlcnRpZXMucHk6OnRlc3RfenNjb3JlX2NvbnN0YW50X2lzX2Zpbml0ZV96ZXJvOgoKICAtIGR1cmluZyBnZW5lcmF0ZSBwaGFzZSAoMC4xNiBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiA5LTE1IG1zLCBvZiB3aGljaCA8IDFtcyBpbiBkYXRhIGdlbmVyYXRpb24KICAgIC0gMTIgcGFzc2luZywgMCBmYWlsaW5nLCBhbmQgMCBpbnZhbGlkIHRlc3QgY2FzZXMKCiAgLSBTdG9wcGVkIGJlY2F1c2Ugc2V0dGluZ3MubWF4X2V4YW1wbGVzPTEy" /><property name="hypothesis-statistics-tests/module2/ai_assisted/test_depth_properties.py::test_log_matches_known_value" value="dGVzdHMvbW9kdWxlMi9haV9hc3Npc3RlZC90ZXN0X2RlcHRoX3Byb3BlcnRpZXMucHk6OnRlc3RfbG9nX21hdGNoZXNfa25vd25fdmFsdWU6CgogIC0gZHVyaW5nIGdlbmVyYXRlIHBoYXNlICgwLjEyIHNlY29uZHMpOgogICAgLSBUeXBpY2FsIHJ1bnRpbWVzOiB+IDctMTYgbXMsIG9mIHdoaWNoIDwgMW1zIGluIGRhdGEgZ2VuZXJhdGlvbgogICAgLSAxMiBwYXNzaW5nLCAwIGZhaWxpbmcsIGFuZCAwIGludmFsaWQgdGVzdCBjYXNlcwoKICAtIFN0b3BwZWQgYmVjYXVzZSBzZXR0aW5ncy5tYXhfZXhhbXBsZXM9MTI=" /><property name="hypothesis-statistics-tests/module2/ai_assisted/test_parameter_validation.py::TestParameterValidation::test_parameter_combinations" value="dGVzdHMvbW9kdWxlMi9haV9hc3Npc3RlZC90ZXN0X3BhcmFtZXRlcl92YWxpZGF0aW9uLnB5OjpUZXN0UGFyYW1ldGVyVmFsaWRhdGlvbjo6dGVzdF9wYXJhbWV0ZXJfY29tYmluYXRpb25zOgoKICAtIGR1cmluZyBnZW5lcmF0ZSBwaGFzZSAoMS4zOSBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiA1NC01MTcgbXMsIG9mIHdoaWNoIH4gMC0xNSBtcyBpbiBkYXRhIGdlbmVyYXRpb24KICAgIC0gMCBwYXNzaW5nLCAxMCBmYWlsaW5nLCBhbmQgMCBpbnZhbGlkIHRlc3QgY2FzZXMKICAgIC0gRm91bmQgMiBkaXN0aW5jdCBlcnJvcnMgaW4gdGhpcyBwaGFzZQoKICAtIGR1cmluZyBzaHJpbmsgcGhhc2UgKDAuMzAgc2Vjb25kcyk6CiAgICAtIFR5cGljYWwgcnVudGltZXM6IH4gNTAtODAgbXMsIG9mIHdoaWNoIH4gMS0zIG1zIGluIGRhdGEgZ2VuZXJhdGlvbgogICAgLSAwIHBhc3NpbmcsIDQgZmFpbGluZywgYW5kIDAgaW52YWxpZCB0ZXN0IGNhc2VzCiAgICAtIFRyaWVkIDQgc2hyaW5rcyBvZiB3aGljaCA1IHdlcmUgc3VjY2Vzc2Z1bAoKICAtIGR1cmluZyBleHBsYWluIHBoYXNlICgyNS44MiBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiA0NC0yMTAgbXMsIG9mIHdoaWNoIH4gMS00IG1zIGluIGRhdGEgZ2VuZXJhdGlvbgogICAgLSAyIHBhc3NpbmcsIDI2MCBmYWlsaW5nLCBhbmQgMCBpbnZhbGlkIHRlc3QgY2FzZXMKCiAgLSBTdG9wcGVkIGJlY2F1c2Ugbm90aGluZyBsZWZ0IHRvIGRv" /><property name="hypothesis-statistics-tests/module2/ai_assisted/test_parameter_validation.py::TestEdgeCaseDiscovery::test_sampling_edge_cases" value="dGVzdHMvbW9kdWxlMi9haV9hc3Npc3RlZC90ZXN0X3BhcmFtZXRlcl92YWxpZGF0aW9uLnB5OjpUZXN0RWRnZUNhc2VEaXNjb3Zlcnk6OnRlc3Rfc2FtcGxpbmdfZWRnZV9jYXNlczoKCiAgLSBkdXJpbmcgZ2VuZXJhdGUgcGhhc2UgKDAuMzggc2Vjb25kcyk6CiAgICAtIFR5cGljYWwgcnVudGltZXM6IH4gMTctNTEgbXMsIG9mIHdoaWNoIH4gMC04IG1zIGluIGRhdGEgZ2VuZXJhdGlvbgogICAgLSAzIHBhc3NpbmcsIDcgZmFpbGluZywgYW5kIDAgaW52YWxpZCB0ZXN0IGNhc2VzCiAgICAtIEZvdW5kIDEgZGlzdGluY3QgZXJyb3IgaW4gdGhpcyBwaGFzZQoKICAtIGR1cmluZyBzaHJpbmsgcGhhc2UgKDAuMDMgc2Vjb25kcyk6CiAgICAtIFR5cGljYWwgcnVudGltZXM6IH4gMjNtcywgb2Ygd2hpY2ggfiAybXMgaW4gZGF0YSBnZW5lcmF0aW9uCiAgICAtIDAgcGFzc2luZywgMSBmYWlsaW5nLCBhbmQgMCBpbnZhbGlkIHRlc3QgY2FzZXMKICAgIC0gVHJpZWQgMSBzaHJpbmtzIG9mIHdoaWNoIDAgd2VyZSBzdWNjZXNzZnVsCgogIC0gZHVyaW5nIGV4cGxhaW4gcGhhc2UgKDUuOTQgc2Vjb25kcyk6CiAgICAtIFR5cGljYWwgcnVudGltZXM6IH4gMjMtNDMgbXMsIG9mIHdoaWNoIH4gMi0zIG1zIGluIGRhdGEgZ2VuZXJhdGlvbgogICAgLSAxIHBhc3NpbmcsIDE4NCBmYWlsaW5nLCBhbmQgMCBpbnZhbGlkIHRlc3QgY2FzZXMKCiAgLSBTdG9wcGVkIGJlY2F1c2Ugbm90aGluZyBsZWZ0IHRvIGRv" /><property name="hypothesis-statistics-tests/module2/ai_assisted/test_parameter_validation.py::TestConfigurationCombinations::test_config_combinations" value="dGVzdHMvbW9kdWxlMi9haV9hc3Npc3RlZC90ZXN0X3BhcmFtZXRlcl92YWxpZGF0aW9uLnB5OjpUZXN0Q29uZmlndXJhdGlvbkNvbWJpbmF0aW9uczo6dGVzdF9jb25maWdfY29tYmluYXRpb25zOgoKICAtIGR1cmluZyBnZW5lcmF0ZSBwaGFzZSAoMi4zMCBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiAxMC00MDcgbXMsIG9mIHdoaWNoIH4gMC02IG1zIGluIGRhdGEgZ2VuZXJhdGlvbgogICAgLSAzIHBhc3NpbmcsIDcgZmFpbGluZywgYW5kIDAgaW52YWxpZCB0ZXN0IGNhc2VzCiAgICAtIEZvdW5kIDEgZGlzdGluY3QgZXJyb3IgaW4gdGhpcyBwaGFzZQoKICAtIGR1cmluZyBzaHJpbmsgcGhhc2UgKDAuMTQgc2Vjb25kcyk6CiAgICAtIFR5cGljYWwgcnVudGltZXM6IH4gNy00MSBtcywgb2Ygd2hpY2ggfiAyLTQgbXMgaW4gZGF0YSBnZW5lcmF0aW9uCiAgICAtIDIgcGFzc2luZywgMiBmYWlsaW5nLCBhbmQgMSBpbnZhbGlkIHRlc3QgY2FzZXMKICAgIC0gVHJpZWQgNSBzaHJpbmtzIG9mIHdoaWNoIDMgd2VyZSBzdWNjZXNzZnVsCgogIC0gZHVyaW5nIGV4cGxhaW4gcGhhc2UgKDIuNzkgc2Vjb25kcyk6CiAgICAtIFR5cGljYWwgcnVudGltZXM6IH4gMjQtNzA4IG1zLCBvZiB3aGljaCB+IDItNCBtcyBpbiBkYXRhIGdlbmVyYXRpb24KICAgIC0gMCBwYXNzaW5nLCAxMSBmYWlsaW5nLCBhbmQgMCBpbnZhbGlkIHRlc3QgY2FzZXMKCiAgLSBTdG9wcGVkIGJlY2F1c2Ugbm90aGluZyBsZWZ0IHRvIGRv" /></properties><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_minmax_constant_is_zero" time="0.204" /><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_zscore_constant_is_finite_zero" time="0.179" /><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_all_zero_depth_is_finite" time="0.049" /><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_log_matches_known_value" time="0.137" /><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_minmax_range_and_order" time="0.028" /><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_zscore_patch_independent_of_access_order" time="0.041"><failure message="AssertionError: Tensor-likes are not close!&#10;&#10;Mismatched elements: 192 / 192 (100.0%)&#10;Greatest absolute difference: 3.488459587097168 at index (0, 0, 2) (up to 1e-05 allowed)&#10;Greatest relative difference: 1.8373204469680786 at index (0, 7, 7) (up to 1.3e-06 allowed)">tests\module2\ai_assisted\test_depth_properties.py:64: in test_zscore_patch_independent_of_access_order
+    torch.testing.assert_close(a[i], b[i])
+E   AssertionError: Tensor-likes are not close!
+E   
+E   Mismatched elements: 192 / 192 (100.0%)
+E   Greatest absolute difference: 3.488459587097168 at index (0, 0, 2) (up to 1e-05 allowed)
+E   Greatest relative difference: 1.8373204469680786 at index (0, 7, 7) (up to 1.3e-06 allowed)</failure></testcase><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_zscore_patch_matches_full_frame_statistics" time="0.031"><failure message="AssertionError: Tensor-likes are not close!&#10;&#10;Mismatched elements: 64 / 64 (100.0%)&#10;Greatest absolute difference: 1.6664721965789795 at index (7, 7) (up to 1e-05 allowed)&#10;Greatest relative difference: 21.732929229736328 at index (7, 7) (up to 1.3e-06 allowed)">tests\module2\ai_assisted\test_depth_properties.py:72: in test_zscore_patch_matches_full_frame_statistics
+    torch.testing.assert_close(dataset[i]["depth"][0], torch.from_numpy(expected))
+E   AssertionError: Tensor-likes are not close!
+E   
+E   Mismatched elements: 64 / 64 (100.0%)
+E   Greatest absolute difference: 1.6664721965789795 at index (7, 7) (up to 1e-05 allowed)
+E   Greatest relative difference: 21.732929229736328 at index (7, 7) (up to 1.3e-06 allowed)</failure></testcase><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_patch_preload_matches_lazy" time="7.475"><failure message="AssertionError: Tensor-likes are not close!&#10;&#10;Mismatched elements: 192 / 192 (100.0%)&#10;Greatest absolute difference: 1.6664721965789795 at index (0, 0, 0) (up to 1e-05 allowed)&#10;Greatest relative difference: 21.732929229736328 at index (0, 0, 0) (up to 1.3e-06 allowed)">tests\module2\ai_assisted\test_depth_properties.py:79: in test_patch_preload_matches_lazy
+    torch.testing.assert_close(lazy[i]["depth"], cached[i]["depth"])
+E   AssertionError: Tensor-likes are not close!
+E   
+E   Mismatched elements: 192 / 192 (100.0%)
+E   Greatest absolute difference: 1.6664721965789795 at index (0, 0, 0) (up to 1e-05 allowed)
+E   Greatest relative difference: 21.732929229736328 at index (0, 0, 0) (up to 1.3e-06 allowed)</failure></testcase><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_depth_channels_are_identical" time="0.140" /><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestParameterValidation" name="test_parameter_combinations" time="27.681"><failure message="exceptiongroup.BaseExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)">+ Exception Group Traceback (most recent call last):
+  |   File "D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py", line 24, in test_parameter_combinations
+  |     view_id=st.integers(min_value=-10, max_value=20),
+  |   File "D:\Anaconda\envs\AI_common\lib\site-packages\hypothesis\core.py", line 2295, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | exceptiongroup.BaseExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py", line 59, in test_parameter_combinations
+    |     with pytest.raises(ValueError):
+    |   File "D:\Anaconda\envs\AI_common\lib\site-packages\_pytest\raises.py", line 699, in __exit__
+    |     fail(f"DID NOT RAISE {self.expected_exceptions[0].__name__}")
+    |   File "D:\Anaconda\envs\AI_common\lib\site-packages\_pytest\outcomes.py", line 162, in __call__
+    |     raise Failed(msg=reason, pytrace=pytrace)
+    | Failed: DID NOT RAISE ValueError
+    | Failing test case: test_parameter_combinations(
+    |     # The test sometimes passed when commented parts were varied together.
+    |     self=&lt;test_parameter_validation.TestParameterValidation object at 0x000002094C266620&gt;,
+    |     tmp_path=WindowsPath('D:/projects/Repo-for-STQA-Practices/tests/artifacts/frozen-module2-temp/test_parameter_combinations0'),
+    |     view_id=0,  # or any other generated value
+    |     split='test',  # or any other generated value
+    |     img_size=0,  # or any other generated value
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:59
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py", line 60, in test_parameter_combinations
+    |     RailDualModalDataset(
+    |   File "D:\projects\Repo-for-STQA-Practices\SteelRailWay\datasets\rail_dataset.py", line 119, in __init__
+    |     self.samples: List[Dict] = self._scan_files()
+    |   File "D:\projects\Repo-for-STQA-Practices\SteelRailWay\datasets\rail_dataset.py", line 211, in _scan_files
+    |     raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+    | FileNotFoundError: RGB directory not found: D:\projects\Repo-for-STQA-Practices\tests\artifacts\frozen-module2-temp\test_parameter_combinations0\train\Cam0\rgb
+    | Failing test case: test_parameter_combinations(
+    |     # The test sometimes passed when commented parts were varied together.
+    |     self=&lt;test_parameter_validation.TestParameterValidation object at 0x000002094C266620&gt;,
+    |     tmp_path=WindowsPath('D:/projects/Repo-for-STQA-Practices/tests/artifacts/frozen-module2-temp/test_parameter_combinations0'),
+    |     view_id=0,  # or any other generated value
+    |     split='train',  # or any other generated value
+    |     img_size=0,  # or any other generated value
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:59
+    +------------------------------------</failure></testcase><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestEdgeCaseDiscovery" name="test_sampling_edge_cases" time="6.406"><failure message="Failed: DID NOT RAISE ValueError&#10;Failing test case: test_sampling_edge_cases(&#10;    # The test always failed when commented parts were varied together.&#10;    self=&lt;test_parameter_validation.TestEdgeCaseDiscovery object at 0x000002094C2662C0&gt;,&#10;    tmp_path=WindowsPath('D:/projects/Repo-for-STQA-Practices/tests/artifacts/frozen-module2-temp/test_sampling_edge_cases0'),&#10;    view_id=1,  # or any other generated value&#10;    train_sample_ratio=0.0,  # or any other generated value&#10;    patch_stride=0,&#10;)&#10;Explanation:&#10;    These lines were always and only run by failing test cases:&#10;        D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:102">tests\module2\ai_assisted\test_parameter_validation.py:76: in test_sampling_edge_cases
+    view_id=st.integers(min_value=1, max_value=8),
+tests\module2\ai_assisted\test_parameter_validation.py:102: in test_sampling_edge_cases
+    with pytest.raises(ValueError):
+E   Failed: DID NOT RAISE ValueError
+E   Failing test case: test_sampling_edge_cases(
+E       # The test always failed when commented parts were varied together.
+E       self=&lt;test_parameter_validation.TestEdgeCaseDiscovery object at 0x000002094C2662C0&gt;,
+E       tmp_path=WindowsPath('D:/projects/Repo-for-STQA-Practices/tests/artifacts/frozen-module2-temp/test_sampling_edge_cases0'),
+E       view_id=1,  # or any other generated value
+E       train_sample_ratio=0.0,  # or any other generated value
+E       patch_stride=0,
+E   )
+E   Explanation:
+E       These lines were always and only run by failing test cases:
+E           D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:102</failure></testcase><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestConfigurationCombinations" name="test_config_combinations" time="5.335"><failure message="Failed: DID NOT RAISE ValueError&#10;Failing test case: test_config_combinations(&#10;    # The test always failed when commented parts were varied together.&#10;    self=&lt;test_parameter_validation.TestConfigurationCombinations object at 0x000002094C2653F0&gt;,&#10;    tmp_path=WindowsPath('D:/projects/Repo-for-STQA-Practices/tests/artifacts/frozen-module2-temp/test_config_combinations0'),&#10;    depth_norm='zscore',  # or any other generated value&#10;    use_patch=False,  # or any other generated value&#10;    preload=False,  # or any other generated value&#10;    sampling_mode='invalid',&#10;)&#10;Explanation:&#10;    These lines were always and only run by failing test cases:&#10;        D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:151">tests\module2\ai_assisted\test_parameter_validation.py:120: in test_config_combinations
+    depth_norm=st.sampled_from(["zscore", "minmax", "log", "invalid"]),
+tests\module2\ai_assisted\test_parameter_validation.py:151: in test_config_combinations
+    with pytest.raises(ValueError):
+E   Failed: DID NOT RAISE ValueError
+E   Failing test case: test_config_combinations(
+E       # The test always failed when commented parts were varied together.
+E       self=&lt;test_parameter_validation.TestConfigurationCombinations object at 0x000002094C2653F0&gt;,
+E       tmp_path=WindowsPath('D:/projects/Repo-for-STQA-Practices/tests/artifacts/frozen-module2-temp/test_config_combinations0'),
+E       depth_norm='zscore',  # or any other generated value
+E       use_patch=False,  # or any other generated value
+E       preload=False,  # or any other generated value
+E       sampling_mode='invalid',
+E   )
+E   Explanation:
+E       These lines were always and only run by failing test cases:
+E           D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:151</failure></testcase><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestRegressionDiscovery" name="test_patch_stride_zero_still_rejected" time="0.049"><failure message="Failed: DID NOT RAISE ValueError">tests\module2\ai_assisted\test_parameter_validation.py:177: in test_patch_stride_zero_still_rejected
+    with pytest.raises(ValueError, match="patch_stride must be a positive integer"):
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestRegressionDiscovery" name="test_invalid_view_id_still_rejected" time="0.039"><failure message="FileNotFoundError: RGB directory not found: D:\projects\Repo-for-STQA-Practices\tests\artifacts\frozen-module2-temp\test_invalid_view_id_still_rej0\train\Cam0\rgb">tests\module2\ai_assisted\test_parameter_validation.py:192: in test_invalid_view_id_still_rejected
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: D:\projects\Repo-for-STQA-Practices\tests\artifacts\frozen-module2-temp\test_invalid_view_id_still_rej0\train\Cam0\rgb</failure></testcase><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestRegressionDiscovery" name="test_invalid_depth_norm_still_rejected" time="0.041"><failure message="Failed: DID NOT RAISE ValueError">tests\module2\ai_assisted\test_parameter_validation.py:207: in test_invalid_depth_norm_still_rejected
+    with pytest.raises(ValueError, match="depth_norm must be one of"):
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestRegressionDiscovery" name="test_empty_list_in_loss_functions" time="0.059"><failure message="AssertionError: assert False&#10; +  where False = isinstance(0.0, &lt;class 'torch.Tensor'&gt;)&#10; +    where &lt;class 'torch.Tensor'&gt; = torch.Tensor">tests\module2\ai_assisted\test_parameter_validation.py:223: in test_empty_list_in_loss_functions
+    assert isinstance(result, torch.Tensor)
+E   AssertionError: assert False
+E    +  where False = isinstance(0.0, &lt;class 'torch.Tensor'&gt;)
+E    +    where &lt;class 'torch.Tensor'&gt; = torch.Tensor</failure></testcase></testsuite></testsuites>

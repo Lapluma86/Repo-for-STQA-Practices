@@ -1,0 +1,35 @@
+<!doctype html><meta charset="utf-8"><title>模块一执行日志末尾（2026-09-15 基线）</title><style>body{font:18px Consolas,"Microsoft YaHei",monospace;margin:36px;background:#fff;color:#172b4d}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px}h1{font-size:28px}</style><h1>模块一执行日志末尾（2026-09-15 基线）</h1><p>来源：module1.log；展示原始文本摘要，完整日志随包提供。</p><pre>tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_distil_identical_features PASSED [ 90%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_distil_p_basic PASSED [ 90%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_distil_pixel_basic PASSED [ 91%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_distil_pixel_branch_coverage PASSED [ 91%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_calculate_pixel_similarity_basic PASSED [ 92%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_calculate_pixel_similarity_batch_loop PASSED [ 92%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_calculate_pixel_similarity_f_basic PASSED [ 93%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_calculate_pixel_similarity_f_2_basic PASSED [ 93%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_count_trainable_params_basic PASSED [ 94%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_count_trainable_params_frozen_layers PASSED [ 94%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_count_trainable_params_empty_model PASSED [ 95%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_measure_inference_latency_basic PASSED [ 95%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_measure_inference_latency_cuda_branch SKIPPED [ 96%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_measure_inference_latency_assertion PASSED [ 96%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_measure_peak_gpu_memory_cpu PASSED [ 97%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_measure_peak_gpu_memory_cuda SKIPPED [ 97%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_compute_fp_per_image_basic PASSED [ 98%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_compute_fp_per_image_with_false_positives PASSED [ 98%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_compute_fp_per_image_no_normal_samples PASSED [ 99%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_compute_fp_per_image_list_input PASSED [100%]
+
+- generated xml file: D:\projects\Repo-for-STQA-Practices\deliverables\module1\evidence\module1.xml -
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.10.20-final-0 _______________
+
+Name                                       Stmts   Miss Branch BrPart   Cover   Missing
+---------------------------------------------------------------------------------------
+SteelRailWay\datasets\rail_dataset.py        366     83    172     37  75.09%   120, 124, 129, 131, 136, 143-&gt;149, 146, 198, 201, 244-267, 280, 282, 327-328, 340, 348, 367, 377, 404, 420-423, 442, 450, 467-470, 477-&gt;exit, 518-&gt;517, 523, 525-&gt;517, 530, 543-567, 577, 583, 596-597, 605-606, 625, 637-645, 680-681, 685, 688-&gt;692, 720
+SteelRailWay\eval\metrics_engineering.py      42      3     16      3  89.66%   42, 47, 56
+SteelRailWay\utils\losses.py                  78      2     26      2  96.15%   52, 74
+---------------------------------------------------------------------------------------
+TOTAL                                        486     88    214     42  79.43%
+Coverage JSON written to file deliverables/module1/evidence/coverage.json
+- Generated html report: file:///D:/projects/Repo-for-STQA-Practices/deliverables/module1/evidence/module1.html -
+====================== 188 passed, 11 skipped in 15.55s =======================</pre>

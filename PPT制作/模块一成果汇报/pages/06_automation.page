@@ -1,0 +1,104 @@
+pageType: content
+background:
+  type: solid
+  color: "$bodybg"
+elements:
+  - elementId: kicker
+    elementType: text
+    bounds: [48, 26, 400, 18]
+    content: {style: "$kicker", wrap: false, text: "03 · 自动化"}
+  - elementId: title
+    elementType: text
+    bounds: [48, 46, 720, 34]
+    content: {style: "$pagetitle", wrap: false, text: 自动化设计与实施：一键运行、可复现}
+  - elementId: secnum
+    elementType: text
+    bounds: [832, 22, 80, 38]
+    content: {fontSize: 28, bold: true, color: "$soft", align: [right, middle], wrap: false, text: "03"}
+  - elementId: hrule
+    elementType: shape
+    bounds: [48, 92, 864, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: hrule-accent
+    elementType: shape
+    bounds: [48, 90, 56, 2]
+    shapeName: rect
+    fill: {type: solid, color: "$accent"}
+  - elementId: impl-list
+    elementType: text
+    bounds: [48, 112, 452, 330]
+    content:
+      style: "$body"
+      fontSize: 12
+      lineHeight: 1.55
+      text: |
+        <p><strong>独立测试工程</strong>　tests/module1/{blackbox, whitebox}，conftest.py 统一被测源码导入路径与共享 fixture；</p>
+        <p style="margin-top:10px"><strong>数据独立</strong>　合成双模态数据（JPG + TIFF + GT 掩码）写入 tmp_path，测试不依赖真实数据集与个人目录；</p>
+        <p style="margin-top:10px"><strong>确定性</strong>　自动 fixture 固定随机种子 42；参数化展开边界值与参数组合；</p>
+        <p style="margin-top:10px"><strong>设备适配</strong>　CUDA 相关用例先检查设备，不可用即显式跳过，跳过不计为通过；</p>
+        <p style="margin-top:10px"><strong>严格配置</strong>　pytest.ini 开启严格 marker，新增 marker 必须注册。</p>
+  - elementId: code-bg
+    elementType: shape
+    bounds: [540, 112, 372, 96]
+    shapeName: rect
+    fill: {type: solid, color: "$ink"}
+  - elementId: code-text
+    elementType: text
+    bounds: [556, 124, 344, 72]
+    content:
+      fontSize: 10
+      color: "#F5F2EB"
+      fontFamily: {latin: "JetBrains Mono", ea: "MiSans"}
+      lineHeight: 1.7
+      text: |
+        <p># 仓库根目录一键运行（模块一）</p>
+        <p>python -m pytest tests/module1/ \</p>
+        <p>  --cov --cov-config=.coveragerc \</p>
+        <p>  --cov-report=term-missing</p>
+  - elementId: evi-title
+    elementType: text
+    bounds: [540, 228, 372, 18]
+    content: {fontSize: 11, bold: true, color: "$primary", wrap: false, text: 证据链（每次执行自动落盘）}
+  - elementId: evi-text
+    elementType: text
+    bounds: [540, 250, 372, 96]
+    content:
+      fontSize: 11
+      color: "$ink"
+      lineHeight: 1.7
+      text: |
+        <p>· pytest-html 自包含报告 · JUnit XML</p>
+        <p>· coverage JSON（语句 + 分支）</p>
+        <p>· 被测源码 / 测试代码 SHA256 指纹</p>
+        <p>· Git 提交与基线一一对应</p>
+  - elementId: auto-num
+    elementType: text
+    bounds: [540, 360, 372, 56]
+    content:
+      fontSize: 40
+      bold: true
+      color: "$accent"
+      fontFamily: {latin: "Liter", ea: "MiSans"}
+      wrap: false
+      text: 100%
+  - elementId: auto-label
+    elementType: text
+    bounds: [540, 420, 372, 40]
+    content:
+      style: "$body"
+      fontSize: 12
+      text: 用例自动化比例（199 / 199 均为 pytest 节点；课程要求 ≥ 80%）
+  - elementId: frule
+    elementType: shape
+    bounds: [48, 508, 864, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: fleft
+    elementType: text
+    bounds: [48, 514, 400, 14]
+    content: {fontSize: 9, color: "$muted", wrap: false, text: 软件测试与质量保证实践 · 模块一成果汇报}
+  - elementId: fright
+    elementType: text
+    bounds: [812, 514, 100, 14]
+    content: {fontSize: 9, color: "$muted", align: [right, top], wrap: false, text: "06 / 12"}

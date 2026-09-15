@@ -1,0 +1,81 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.20, pytest-9.1.1, pluggy-1.6.0 -- D:\Anaconda\envs\AI_common\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+metadata: {'Python': '3.10.20', 'Platform': 'Windows-10-10.0.26200-SP0', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.12.1', 'hypothesis': '6.168.0', 'cov': '7.1.0', 'html': '4.2.0', 'metadata': '3.1.1'}}
+rootdir: D:\projects\Repo-for-STQA-Practices
+configfile: pytest.ini
+plugins: anyio-4.12.1, hypothesis-6.168.0, cov-7.1.0, html-4.2.0, metadata-3.1.1
+collecting ... collected 7 items
+
+tests/module1/whitebox/test_regression_metrics.py::test_latency_uses_monotonic_high_resolution_clock FAILED [ 14%]
+tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[0] FAILED [ 28%]
+tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[-1] FAILED [ 42%]
+tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[1.5] FAILED [ 57%]
+tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[True] FAILED [ 71%]
+tests/module1/blackbox/test_regression_depth.py::test_depth_read_failure[missing] FAILED [ 85%]
+tests/module1/blackbox/test_regression_depth.py::test_depth_read_failure[corrupt] FAILED [100%]
+
+================================== FAILURES ===================================
+______________ test_latency_uses_monotonic_high_resolution_clock ______________
+tests\module1\whitebox\test_regression_metrics.py:19: in test_latency_uses_monotonic_high_resolution_clock
+    assert result == pytest.approx(0.5)
+E   assert 0.0 == 0.5 �� 5.0e-07
+E     
+E     comparison failed
+E     Obtained: 0.0
+E     Expected: 0.5 �� 5.0e-07
+________________________ test_latency_invalid_runs[0] _________________________
+tests\module1\whitebox\test_regression_metrics.py:26: in test_latency_invalid_runs
+    metrics.measure_inference_latency(torch.nn.Identity(), (torch.ones(1),), torch.device("cpu"), n_run=runs)
+SteelRailWay\eval\metrics_engineering.py:46: in measure_inference_latency
+    return elapsed / n_run * 1000.0
+E   ZeroDivisionError: float division by zero
+________________________ test_latency_invalid_runs[-1] ________________________
+tests\module1\whitebox\test_regression_metrics.py:25: in test_latency_invalid_runs
+    with pytest.raises(ValueError, match="n_run"):
+E   Failed: DID NOT RAISE ValueError
+_______________________ test_latency_invalid_runs[1.5] ________________________
+tests\module1\whitebox\test_regression_metrics.py:26: in test_latency_invalid_runs
+    metrics.measure_inference_latency(torch.nn.Identity(), (torch.ones(1),), torch.device("cpu"), n_run=runs)
+SteelRailWay\eval\metrics_engineering.py:41: in measure_inference_latency
+    for _ in range(n_run):
+E   TypeError: 'float' object cannot be interpreted as an integer
+_______________________ test_latency_invalid_runs[True] _______________________
+tests\module1\whitebox\test_regression_metrics.py:25: in test_latency_invalid_runs
+    with pytest.raises(ValueError, match="n_run"):
+E   Failed: DID NOT RAISE ValueError
+______________________ test_depth_read_failure[missing] _______________________
+tests\module1\blackbox\test_regression_depth.py:17: in test_depth_read_failure
+    dataset[0]
+SteelRailWay\datasets\rail_dataset.py:708: in __getitem__
+    "depth": self._load_depth(s["depth_path"], patch_idx),
+SteelRailWay\datasets\rail_dataset.py:659: in _load_depth
+    depth = cv2.imread(path, cv2.IMREAD_UNCHANGED).astype(np.float32)
+E   AttributeError: 'NoneType' object has no attribute 'astype'
+---------------------------- Captured stdout call -----------------------------
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+[ WARN:0@1.882] global loadsave.cpp:268 cv::findDecoder imread_('C:\Users\sundowner\AppData\Local\Temp\pytest-of-sundowner\pytest-2\test_depth_read_failure_missin0\train\Cam1\depth\frame_000.tiff'): can't open/read file: check file path/integrity
+
+______________________ test_depth_read_failure[corrupt] _______________________
+tests\module1\blackbox\test_regression_depth.py:17: in test_depth_read_failure
+    dataset[0]
+SteelRailWay\datasets\rail_dataset.py:708: in __getitem__
+    "depth": self._load_depth(s["depth_path"], patch_idx),
+SteelRailWay\datasets\rail_dataset.py:659: in _load_depth
+    depth = cv2.imread(path, cv2.IMREAD_UNCHANGED).astype(np.float32)
+E   AttributeError: 'NoneType' object has no attribute 'astype'
+---------------------------- Captured stdout call -----------------------------
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+- generated xml file: D:\projects\Repo-for-STQA-Practices\tests\artifacts\fixes-20260915\before.xml -
+=========================== short test summary info ===========================
+FAILED tests/module1/whitebox/test_regression_metrics.py::test_latency_uses_monotonic_high_resolution_clock
+FAILED tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[0]
+FAILED tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[-1]
+FAILED tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[1.5]
+FAILED tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[True]
+FAILED tests/module1/blackbox/test_regression_depth.py::test_depth_read_failure[missing]
+FAILED tests/module1/blackbox/test_regression_depth.py::test_depth_read_failure[corrupt]
+============================== 7 failed in 4.62s ==============================

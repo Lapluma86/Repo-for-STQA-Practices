@@ -1,0 +1,160 @@
+pageType: content
+background:
+  type: solid
+  color: "$bodybg"
+elements:
+  - elementId: kicker
+    elementType: text
+    bounds: [48, 26, 400, 18]
+    content: {style: "$kicker", wrap: false, text: "04 · 结果 · 覆盖率 · 缺陷"}
+  - elementId: title
+    elementType: text
+    bounds: [48, 46, 720, 34]
+    content: {style: "$pagetitle", wrap: false, text: 执行结果：199 项收集，188 通过，0 失败}
+  - elementId: secnum
+    elementType: text
+    bounds: [832, 22, 80, 38]
+    content: {fontSize: 28, bold: true, color: "$soft", align: [right, middle], wrap: false, text: "04"}
+  - elementId: hrule
+    elementType: shape
+    bounds: [48, 92, 864, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: hrule-accent
+    elementType: shape
+    bounds: [48, 90, 56, 2]
+    shapeName: rect
+    fill: {type: solid, color: "$accent"}
+  - elementId: stat1-num
+    elementType: text
+    bounds: [48, 110, 150, 48]
+    content: {fontSize: 36, bold: true, color: "$ink", fontFamily: {latin: "Liter", ea: "MiSans"}, wrap: false, text: "199"}
+  - elementId: stat1-label
+    elementType: text
+    bounds: [48, 160, 150, 16]
+    content: {fontSize: 10, color: "$muted", wrap: false, text: 收集用例（项）}
+  - elementId: stat1-sep
+    elementType: shape
+    bounds: [212, 116, 1, 52]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: stat2-num
+    elementType: text
+    bounds: [232, 110, 150, 48]
+    content: {fontSize: 36, bold: true, color: "$pass", fontFamily: {latin: "Liter", ea: "MiSans"}, wrap: false, text: "188"}
+  - elementId: stat2-label
+    elementType: text
+    bounds: [232, 160, 150, 16]
+    content: {fontSize: 10, color: "$muted", wrap: false, text: 通过（项）}
+  - elementId: stat2-sep
+    elementType: shape
+    bounds: [396, 116, 1, 52]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: stat3-num
+    elementType: text
+    bounds: [416, 110, 130, 48]
+    content: {fontSize: 36, bold: true, color: "$ink", fontFamily: {latin: "Liter", ea: "MiSans"}, wrap: false, text: "0"}
+  - elementId: stat3-label
+    elementType: text
+    bounds: [416, 160, 130, 16]
+    content: {fontSize: 10, color: "$muted", wrap: false, text: 失败（项）}
+  - elementId: stat3-sep
+    elementType: shape
+    bounds: [560, 116, 1, 52]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: stat4-num
+    elementType: text
+    bounds: [580, 110, 150, 48]
+    content: {fontSize: 36, bold: true, color: "$muted", fontFamily: {latin: "Liter", ea: "MiSans"}, wrap: false, text: "11"}
+  - elementId: stat4-label
+    elementType: text
+    bounds: [580, 160, 150, 16]
+    content: {fontSize: 10, color: "$muted", wrap: false, text: 跳过（均为 CUDA）}
+  - elementId: stat4-sep
+    elementType: shape
+    bounds: [744, 116, 1, 52]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: stat5-num
+    elementType: text
+    bounds: [764, 110, 148, 48]
+    content: {fontSize: 36, bold: true, color: "$ink", fontFamily: {latin: "Liter", ea: "MiSans"}, wrap: false, text: "15.55"}
+  - elementId: stat5-label
+    elementType: text
+    bounds: [764, 160, 148, 16]
+    content: {fontSize: 10, color: "$muted", wrap: false, text: 总耗时（秒）}
+  - elementId: result-table
+    elementType: table
+    bounds: [48, 196, 420, 218]
+    columnWidths: [0.34, 0.13, 0.13, 0.13, 0.13, 0.14]
+    rowHeights: [0.2, 0.2, 0.2, 0.2, 0.2]
+    style: "$three"
+    rows:
+      - - text: 功能组
+        - text: 收集
+        - text: 通过
+        - text: 失败
+        - text: 跳过
+        - text: 通过率
+      - - text: 数据集黑盒
+          align: [left, middle]
+        - text: "95"
+        - text: "95"
+        - text: "0"
+        - text: "0"
+        - text: 100%
+      - - text: 损失与指标白盒
+          align: [left, middle]
+        - text: "103"
+        - text: "92"
+        - text: "0"
+        - text: "11"
+        - text: 89.3%
+      - - text: 最小集成
+          align: [left, middle]
+        - text: "1"
+        - text: "1"
+        - text: "0"
+        - text: "0"
+        - text: 100%
+      - - text: 合计
+          align: [left, middle]
+        - text: "199"
+        - text: "188"
+        - text: "0"
+        - text: "11"
+        - text: 94.5%
+  - elementId: report-img
+    elementType: image
+    bounds: [500, 196, 412, 218]
+    src: media/report_module1.png
+    fit: {mode: cover}
+    crop: {right: 0.28, bottom: 0.32}
+    border: {style: solid, width: 1, color: "$hairline"}
+  - elementId: report-caption
+    elementType: text
+    bounds: [500, 418, 412, 32]
+    content:
+      style: "$small"
+      text: 图 2　pytest-html 基线报告摘要（2026-09-15 模块一独立执行；Summary 中 188 为未跳过的实际执行数）。
+  - elementId: result-note
+    elementType: text
+    bounds: [48, 452, 864, 44]
+    content:
+      style: "$footnote"
+      text: 运行环境：Windows 11 · i5-12500H · 16 GB · Python 3.10.20 · PyTorch 2.12.0+cpu · pytest 9.1.1。收集总数 199 以 JUnit 与日志为准；11 项跳过均为 CUDA 相关，不计为通过。
+  - elementId: frule
+    elementType: shape
+    bounds: [48, 508, 864, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$hairline"}
+  - elementId: fleft
+    elementType: text
+    bounds: [48, 514, 400, 14]
+    content: {fontSize: 9, color: "$muted", wrap: false, text: 软件测试与质量保证实践 · 模块一成果汇报}
+  - elementId: fright
+    elementType: text
+    bounds: [812, 514, 100, 14]
+    content: {fontSize: 9, color: "$muted", align: [right, top], wrap: false, text: "07 / 12"}

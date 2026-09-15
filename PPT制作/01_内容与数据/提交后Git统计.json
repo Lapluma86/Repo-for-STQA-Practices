@@ -1,0 +1,47 @@
+{
+  "commit": "8da48445d393e882135e659a2b8b72eddee5b0cd",
+  "method": "git blame HEAD 现存Python行，含注释和空行，区分被测代码与测试代码；不是实际工作量",
+  "code": {
+    "SteelRailWay": {
+      "total": 24132,
+      "authors": {
+        "EdwinNull": {
+          "lines": 24113,
+          "percent": 99.9213
+        },
+        "sundowner": {
+          "lines": 19,
+          "percent": 0.0787
+        }
+      }
+    },
+    "tests": {
+      "total": 3969,
+      "authors": {
+        "EdwinNull": {
+          "lines": 3489,
+          "percent": 87.9063
+        },
+        "sundowner": {
+          "lines": 480,
+          "percent": 12.0937
+        }
+      }
+    }
+  },
+  "commits": "     6\tsundowner\n     5\tEdwinNull\n",
+  "combined": {
+    "total": 28101,
+    "authors": {
+      "EdwinNull": {
+        "lines": 27602,
+        "percent": 98.2243
+      },
+      "sundowner": {
+        "lines": 499,
+        "percent": 1.7757
+      }
+    },
+    "note": "源码+测试合并；迁移前SteelRailWay目录曾包含tests，不能直接比较迁移前后单目录占比。成员C无可识别提交，0行。"
+  }
+}

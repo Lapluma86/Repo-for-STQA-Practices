@@ -14,6 +14,28 @@ PROJECT_ROOT = REPO_ROOT / "SteelRailWay"
 sys.path.insert(0, str(PROJECT_ROOT))
 
 
+def pytest_sessionstart(session):
+    """冻结被测源码：收集前核对清单，防止修复混入缺陷演示。"""
+    import hashlib
+    import json
+
+    manifest = json.loads((REPO_ROOT / "tests/source-freeze.json").read_text(encoding="utf-8"))
+    changed = []
+    for relative, expected in manifest["sha256"].items():
+        path = REPO_ROOT / relative
+        if not path.is_file():
+            changed.append(relative)
+            continue
+        data = path.read_bytes().replace(b"\r\n", b"\n")
+        if hashlib.sha256(data).hexdigest() != expected:
+            changed.append(relative)
+    if changed:
+        raise pytest.UsageError(
+            "被测源码偏离冻结基线；请核对修改，勿为测试通过更新指纹：\n"
+            + "\n".join(changed)
+        )
+
+
 @pytest.fixture(scope="session")
 def project_root():
     """项目根目录"""

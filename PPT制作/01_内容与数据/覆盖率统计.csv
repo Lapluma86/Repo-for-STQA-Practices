@@ -1,0 +1,5 @@
+﻿源码,可执行语句,已覆盖语句,分支,已覆盖分支,综合覆盖率
+SteelRailWay\datasets\rail_dataset.py,366,283,172,121,75.09
+SteelRailWay\eval\metrics_engineering.py,42,39,16,13,89.66
+SteelRailWay\utils\losses.py,78,76,26,24,96.15
+合计,486,398,214,158,79.43

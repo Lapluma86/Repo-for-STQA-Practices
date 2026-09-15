@@ -1,0 +1,11 @@
+{
+  "CPU": [
+    {
+      "Name": "12th Gen Intel(R) Core(TM) i5-12500H",
+      "NumberOfCores": 12,
+      "NumberOfLogicalProcessors": 16
+    }
+  ],
+  "MemoryBytes": 16892026880,
+  "CapturedAt": "2026-09-15T10:45:34"
+}

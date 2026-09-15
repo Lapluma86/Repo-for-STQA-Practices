@@ -1,0 +1,289 @@
+{
+  "original_commit": "8da48445d393e882135e659a2b8b72eddee5b0cd",
+  "original_count": 199,
+  "selected_count": 50,
+  "files": [
+    {
+      "file": "tests/module1/blackbox/test_boundary_value.py",
+      "kept_functions": [
+        "test_img_size_minimum_value",
+        "test_img_size_zero_boundary",
+        "test_patch_stride_zero_invalid",
+        "test_train_sample_ratio_one",
+        "test_train_sample_ratio_zero",
+        "test_view_id_maximum"
+      ],
+      "removed_functions": [
+        "test_img_size_common_values",
+        "test_img_size_minimum_plus_one",
+        "test_img_size_negative_boundary",
+        "test_img_size_very_large",
+        "test_nonexistent_train_root",
+        "test_patch_size_default",
+        "test_patch_size_minimum",
+        "test_patch_size_zero_invalid",
+        "test_patch_stride_equals_patch_size",
+        "test_patch_stride_negative_invalid",
+        "test_patch_stride_valid_values",
+        "test_train_sample_ratio_above_one",
+        "test_train_sample_ratio_half",
+        "test_train_sample_ratio_near_one",
+        "test_train_sample_ratio_near_zero",
+        "test_train_sample_ratio_negative",
+        "test_very_long_path",
+        "test_view_id_above_maximum_invalid",
+        "test_view_id_middle",
+        "test_view_id_minimum",
+        "test_view_id_zero_invalid"
+      ]
+    },
+    {
+      "file": "tests/module1/blackbox/test_equivalence_partitioning.py",
+      "kept_functions": [
+        "test_depth_norm_invalid",
+        "test_depth_norm_valid_minmax",
+        "test_split_invalid_unknown",
+        "test_split_valid_train",
+        "test_train_sample_ratio_invalid_greater_than_one",
+        "test_view_id_invalid_zero",
+        "test_view_id_valid_range"
+      ],
+      "removed_functions": [
+        "test_depth_norm_valid_log",
+        "test_depth_norm_valid_zscore",
+        "test_img_size_invalid_negative",
+        "test_img_size_invalid_zero",
+        "test_img_size_valid_custom",
+        "test_img_size_valid_default",
+        "test_patch_stride_invalid_negative",
+        "test_patch_stride_invalid_zero",
+        "test_patch_stride_valid",
+        "test_split_invalid_empty",
+        "test_split_valid_test",
+        "test_split_valid_val",
+        "test_train_sample_ratio_boundary_zero",
+        "test_train_sample_ratio_invalid_negative",
+        "test_train_sample_ratio_valid_full",
+        "test_train_sample_ratio_valid_half",
+        "test_view_id_boundary_lower",
+        "test_view_id_boundary_upper",
+        "test_view_id_invalid_negative",
+        "test_view_id_invalid_out_of_range"
+      ]
+    },
+    {
+      "file": "tests/module1/blackbox/test_decision_table.py",
+      "kept_functions": [
+        "test_combination_log_patch_true",
+        "test_combination_patch_false_split_test",
+        "test_combination_patch_true_split_train",
+        "test_combination_sample_ratio_with_num"
+      ],
+      "removed_functions": [
+        "test_combination_complex_1",
+        "test_combination_complex_2",
+        "test_combination_complex_3",
+        "test_combination_minmax_patch_false",
+        "test_combination_patch_false_split_train",
+        "test_combination_patch_size_stride_conflict",
+        "test_combination_patch_true_split_test",
+        "test_combination_preload_false_split_test",
+        "test_combination_preload_true_split_train",
+        "test_combination_sample_ratio_only",
+        "test_combination_test_with_train_params",
+        "test_combination_zscore_patch_true"
+      ]
+    },
+    {
+      "file": "tests/module1/blackbox/test_state_transition.py",
+      "kept_functions": [
+        "test_lazy_preload_equivalence",
+        "test_scan_then_read",
+        "test_state_transition_error_recovery"
+      ],
+      "removed_functions": [
+        "test_configuration_independence",
+        "test_patch_configuration_changes_actual_items",
+        "test_state_loading_to_error",
+        "test_state_loading_to_ready",
+        "test_state_transition_repeated_access",
+        "test_state_transition_sequence",
+        "test_state_uninitialized_to_initialized",
+        "test_test_mode_reads_good_and_broken",
+        "test_train_val_split_reproducible"
+      ]
+    },
+    {
+      "file": "tests/module1/blackbox/test_sampling_behavior.py",
+      "kept_functions": [
+        "test_count_overrides_ratio",
+        "test_random_sampling_reproducible_unique"
+      ],
+      "removed_functions": [
+        "test_missing_pair_is_excluded",
+        "test_ratio_selects_actual_frames",
+        "test_reflectance_and_tif_matching",
+        "test_requested_count_capped_by_available",
+        "test_sampled_train_val_partition_is_complete"
+      ]
+    },
+    {
+      "file": "tests/module1/blackbox/test_spatial_alignment.py",
+      "kept_functions": [
+        "test_rgb_depth_gt_alignment"
+      ],
+      "removed_functions": []
+    },
+    {
+      "file": "tests/module1/blackbox/test_regression_depth.py",
+      "kept_functions": [
+        "test_depth_read_failure"
+      ],
+      "removed_functions": []
+    },
+    {
+      "file": "tests/module1/whitebox/test_statement_coverage.py",
+      "kept_functions": [
+        "test_calculate_pixel_similarity_f_2_basic",
+        "test_compute_fp_per_image_list_input",
+        "test_count_trainable_params_frozen_layers",
+        "test_loss_distil_basic",
+        "test_loss_distil_p_basic",
+        "test_loss_l2_basic"
+      ],
+      "removed_functions": [
+        "test_calculate_pixel_similarity_basic",
+        "test_calculate_pixel_similarity_batch_loop",
+        "test_calculate_pixel_similarity_f_basic",
+        "test_compute_fp_per_image_basic",
+        "test_compute_fp_per_image_no_normal_samples",
+        "test_compute_fp_per_image_with_false_positives",
+        "test_count_trainable_params_basic",
+        "test_count_trainable_params_empty_model",
+        "test_loss_distil_identical_features",
+        "test_loss_distil_pixel_basic",
+        "test_loss_distil_pixel_branch_coverage",
+        "test_loss_l2_empty_features",
+        "test_loss_l2_single_scale",
+        "test_measure_inference_latency_assertion",
+        "test_measure_inference_latency_basic",
+        "test_measure_inference_latency_cuda_branch",
+        "test_measure_peak_gpu_memory_cpu",
+        "test_measure_peak_gpu_memory_cuda"
+      ]
+    },
+    {
+      "file": "tests/module1/whitebox/test_branch_coverage.py",
+      "kept_functions": [
+        "test_compute_fp_per_image_n_normal_zero_false",
+        "test_compute_fp_per_image_n_normal_zero_true",
+        "test_count_trainable_params_total_greater_than_zero_false",
+        "test_count_trainable_params_total_greater_than_zero_true",
+        "test_loss_distil_pixel_all_branches",
+        "test_measure_peak_gpu_memory_not_cuda_false"
+      ],
+      "removed_functions": [
+        "test_assertion_branch_false",
+        "test_assertion_branch_true",
+        "test_calculate_pixel_similarity_batch_loop_multiple",
+        "test_calculate_pixel_similarity_batch_loop_single",
+        "test_combined_branches_all_false",
+        "test_combined_branches_all_true",
+        "test_combined_branches_mixed",
+        "test_loop_branch_multiple_iterations",
+        "test_loop_branch_one_iteration",
+        "test_loop_branch_zero_iterations",
+        "test_loss_distil_pixel_pool_branch_i_equals_0",
+        "test_loss_distil_pixel_pool_branch_i_equals_1",
+        "test_loss_distil_pixel_pool_branch_i_not_0_or_1",
+        "test_measure_inference_latency_cuda_false",
+        "test_measure_inference_latency_cuda_true",
+        "test_measure_peak_gpu_memory_not_cuda_true",
+        "test_nested_branch_outer_true_inner_false",
+        "test_nested_branch_outer_true_inner_true"
+      ]
+    },
+    {
+      "file": "tests/module1/whitebox/test_condition_coverage.py",
+      "kept_functions": [
+        "test_condition_i_equals_0_false_i_equals_1_false",
+        "test_condition_i_equals_0_false_i_equals_1_true",
+        "test_condition_i_equals_0_true_i_equals_1_false",
+        "test_condition_isinstance_both_false",
+        "test_condition_isinstance_tuple_true"
+      ],
+      "removed_functions": [
+        "test_condition_device_type_equals_cuda_false",
+        "test_condition_device_type_equals_cuda_true",
+        "test_condition_device_type_not_cuda_false",
+        "test_condition_device_type_not_cuda_true",
+        "test_condition_i_equals_0_true_i_equals_1_true",
+        "test_condition_isinstance_list_true",
+        "test_condition_labels_equals_zero_true_and_false",
+        "test_condition_n_normal_equals_zero_false",
+        "test_condition_n_normal_equals_zero_true",
+        "test_condition_scores_greater_than_threshold_true_and_false",
+        "test_condition_total_greater_than_zero_false",
+        "test_condition_total_greater_than_zero_true",
+        "test_condition_truth_table_complete",
+        "test_condition_truth_table_false_true",
+        "test_condition_truth_table_true_false"
+      ]
+    },
+    {
+      "file": "tests/module1/whitebox/test_path_coverage.py",
+      "kept_functions": [
+        "test_loss_distil_pixel_path_5",
+        "test_loss_l2_path_multiple_iterations",
+        "test_loss_l2_path_zero_iterations",
+        "test_measure_inference_latency_path_1",
+        "test_measure_peak_gpu_memory_path_1"
+      ],
+      "removed_functions": [
+        "test_combined_path_all_cpu",
+        "test_combined_path_all_cuda",
+        "test_combined_path_mixed",
+        "test_compute_fp_per_image_path_1",
+        "test_compute_fp_per_image_path_2",
+        "test_count_trainable_params_path_1",
+        "test_count_trainable_params_path_2",
+        "test_exception_path_assertion_error",
+        "test_loss_distil_pixel_path_1",
+        "test_loss_distil_pixel_path_2",
+        "test_loss_distil_pixel_path_3",
+        "test_loss_distil_pixel_path_4",
+        "test_loss_l2_path_one_iteration",
+        "test_measure_inference_latency_path_2",
+        "test_measure_inference_latency_path_3",
+        "test_measure_peak_gpu_memory_path_2",
+        "test_normal_path_vs_exception_path"
+      ]
+    },
+    {
+      "file": "tests/module1/whitebox/test_loss_values.py",
+      "kept_functions": [
+        "test_l2_multiscale_value_and_gradient"
+      ],
+      "removed_functions": [
+        "test_cosine_same_and_opposite"
+      ]
+    },
+    {
+      "file": "tests/module1/whitebox/test_regression_metrics.py",
+      "kept_functions": [
+        "test_latency_invalid_runs",
+        "test_latency_uses_monotonic_high_resolution_clock"
+      ],
+      "removed_functions": [
+        "test_latency_invalid_warmup"
+      ]
+    },
+    {
+      "file": "tests/module1/test_pipeline.py",
+      "kept_functions": [
+        "test_dataset_batch_loss_backward"
+      ],
+      "removed_functions": []
+    }
+  ]
+}

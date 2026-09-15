@@ -1,0 +1,346 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.20, pytest-9.1.1, pluggy-1.6.0 -- D:\Anaconda\envs\AI_common\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+metadata: {'Python': '3.10.20', 'Platform': 'Windows-10-10.0.26200-SP0', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.12.1', 'hypothesis': '6.168.0', 'cov': '7.1.0', 'html': '4.2.0', 'metadata': '3.1.1'}}
+rootdir: D:\projects\Repo-for-STQA-Practices
+configfile: pytest.ini
+plugins: anyio-4.12.1, hypothesis-6.168.0, cov-7.1.0, html-4.2.0, metadata-3.1.1
+collecting ... collected 16 items
+
+tests/module2/ai_assisted/test_depth_properties.py::test_minmax_constant_is_zero PASSED [  6%]
+tests/module2/ai_assisted/test_depth_properties.py::test_zscore_constant_is_finite_zero PASSED [ 12%]
+tests/module2/ai_assisted/test_depth_properties.py::test_all_zero_depth_is_finite PASSED [ 18%]
+tests/module2/ai_assisted/test_depth_properties.py::test_log_matches_known_value PASSED [ 25%]
+tests/module2/ai_assisted/test_depth_properties.py::test_minmax_range_and_order PASSED [ 31%]
+tests/module2/ai_assisted/test_depth_properties.py::test_zscore_patch_independent_of_access_order FAILED [ 37%]
+tests/module2/ai_assisted/test_depth_properties.py::test_zscore_patch_matches_full_frame_statistics FAILED [ 43%]
+tests/module2/ai_assisted/test_depth_properties.py::test_patch_preload_matches_lazy FAILED [ 50%]
+tests/module2/ai_assisted/test_depth_properties.py::test_depth_channels_are_identical PASSED [ 56%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestParameterValidation::test_parameter_combinations FAILED [ 62%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestEdgeCaseDiscovery::test_sampling_edge_cases FAILED [ 68%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestConfigurationCombinations::test_config_combinations FAILED [ 75%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_patch_stride_zero_still_rejected FAILED [ 81%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_invalid_view_id_still_rejected FAILED [ 87%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_invalid_depth_norm_still_rejected FAILED [ 93%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_empty_list_in_loss_functions FAILED [100%]
+
+================================== FAILURES ===================================
+________________ test_zscore_patch_independent_of_access_order ________________
+tests\module2\ai_assisted\test_depth_properties.py:64: in test_zscore_patch_independent_of_access_order
+    torch.testing.assert_close(a[i], b[i])
+E   AssertionError: Tensor-likes are not close!
+E   
+E   Mismatched elements: 192 / 192 (100.0%)
+E   Greatest absolute difference: 3.488459587097168 at index (0, 0, 2) (up to 1e-05 allowed)
+E   Greatest relative difference: 1.8373204469680786 at index (0, 7, 7) (up to 1.3e-06 allowed)
+---------------------------- Captured stdout call -----------------------------
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+[RailDataset] Detected image: 16��24, 2 patches per image
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+[RailDataset] Detected image: 16��24, 2 patches per image
+_______________ test_zscore_patch_matches_full_frame_statistics _______________
+tests\module2\ai_assisted\test_depth_properties.py:72: in test_zscore_patch_matches_full_frame_statistics
+    torch.testing.assert_close(dataset[i]["depth"][0], torch.from_numpy(expected))
+E   AssertionError: Tensor-likes are not close!
+E   
+E   Mismatched elements: 64 / 64 (100.0%)
+E   Greatest absolute difference: 1.6664721965789795 at index (7, 7) (up to 1e-05 allowed)
+E   Greatest relative difference: 21.732929229736328 at index (7, 7) (up to 1.3e-06 allowed)
+---------------------------- Captured stdout call -----------------------------
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+[RailDataset] Detected image: 16��24, 2 patches per image
+_______________________ test_patch_preload_matches_lazy _______________________
+tests\module2\ai_assisted\test_depth_properties.py:79: in test_patch_preload_matches_lazy
+    torch.testing.assert_close(lazy[i]["depth"], cached[i]["depth"])
+E   AssertionError: Tensor-likes are not close!
+E   
+E   Mismatched elements: 192 / 192 (100.0%)
+E   Greatest absolute difference: 1.6664721965789795 at index (0, 0, 0) (up to 1e-05 allowed)
+E   Greatest relative difference: 21.732929229736328 at index (0, 0, 0) (up to 1.3e-06 allowed)
+---------------------------- Captured stdout call -----------------------------
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+[RailDataset] Detected image: 16��24, 2 patches per image
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+
+[RailDataset] Preloading 1 images to memory...
+[RailDataset] Using 1 workers
+[RailDataset] Preloading completed in 7.4s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.1 images/s
+
+[RailDataset] Detected image: 16��24, 2 patches per image
+---------------------------- Captured stderr call -----------------------------
+
+Preloading:   0%|                                         | 0/1 [00:00<?, ?it/s]
+Preloading: 100%|������������������������������������������������������������������| 1/1 [00:07<00:00,  7.19s/it]
+Preloading: 100%|������������������������������������������������������������������| 1/1 [00:07<00:00,  7.19s/it]
+_____________ TestParameterValidation.test_parameter_combinations _____________
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py", line 24, in test_parameter_combinations
+  |     view_id=st.integers(min_value=-10, max_value=20),
+  |   File "D:\Anaconda\envs\AI_common\lib\site-packages\hypothesis\core.py", line 2295, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | exceptiongroup.BaseExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py", line 59, in test_parameter_combinations
+    |     with pytest.raises(ValueError):
+    |   File "D:\Anaconda\envs\AI_common\lib\site-packages\_pytest\raises.py", line 699, in __exit__
+    |     fail(f"DID NOT RAISE {self.expected_exceptions[0].__name__}")
+    |   File "D:\Anaconda\envs\AI_common\lib\site-packages\_pytest\outcomes.py", line 162, in __call__
+    |     raise Failed(msg=reason, pytrace=pytrace)
+    | Failed: DID NOT RAISE ValueError
+    | Failing test case: test_parameter_combinations(
+    |     # The test sometimes passed when commented parts were varied together.
+    |     self=<test_parameter_validation.TestParameterValidation object at 0x000002094C266620>,
+    |     tmp_path=WindowsPath('D:/projects/Repo-for-STQA-Practices/tests/artifacts/frozen-module2-temp/test_parameter_combinations0'),
+    |     view_id=0,  # or any other generated value
+    |     split='test',  # or any other generated value
+    |     img_size=0,  # or any other generated value
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:59
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py", line 60, in test_parameter_combinations
+    |     RailDualModalDataset(
+    |   File "D:\projects\Repo-for-STQA-Practices\SteelRailWay\datasets\rail_dataset.py", line 119, in __init__
+    |     self.samples: List[Dict] = self._scan_files()
+    |   File "D:\projects\Repo-for-STQA-Practices\SteelRailWay\datasets\rail_dataset.py", line 211, in _scan_files
+    |     raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+    | FileNotFoundError: RGB directory not found: D:\projects\Repo-for-STQA-Practices\tests\artifacts\frozen-module2-temp\test_parameter_combinations0\train\Cam0\rgb
+    | Failing test case: test_parameter_combinations(
+    |     # The test sometimes passed when commented parts were varied together.
+    |     self=<test_parameter_validation.TestParameterValidation object at 0x000002094C266620>,
+    |     tmp_path=WindowsPath('D:/projects/Repo-for-STQA-Practices/tests/artifacts/frozen-module2-temp/test_parameter_combinations0'),
+    |     view_id=0,  # or any other generated value
+    |     split='train',  # or any other generated value
+    |     img_size=0,  # or any other generated value
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:59
+    +------------------------------------
+---------------------------- Captured stdout call -----------------------------
+Warning: Test set only has cam1-6, view_id=16 has no test data
+Warning: Test set only has cam1-6, view_id=14 has no test data
+Warning: Test set only has cam1-6, view_id=16 has no test data
+Warning: Test set only has cam1-6, view_id=14 has no test data
+Warning: Test set only has cam1-6, view_id=18 has no test data
+Warning: Test set only has cam1-6, view_id=8 has no test data
+Warning: Test set only has cam1-6, view_id=14 has no test data
+Warning: Test set only has cam1-6, view_id=9 has no test data
+Warning: Test set only has cam1-6, view_id=12 has no test data
+Warning: Test set only has cam1-6, view_id=13 has no test data
+Warning: Test set only has cam1-6, view_id=15 has no test data
+Warning: Test set only has cam1-6, view_id=10 has no test data
+Warning: Test set only has cam1-6, view_id=17 has no test data
+Warning: Test set only has cam1-6, view_id=11 has no test data
+Warning: Test set only has cam1-6, view_id=7 has no test data
+Warning: Test set only has cam1-6, view_id=20 has no test data
+Warning: Test set only has cam1-6, view_id=19 has no test data
+Warning: Test set only has cam1-6, view_id=16 has no test data
+Warning: Test set only has cam1-6, view_id=10 has no test data
+Warning: Test set only has cam1-6, view_id=11 has no test data
+Warning: Test set only has cam1-6, view_id=15 has no test data
+Warning: Test set only has cam1-6, view_id=11 has no test data
+Warning: Test set only has cam1-6, view_id=7 has no test data
+_______________ TestEdgeCaseDiscovery.test_sampling_edge_cases ________________
+tests\module2\ai_assisted\test_parameter_validation.py:76: in test_sampling_edge_cases
+    view_id=st.integers(min_value=1, max_value=8),
+tests\module2\ai_assisted\test_parameter_validation.py:102: in test_sampling_edge_cases
+    with pytest.raises(ValueError):
+E   Failed: DID NOT RAISE ValueError
+E   Failing test case: test_sampling_edge_cases(
+E       # The test always failed when commented parts were varied together.
+E       self=<test_parameter_validation.TestEdgeCaseDiscovery object at 0x000002094C2662C0>,
+E       tmp_path=WindowsPath('D:/projects/Repo-for-STQA-Practices/tests/artifacts/frozen-module2-temp/test_sampling_edge_cases0'),
+E       view_id=1,  # or any other generated value
+E       train_sample_ratio=0.0,  # or any other generated value
+E       patch_stride=0,
+E   )
+E   Explanation:
+E       These lines were always and only run by failing test cases:
+E           D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:102
+___________ TestConfigurationCombinations.test_config_combinations ____________
+tests\module2\ai_assisted\test_parameter_validation.py:120: in test_config_combinations
+    depth_norm=st.sampled_from(["zscore", "minmax", "log", "invalid"]),
+tests\module2\ai_assisted\test_parameter_validation.py:151: in test_config_combinations
+    with pytest.raises(ValueError):
+E   Failed: DID NOT RAISE ValueError
+E   Failing test case: test_config_combinations(
+E       # The test always failed when commented parts were varied together.
+E       self=<test_parameter_validation.TestConfigurationCombinations object at 0x000002094C2653F0>,
+E       tmp_path=WindowsPath('D:/projects/Repo-for-STQA-Practices/tests/artifacts/frozen-module2-temp/test_config_combinations0'),
+E       depth_norm='zscore',  # or any other generated value
+E       use_patch=False,  # or any other generated value
+E       preload=False,  # or any other generated value
+E       sampling_mode='invalid',
+E   )
+E   Explanation:
+E       These lines were always and only run by failing test cases:
+E           D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:151
+---------------------------- Captured stdout call -----------------------------
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.4s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.3s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.3s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.3s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.3s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.3s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.3s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.3s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.3s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.3s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.4s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.6s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+---------------------------- Captured stderr call -----------------------------
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+________ TestRegressionDiscovery.test_patch_stride_zero_still_rejected ________
+tests\module2\ai_assisted\test_parameter_validation.py:177: in test_patch_stride_zero_still_rejected
+    with pytest.raises(ValueError, match="patch_stride must be a positive integer"):
+E   Failed: DID NOT RAISE ValueError
+_________ TestRegressionDiscovery.test_invalid_view_id_still_rejected _________
+tests\module2\ai_assisted\test_parameter_validation.py:192: in test_invalid_view_id_still_rejected
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: D:\projects\Repo-for-STQA-Practices\tests\artifacts\frozen-module2-temp\test_invalid_view_id_still_rej0\train\Cam0\rgb
+_______ TestRegressionDiscovery.test_invalid_depth_norm_still_rejected ________
+tests\module2\ai_assisted\test_parameter_validation.py:207: in test_invalid_depth_norm_still_rejected
+    with pytest.raises(ValueError, match="depth_norm must be one of"):
+E   Failed: DID NOT RAISE ValueError
+__________ TestRegressionDiscovery.test_empty_list_in_loss_functions __________
+tests\module2\ai_assisted\test_parameter_validation.py:223: in test_empty_list_in_loss_functions
+    assert isinstance(result, torch.Tensor)
+E   AssertionError: assert False
+E    +  where False = isinstance(0.0, <class 'torch.Tensor'>)
+E    +    where <class 'torch.Tensor'> = torch.Tensor
+- generated xml file: D:\projects\Repo-for-STQA-Practices\tests\logs\frozen-50\module2.xml -
+=========================== short test summary info ===========================
+FAILED tests/module2/ai_assisted/test_depth_properties.py::test_zscore_patch_independent_of_access_order
+FAILED tests/module2/ai_assisted/test_depth_properties.py::test_zscore_patch_matches_full_frame_statistics
+FAILED tests/module2/ai_assisted/test_depth_properties.py::test_patch_preload_matches_lazy
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestParameterValidation::test_parameter_combinations
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestEdgeCaseDiscovery::test_sampling_edge_cases
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestConfigurationCombinations::test_config_combinations
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_patch_stride_zero_still_rejected
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_invalid_view_id_still_rejected
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_invalid_depth_norm_still_rejected
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_empty_list_in_loss_functions
+=================== 10 failed, 6 passed in 60.01s (0:01:00) ===================

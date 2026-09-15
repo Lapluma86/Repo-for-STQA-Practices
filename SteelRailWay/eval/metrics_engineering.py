@@ -5,7 +5,7 @@
 """
 
 import time
-from typing import Tuple, Union
+from typing import Tuple
 
 import numpy as np
 import torch
@@ -29,10 +29,6 @@ def measure_inference_latency(
 ) -> float:
     """单图前向耗时（毫秒/图）。sample_input 必须是 tuple。"""
     assert isinstance(sample_input, (tuple, list)), "sample_input 需为 tuple/list"
-    if isinstance(n_run, bool) or not isinstance(n_run, int) or n_run <= 0:
-        raise ValueError("n_run must be a positive integer")
-    if isinstance(n_warmup, bool) or not isinstance(n_warmup, int) or n_warmup < 0:
-        raise ValueError("n_warmup must be a non-negative integer")
     model.eval()
     use_cuda = device.type == "cuda"
     with torch.no_grad():
@@ -40,12 +36,12 @@ def measure_inference_latency(
             _ = model(*sample_input)
         if use_cuda:
             torch.cuda.synchronize()
-        t0 = time.perf_counter()
+        t0 = time.time()
         for _ in range(n_run):
             _ = model(*sample_input)
         if use_cuda:
             torch.cuda.synchronize()
-        elapsed = time.perf_counter() - t0
+        elapsed = time.time() - t0
     return elapsed / n_run * 1000.0
 
 

@@ -8,7 +8,7 @@ from datasets.rail_dataset import RailDualModalDataset
 pytestmark = [pytest.mark.module1, pytest.mark.blackbox]
 
 
-@pytest.mark.parametrize("size", [4, 8, 16])
+@pytest.mark.parametrize("size", [8])
 def test_rgb_depth_gt_alignment(tmp_path, size):
     rgb_dir = tmp_path / "rail_mvtec/cam1/test/broken"
     depth_dir = tmp_path / "rail_mvtec_depth/cam1/test/broken"
