@@ -1,34 +1,31 @@
 # -*- coding: utf-8 -*-
 """
-Module 1 Phase 2: AI-Assisted Testing
+Module 2: AI-Assisted Testing
 Uses Hypothesis for property-based testing to find edge cases
 
 This file supplements manual tests with automated property-based tests
 that explore a wider range of input combinations.
 """
 
+import torch
 import pytest
-import sys
-from pathlib import Path
-from hypothesis import given, strategies as st, settings, assume, HealthCheck
-
-PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
-sys.path.insert(0, str(PROJECT_ROOT))
+from hypothesis import given, strategies as st, settings, HealthCheck
 
 from datasets.rail_dataset import RailDualModalDataset
 
 
 @pytest.mark.ai_assisted
-@pytest.mark.phase2
+@pytest.mark.module2
 class TestParameterValidation:
     """Property-based tests for parameter validation"""
 
+    # 功能属性测试含磁盘/进程启动；不以 Hypothesis 默认200ms作为性能要求。
     @given(
         view_id=st.integers(min_value=-10, max_value=20),
         split=st.sampled_from(["train", "val", "test", "invalid", ""]),
         img_size=st.integers(min_value=-100, max_value=10000),
     )
-    @settings(max_examples=100, suppress_health_check=[HealthCheck.function_scoped_fixture])
+    @settings(deadline=None, max_examples=100, suppress_health_check=[HealthCheck.function_scoped_fixture])
     def test_parameter_combinations(self, tmp_path, view_id, split, img_size):
         """Test random parameter combinations"""
         train_root = str(tmp_path / "train")
@@ -59,7 +56,7 @@ class TestParameterValidation:
             assert dataset.img_size == img_size
         else:
             # Invalid combination should raise
-            with pytest.raises((ValueError, FileNotFoundError)):
+            with pytest.raises(ValueError):
                 RailDualModalDataset(
                     train_root=train_root,
                     test_root=test_root,
@@ -70,16 +67,17 @@ class TestParameterValidation:
 
 
 @pytest.mark.ai_assisted
-@pytest.mark.phase2
+@pytest.mark.module2
 class TestEdgeCaseDiscovery:
     """Discover edge cases through random exploration"""
 
+    # 功能属性测试含磁盘/进程启动；不以 Hypothesis 默认200ms作为性能要求。
     @given(
         view_id=st.integers(min_value=1, max_value=8),
         train_sample_ratio=st.floats(min_value=-1.0, max_value=2.0, allow_nan=False),
         patch_stride=st.integers(min_value=-50, max_value=2000),
     )
-    @settings(max_examples=50, suppress_health_check=[HealthCheck.function_scoped_fixture])
+    @settings(deadline=None, max_examples=50, suppress_health_check=[HealthCheck.function_scoped_fixture])
     def test_sampling_edge_cases(self, tmp_path, view_id, train_sample_ratio, patch_stride):
         """Test edge cases for sampling parameters"""
         train_root = str(tmp_path / "train")
@@ -113,17 +111,18 @@ class TestEdgeCaseDiscovery:
 
 
 @pytest.mark.ai_assisted
-@pytest.mark.phase2
+@pytest.mark.module2
 class TestConfigurationCombinations:
     """Test complex configuration combinations"""
 
+    # 功能属性测试含磁盘/进程启动；不以 Hypothesis 默认200ms作为性能要求。
     @given(
         depth_norm=st.sampled_from(["zscore", "minmax", "log", "invalid"]),
         use_patch=st.booleans(),
         preload=st.booleans(),
         sampling_mode=st.sampled_from(["random", "uniform_time", "invalid"]),
     )
-    @settings(max_examples=40, suppress_health_check=[HealthCheck.function_scoped_fixture])
+    @settings(deadline=None, max_examples=40, suppress_health_check=[HealthCheck.function_scoped_fixture])
     def test_config_combinations(self, tmp_path, depth_norm, use_patch, preload, sampling_mode):
         """Test various configuration combinations"""
         train_root = str(tmp_path / "train")
@@ -163,7 +162,7 @@ class TestConfigurationCombinations:
 
 
 @pytest.mark.ai_assisted
-@pytest.mark.phase2
+@pytest.mark.module2
 class TestRegressionDiscovery:
     """Regression tests to ensure fixes remain in place"""
 
@@ -221,5 +220,5 @@ class TestRegressionDiscovery:
         # All loss functions should handle empty lists gracefully
         for loss_fn in [loss_l2, loss_distil, loss_distil_p, loss_distil_pixel]:
             result = loss_fn([], [])
-            assert isinstance(result, type(result))
+            assert isinstance(result, torch.Tensor)
             assert result.item() == 0.0

@@ -6,11 +6,11 @@ pytest 配置文件
 
 import pytest
 import sys
-import os
 from pathlib import Path
 
 # 添加项目根目录到路径
-PROJECT_ROOT = Path(__file__).parent.parent
+REPO_ROOT = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = REPO_ROOT / "SteelRailWay"
 sys.path.insert(0, str(PROJECT_ROOT))
 
 
@@ -67,30 +67,28 @@ def reset_random_seed():
         torch.cuda.manual_seed_all(seed)
 
 
-def pytest_configure(config):
-    """pytest 配置钩子"""
-    # 添加自定义标记
-    config.addinivalue_line(
-        "markers", "blackbox: 黑盒测试标记"
-    )
-    config.addinivalue_line(
-        "markers", "whitebox: 白盒测试标记"
-    )
-    config.addinivalue_line(
-        "markers", "performance: 性能测试标记"
-    )
-    config.addinivalue_line(
-        "markers", "security: 安全测试标记"
-    )
-    config.addinivalue_line(
-        "markers", "integration: 集成测试标记"
-    )
-    config.addinivalue_line(
-        "markers", "slow: 运行时间较长的测试"
-    )
-    config.addinivalue_line(
-        "markers", "phase1: 第一阶段测试（人工手写）"
-    )
-    config.addinivalue_line(
-        "markers", "phase2: 第二阶段测试（AI辅助）"
-    )
+
+@pytest.fixture
+def rail_factory(tmp_path):
+    """小型真实双模态数据；显式划分使加载用例不会意外得到空训练集。"""
+    import cv2
+    import numpy as np
+    from datasets.rail_dataset import RailDualModalDataset
+
+    def create(count=1, **kwargs):
+        root = tmp_path / "train"
+        rgb_dir, depth_dir = root / "Cam1/rgb", root / "Cam1/depth"
+        rgb_dir.mkdir(parents=True, exist_ok=True)
+        depth_dir.mkdir(parents=True, exist_ok=True)
+        for i in range(count):
+            rgb = np.full((16, 24, 3), 40 + i, dtype=np.uint8)
+            depth = np.arange(1, 385, dtype=np.uint16).reshape(16, 24) + i
+            assert cv2.imwrite(str(rgb_dir / f"frame_{i:03}.jpg"), rgb)
+            assert cv2.imwrite(str(depth_dir / f"frame_{i:03}.tiff"), depth)
+        options = dict(train_root=str(root), test_root=str(tmp_path / "test"),
+                       view_id=1, split="train", img_size=8, use_patch=False,
+                       patch_size=8, patch_stride=8, preload_workers=1,
+                       train_val_test_split=[1, 0, 0])
+        options.update(kwargs)
+        return RailDualModalDataset(**options)
+    return create

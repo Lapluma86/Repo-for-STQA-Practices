@@ -4,18 +4,15 @@ Blackbox Test - Boundary Value Analysis
 Tests critical parameter boundary values
 """
 
-import pytest
-import sys
+import os
 from pathlib import Path
-
-PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
-sys.path.insert(0, str(PROJECT_ROOT))
+import pytest
 
 from datasets.rail_dataset import RailDualModalDataset
 
 
 @pytest.mark.blackbox
-@pytest.mark.phase1
+@pytest.mark.module1
 class TestBoundaryValueAnalysis:
     """Boundary value analysis test class"""
 
@@ -456,11 +453,15 @@ class TestBoundaryValueAnalysis:
     def test_very_long_path(self, tmp_path):
         """TC-BV-006-2: Very long path name"""
         long_name = "a" * 200
-        train_root = str(tmp_path / long_name)
+        # Windows 扩展路径保留超长路径测试目标，不受传统 MAX_PATH 限制。
+        root = (tmp_path / long_name).resolve()
+        if os.name == "nt":
+            root = Path("\\\\?\\" + str(root))
+        train_root = str(root)
         test_root = str(tmp_path / "test")
 
-        (tmp_path / long_name / "Cam1" / "rgb").mkdir(parents=True, exist_ok=True)
-        (tmp_path / long_name / "Cam1" / "depth").mkdir(parents=True, exist_ok=True)
+        (root / "Cam1" / "rgb").mkdir(parents=True, exist_ok=True)
+        (root / "Cam1" / "depth").mkdir(parents=True, exist_ok=True)
 
         dataset = RailDualModalDataset(
             train_root=train_root,

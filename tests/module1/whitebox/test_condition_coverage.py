@@ -12,21 +12,16 @@
 """
 
 import pytest
-import sys
 import torch
 import torch.nn as nn
 import numpy as np
-from pathlib import Path
-
-PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
-sys.path.insert(0, str(PROJECT_ROOT))
 
 from utils.losses import loss_distil_pixel
 from eval.metrics_engineering import count_trainable_params
 
 
 @pytest.mark.whitebox
-@pytest.mark.phase1
+@pytest.mark.module1
 class TestConditionCoverage:
     """条件覆盖测试类"""
 

@@ -12,14 +12,9 @@
 """
 
 import pytest
-import sys
 import torch
 import torch.nn as nn
 import numpy as np
-from pathlib import Path
-
-PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
-sys.path.insert(0, str(PROJECT_ROOT))
 
 from utils.losses import loss_l2, loss_distil, loss_distil_pixel
 from eval.metrics_engineering import (
@@ -31,7 +26,7 @@ from eval.metrics_engineering import (
 
 
 @pytest.mark.whitebox
-@pytest.mark.phase1
+@pytest.mark.module1
 class TestPathCoverage:
     """路径覆盖测试类"""
 

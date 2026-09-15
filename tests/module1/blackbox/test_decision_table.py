@@ -15,17 +15,12 @@
 """
 
 import pytest
-import sys
-from pathlib import Path
-
-PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
-sys.path.insert(0, str(PROJECT_ROOT))
 
 from datasets.rail_dataset import RailDualModalDataset
 
 
 @pytest.mark.blackbox
-@pytest.mark.phase1
+@pytest.mark.module1
 class TestDecisionTable:
     """判定表测试类"""
 
