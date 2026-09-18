@@ -71,7 +71,7 @@ def sample_image_path():
 def device():
     """测试使用的设备"""
     import torch
-    return torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    return torch.device("cpu")
 
 
 @pytest.fixture(autouse=True)
@@ -85,8 +85,6 @@ def reset_random_seed():
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(seed)
 
 
 

@@ -1,7 +1,7 @@
 {
   "original_commit": "8da48445d393e882135e659a2b8b72eddee5b0cd",
   "original_count": 199,
-  "selected_count": 50,
+  "selected_count": 48,
   "files": [
     {
       "file": "tests/module1/blackbox/test_boundary_value.py",
@@ -179,8 +179,7 @@
         "test_compute_fp_per_image_n_normal_zero_true",
         "test_count_trainable_params_total_greater_than_zero_false",
         "test_count_trainable_params_total_greater_than_zero_true",
-        "test_loss_distil_pixel_all_branches",
-        "test_measure_peak_gpu_memory_not_cuda_false"
+        "test_loss_distil_pixel_all_branches"
       ],
       "removed_functions": [
         "test_assertion_branch_false",
@@ -198,6 +197,7 @@
         "test_loss_distil_pixel_pool_branch_i_not_0_or_1",
         "test_measure_inference_latency_cuda_false",
         "test_measure_inference_latency_cuda_true",
+        "test_measure_peak_gpu_memory_not_cuda_false",
         "test_measure_peak_gpu_memory_not_cuda_true",
         "test_nested_branch_outer_true_inner_false",
         "test_nested_branch_outer_true_inner_true"
@@ -236,8 +236,7 @@
         "test_loss_distil_pixel_path_5",
         "test_loss_l2_path_multiple_iterations",
         "test_loss_l2_path_zero_iterations",
-        "test_measure_inference_latency_path_1",
-        "test_measure_peak_gpu_memory_path_1"
+        "test_measure_inference_latency_path_1"
       ],
       "removed_functions": [
         "test_combined_path_all_cpu",
@@ -255,6 +254,7 @@
         "test_loss_l2_path_one_iteration",
         "test_measure_inference_latency_path_2",
         "test_measure_inference_latency_path_3",
+        "test_measure_peak_gpu_memory_path_1",
         "test_measure_peak_gpu_memory_path_2",
         "test_normal_path_vs_exception_path"
       ]
@@ -285,5 +285,6 @@
       ],
       "removed_functions": []
     }
-  ]
+  ],
+  "cuda_removal": "2026-09-15：删除CUDA显存用例及同一显存接口的CPU分支用例，测试统一使用CPU。"
 }

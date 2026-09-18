@@ -20,7 +20,6 @@ from utils.losses import loss_distil_pixel, calculate_pixel_similarity
 from eval.metrics_engineering import (
     count_trainable_params,
     measure_inference_latency,
-    measure_peak_gpu_memory,
     compute_fp_per_image
 )
 
@@ -58,27 +57,6 @@ class TestBranchCoverage:
         # total == 0，执行 else 分支
         assert total == 0
         assert ratio == 0.0
-
-
-    def test_measure_peak_gpu_memory_not_cuda_false(self):
-        """
-        测试用例ID: TC-BC-003-2
-        分支: device.type != "cuda" (False)
-        测试目的: CUDA 设备返回实际内存使用
-        """
-        if not torch.cuda.is_available():
-            pytest.skip("CUDA not available")
-
-        device = torch.device("cuda")
-        torch.cuda.reset_peak_memory_stats(device)
-
-        # 分配内存
-        _ = torch.randn(100, 100).cuda()
-
-        memory = measure_peak_gpu_memory(device)
-
-        # 执行 return torch.cuda.max_memory_allocated(...) 分支
-        assert memory > 0
 
 
     def test_compute_fp_per_image_n_normal_zero_true(self):

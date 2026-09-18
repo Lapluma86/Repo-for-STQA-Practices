@@ -1,0 +1,107 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.20, pytest-9.1.1, pluggy-1.6.0
+rootdir: D:\projects\Repo-for-STQA-Practices
+configfile: pytest.ini
+plugins: anyio-4.12.1, hypothesis-6.168.0, cov-7.1.0, html-4.2.0, metadata-3.1.1
+collected 64 items
+
+<Dir Repo-for-STQA-Practices>
+  <Dir tests>
+    <Dir module1>
+      <Package blackbox>
+        <Module test_boundary_value.py>
+          <Class TestBoundaryValueAnalysis>
+            <Function test_img_size_minimum_value>
+            <Function test_img_size_zero_boundary>
+            <Function test_patch_stride_zero_invalid>
+            <Function test_train_sample_ratio_zero>
+            <Function test_train_sample_ratio_one>
+            <Function test_view_id_maximum>
+        <Module test_decision_table.py>
+          <Class TestDecisionTable>
+            <Function test_combination_patch_true_split_train>
+            <Function test_combination_patch_false_split_test>
+            <Function test_combination_log_patch_true>
+            <Function test_combination_sample_ratio_with_num>
+        <Module test_equivalence_partitioning.py>
+          <Class TestEquivalencePartitioning>
+            <Function test_view_id_valid_range>
+            <Function test_view_id_invalid_zero>
+            <Function test_split_valid_train>
+            <Function test_split_invalid_unknown>
+            <Function test_depth_norm_valid_minmax>
+            <Function test_depth_norm_invalid>
+            <Function test_train_sample_ratio_invalid_greater_than_one>
+        <Module test_regression_depth.py>
+          <Function test_depth_read_failure[missing]>
+        <Module test_sampling_behavior.py>
+          <Function test_count_overrides_ratio>
+          <Function test_random_sampling_reproducible_unique>
+        <Module test_spatial_alignment.py>
+          <Function test_rgb_depth_gt_alignment[8]>
+        <Module test_state_transition.py>
+          <Function test_scan_then_read>
+          <Function test_lazy_preload_equivalence>
+          <Function test_state_transition_error_recovery>
+      <Module test_pipeline.py>
+        <Function test_dataset_batch_loss_backward>
+      <Package whitebox>
+        <Module test_branch_coverage.py>
+          <Class TestBranchCoverage>
+            <Function test_count_trainable_params_total_greater_than_zero_true>
+            <Function test_count_trainable_params_total_greater_than_zero_false>
+            <Function test_compute_fp_per_image_n_normal_zero_true>
+            <Function test_compute_fp_per_image_n_normal_zero_false>
+            <Function test_loss_distil_pixel_all_branches>
+        <Module test_condition_coverage.py>
+          <Class TestConditionCoverage>
+            <Function test_condition_i_equals_0_true_i_equals_1_false>
+            <Function test_condition_i_equals_0_false_i_equals_1_true>
+            <Function test_condition_i_equals_0_false_i_equals_1_false>
+            <Function test_condition_isinstance_tuple_true>
+            <Function test_condition_isinstance_both_false>
+        <Module test_loss_values.py>
+          <Function test_l2_multiscale_value_and_gradient>
+        <Module test_path_coverage.py>
+          <Class TestPathCoverage>
+            <Function test_measure_inference_latency_path_1>
+            <Function test_loss_distil_pixel_path_5>
+            <Function test_loss_l2_path_zero_iterations>
+            <Function test_loss_l2_path_multiple_iterations>
+        <Module test_regression_metrics.py>
+          <Function test_latency_uses_monotonic_high_resolution_clock>
+          <Function test_latency_invalid_runs[0]>
+        <Module test_statement_coverage.py>
+          <Class TestStatementCoverage>
+            <Function test_loss_l2_basic>
+            <Function test_loss_distil_basic>
+            <Function test_loss_distil_p_basic>
+            <Function test_calculate_pixel_similarity_f_2_basic>
+            <Function test_count_trainable_params_frozen_layers>
+            <Function test_compute_fp_per_image_list_input>
+    <Dir module2>
+      <Dir ai_assisted>
+        <Module test_depth_properties.py>
+          <Function test_minmax_constant_is_zero>
+          <Function test_zscore_constant_is_finite_zero>
+          <Function test_all_zero_depth_is_finite>
+          <Function test_log_matches_known_value>
+          <Function test_minmax_range_and_order>
+          <Function test_zscore_patch_independent_of_access_order>
+          <Function test_zscore_patch_matches_full_frame_statistics>
+          <Function test_patch_preload_matches_lazy>
+          <Function test_depth_channels_are_identical>
+        <Module test_parameter_validation.py>
+          <Class TestParameterValidation>
+            <Function test_parameter_combinations>
+          <Class TestEdgeCaseDiscovery>
+            <Function test_sampling_edge_cases>
+          <Class TestConfigurationCombinations>
+            <Function test_config_combinations>
+          <Class TestRegressionDiscovery>
+            <Function test_patch_stride_zero_still_rejected>
+            <Function test_invalid_view_id_still_rejected>
+            <Function test_invalid_depth_norm_still_rejected>
+            <Function test_empty_list_in_loss_functions>
+
+======================== 64 tests collected in 16.53s =========================

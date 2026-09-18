@@ -1,0 +1,471 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.20, pytest-9.1.1, pluggy-1.6.0 -- D:\Anaconda\envs\AI_common\python.exe
+hypothesis profile 'default'
+metadata: {'Python': '3.10.20', 'Platform': 'Windows-10-10.0.26200-SP0', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.12.1', 'hypothesis': '6.168.0', 'cov': '7.1.0', 'html': '4.2.0', 'metadata': '3.1.1'}}
+rootdir: D:\projects\Repo-for-STQA-Practices
+configfile: pytest.ini
+plugins: anyio-4.12.1, hypothesis-6.168.0, cov-7.1.0, html-4.2.0, metadata-3.1.1
+collecting ... collected 64 items
+
+tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_img_size_minimum_value PASSED [  1%]
+tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_img_size_zero_boundary FAILED [  3%]
+tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_patch_stride_zero_invalid FAILED [  4%]
+tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_train_sample_ratio_zero PASSED [  6%]
+tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_train_sample_ratio_one PASSED [  7%]
+tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_view_id_maximum PASSED [  9%]
+tests/module1/blackbox/test_decision_table.py::TestDecisionTable::test_combination_patch_true_split_train PASSED [ 10%]
+tests/module1/blackbox/test_decision_table.py::TestDecisionTable::test_combination_patch_false_split_test PASSED [ 12%]
+tests/module1/blackbox/test_decision_table.py::TestDecisionTable::test_combination_log_patch_true PASSED [ 14%]
+tests/module1/blackbox/test_decision_table.py::TestDecisionTable::test_combination_sample_ratio_with_num PASSED [ 15%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_view_id_valid_range PASSED [ 17%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_view_id_invalid_zero FAILED [ 18%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_split_valid_train PASSED [ 20%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_split_invalid_unknown FAILED [ 21%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_depth_norm_valid_minmax PASSED [ 23%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_depth_norm_invalid FAILED [ 25%]
+tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_train_sample_ratio_invalid_greater_than_one FAILED [ 26%]
+tests/module1/blackbox/test_regression_depth.py::test_depth_read_failure[missing] FAILED [ 28%]
+tests/module1/blackbox/test_sampling_behavior.py::test_count_overrides_ratio PASSED [ 29%]
+tests/module1/blackbox/test_sampling_behavior.py::test_random_sampling_reproducible_unique PASSED [ 31%]
+tests/module1/blackbox/test_spatial_alignment.py::test_rgb_depth_gt_alignment[8] PASSED [ 32%]
+tests/module1/blackbox/test_state_transition.py::test_scan_then_read PASSED [ 34%]
+tests/module1/blackbox/test_state_transition.py::test_lazy_preload_equivalence PASSED [ 35%]
+tests/module1/blackbox/test_state_transition.py::test_state_transition_error_recovery PASSED [ 37%]
+tests/module1/test_pipeline.py::test_dataset_batch_loss_backward PASSED  [ 39%]
+tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_count_trainable_params_total_greater_than_zero_true PASSED [ 40%]
+tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_count_trainable_params_total_greater_than_zero_false PASSED [ 42%]
+tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_compute_fp_per_image_n_normal_zero_true PASSED [ 43%]
+tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_compute_fp_per_image_n_normal_zero_false PASSED [ 45%]
+tests/module1/whitebox/test_branch_coverage.py::TestBranchCoverage::test_loss_distil_pixel_all_branches PASSED [ 46%]
+tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_i_equals_0_true_i_equals_1_false PASSED [ 48%]
+tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_i_equals_0_false_i_equals_1_true PASSED [ 50%]
+tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_i_equals_0_false_i_equals_1_false PASSED [ 51%]
+tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_isinstance_tuple_true FAILED [ 53%]
+tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_isinstance_both_false PASSED [ 54%]
+tests/module1/whitebox/test_loss_values.py::test_l2_multiscale_value_and_gradient PASSED [ 56%]
+tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_measure_inference_latency_path_1 PASSED [ 57%]
+tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_loss_distil_pixel_path_5 PASSED [ 59%]
+tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_loss_l2_path_zero_iterations PASSED [ 60%]
+tests/module1/whitebox/test_path_coverage.py::TestPathCoverage::test_loss_l2_path_multiple_iterations PASSED [ 62%]
+tests/module1/whitebox/test_regression_metrics.py::test_latency_uses_monotonic_high_resolution_clock FAILED [ 64%]
+tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[0] FAILED [ 65%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_l2_basic PASSED [ 67%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_distil_basic PASSED [ 68%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_loss_distil_p_basic PASSED [ 70%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_calculate_pixel_similarity_f_2_basic PASSED [ 71%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_count_trainable_params_frozen_layers PASSED [ 73%]
+tests/module1/whitebox/test_statement_coverage.py::TestStatementCoverage::test_compute_fp_per_image_list_input PASSED [ 75%]
+tests/module2/ai_assisted/test_depth_properties.py::test_minmax_constant_is_zero PASSED [ 76%]
+tests/module2/ai_assisted/test_depth_properties.py::test_zscore_constant_is_finite_zero PASSED [ 78%]
+tests/module2/ai_assisted/test_depth_properties.py::test_all_zero_depth_is_finite PASSED [ 79%]
+tests/module2/ai_assisted/test_depth_properties.py::test_log_matches_known_value PASSED [ 81%]
+tests/module2/ai_assisted/test_depth_properties.py::test_minmax_range_and_order PASSED [ 82%]
+tests/module2/ai_assisted/test_depth_properties.py::test_zscore_patch_independent_of_access_order FAILED [ 84%]
+tests/module2/ai_assisted/test_depth_properties.py::test_zscore_patch_matches_full_frame_statistics FAILED [ 85%]
+tests/module2/ai_assisted/test_depth_properties.py::test_patch_preload_matches_lazy FAILED [ 87%]
+tests/module2/ai_assisted/test_depth_properties.py::test_depth_channels_are_identical PASSED [ 89%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestParameterValidation::test_parameter_combinations FAILED [ 90%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestEdgeCaseDiscovery::test_sampling_edge_cases FAILED [ 92%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestConfigurationCombinations::test_config_combinations FAILED [ 93%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_patch_stride_zero_still_rejected FAILED [ 95%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_invalid_view_id_still_rejected FAILED [ 96%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_invalid_depth_norm_still_rejected FAILED [ 98%]
+tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_empty_list_in_loss_functions FAILED [100%]
+
+================================== FAILURES ===================================
+____________ TestBoundaryValueAnalysis.test_img_size_zero_boundary ____________
+tests\module1\blackbox\test_boundary_value.py:45: in test_img_size_zero_boundary
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_img_size_zero_boundary0\train\Cam1\rgb
+__________ TestBoundaryValueAnalysis.test_patch_stride_zero_invalid ___________
+tests\module1\blackbox\test_boundary_value.py:60: in test_patch_stride_zero_invalid
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_patch_stride_zero_invalid0\train\Cam1\rgb
+____________ TestEquivalencePartitioning.test_view_id_invalid_zero ____________
+tests\module1\blackbox\test_equivalence_partitioning.py:42: in test_view_id_invalid_zero
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_view_id_invalid_zero0\train\Cam0\rgb
+___________ TestEquivalencePartitioning.test_split_invalid_unknown ____________
+tests\module1\blackbox\test_equivalence_partitioning.py:73: in test_split_invalid_unknown
+    with pytest.raises(ValueError, match="split must be one of"):
+E   Failed: DID NOT RAISE ValueError
+_____________ TestEquivalencePartitioning.test_depth_norm_invalid _____________
+tests\module1\blackbox\test_equivalence_partitioning.py:107: in test_depth_norm_invalid
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_depth_norm_invalid0\train\Cam1\rgb
+_ TestEquivalencePartitioning.test_train_sample_ratio_invalid_greater_than_one _
+tests\module1\blackbox\test_equivalence_partitioning.py:122: in test_train_sample_ratio_invalid_greater_than_one
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_train_sample_ratio_invali0\train\Cam1\rgb
+______________________ test_depth_read_failure[missing] _______________________
+tests\module1\blackbox\test_regression_depth.py:17: in test_depth_read_failure
+    dataset[0]
+SteelRailWay\datasets\rail_dataset.py:639: in __getitem__
+    "depth": self._load_depth(s["depth_path"], patch_idx),
+SteelRailWay\datasets\rail_dataset.py:590: in _load_depth
+    depth = cv2.imread(path, cv2.IMREAD_UNCHANGED).astype(np.float32)
+E   AttributeError: 'NoneType' object has no attribute 'astype'
+---------------------------- Captured stdout call -----------------------------
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+_________ TestConditionCoverage.test_condition_isinstance_tuple_true __________
+tests\module1\whitebox\test_condition_coverage.py:112: in test_condition_isinstance_tuple_true
+    assert latency > 0
+E   assert 0.0 > 0
+______________ test_latency_uses_monotonic_high_resolution_clock ______________
+tests\module1\whitebox\test_regression_metrics.py:19: in test_latency_uses_monotonic_high_resolution_clock
+    assert result == pytest.approx(0.5)
+E   assert 0.0 == 0.5 �� 5.0e-07
+E     
+E     comparison failed
+E     Obtained: 0.0
+E     Expected: 0.5 �� 5.0e-07
+________________________ test_latency_invalid_runs[0] _________________________
+tests\module1\whitebox\test_regression_metrics.py:26: in test_latency_invalid_runs
+    metrics.measure_inference_latency(torch.nn.Identity(), (torch.ones(1),), torch.device("cpu"), n_run=runs)
+SteelRailWay\eval\metrics_engineering.py:45: in measure_inference_latency
+    return elapsed / n_run * 1000.0
+E   ZeroDivisionError: float division by zero
+________________ test_zscore_patch_independent_of_access_order ________________
+tests\module2\ai_assisted\test_depth_properties.py:64: in test_zscore_patch_independent_of_access_order
+    torch.testing.assert_close(a[i], b[i])
+E   AssertionError: Tensor-likes are not close!
+E   
+E   Mismatched elements: 192 / 192 (100.0%)
+E   Greatest absolute difference: 3.488459587097168 at index (0, 0, 2) (up to 1e-05 allowed)
+E   Greatest relative difference: 1.8373204469680786 at index (0, 7, 7) (up to 1.3e-06 allowed)
+---------------------------- Captured stdout call -----------------------------
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+[RailDataset] Detected image: 16��24, 2 patches per image
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+[RailDataset] Detected image: 16��24, 2 patches per image
+_______________ test_zscore_patch_matches_full_frame_statistics _______________
+tests\module2\ai_assisted\test_depth_properties.py:72: in test_zscore_patch_matches_full_frame_statistics
+    torch.testing.assert_close(dataset[i]["depth"][0], torch.from_numpy(expected))
+E   AssertionError: Tensor-likes are not close!
+E   
+E   Mismatched elements: 64 / 64 (100.0%)
+E   Greatest absolute difference: 1.6664721965789795 at index (7, 7) (up to 1e-05 allowed)
+E   Greatest relative difference: 21.732929229736328 at index (7, 7) (up to 1.3e-06 allowed)
+---------------------------- Captured stdout call -----------------------------
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+[RailDataset] Detected image: 16��24, 2 patches per image
+_______________________ test_patch_preload_matches_lazy _______________________
+tests\module2\ai_assisted\test_depth_properties.py:79: in test_patch_preload_matches_lazy
+    torch.testing.assert_close(lazy[i]["depth"], cached[i]["depth"])
+E   AssertionError: Tensor-likes are not close!
+E   
+E   Mismatched elements: 192 / 192 (100.0%)
+E   Greatest absolute difference: 1.6664721965789795 at index (0, 0, 0) (up to 1e-05 allowed)
+E   Greatest relative difference: 21.732929229736328 at index (0, 0, 0) (up to 1.3e-06 allowed)
+---------------------------- Captured stdout call -----------------------------
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+[RailDataset] Detected image: 16��24, 2 patches per image
+[RailDataset] Using all 1 images
+[RailDataset] train split: 1 images (no val partition)
+
+[RailDataset] Preloading 1 images to memory...
+[RailDataset] Using 1 workers
+[RailDataset] Preloading completed in 3.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.3 images/s
+
+[RailDataset] Detected image: 16��24, 2 patches per image
+---------------------------- Captured stderr call -----------------------------
+
+Preloading:   0%|                                         | 0/1 [00:00<?, ?it/s]
+Preloading: 100%|������������������������������������������������������������������| 1/1 [00:03<00:00,  3.06s/it]
+Preloading: 100%|������������������������������������������������������������������| 1/1 [00:03<00:00,  3.06s/it]
+_____________ TestParameterValidation.test_parameter_combinations _____________
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py", line 24, in test_parameter_combinations
+  |     view_id=st.integers(min_value=-10, max_value=20),
+  |   File "D:\Anaconda\envs\AI_common\lib\site-packages\hypothesis\core.py", line 2295, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | exceptiongroup.BaseExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py", line 59, in test_parameter_combinations
+    |     with pytest.raises(ValueError):
+    |   File "D:\Anaconda\envs\AI_common\lib\site-packages\_pytest\raises.py", line 699, in __exit__
+    |     fail(f"DID NOT RAISE {self.expected_exceptions[0].__name__}")
+    |   File "D:\Anaconda\envs\AI_common\lib\site-packages\_pytest\outcomes.py", line 162, in __call__
+    |     raise Failed(msg=reason, pytrace=pytrace)
+    | Failed: DID NOT RAISE ValueError
+    | Failing test case: test_parameter_combinations(
+    |     # The test sometimes passed when commented parts were varied together.
+    |     self=<test_parameter_validation.TestParameterValidation object at 0x00000104A34E5C00>,
+    |     tmp_path=WindowsPath('C:/Users/sundowner/AppData/Local/Temp/stqa-cleanup-20260918/after-temp/test_parameter_combinations0'),
+    |     view_id=0,  # or any other generated value
+    |     split='test',  # or any other generated value
+    |     img_size=0,  # or any other generated value
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:59
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py", line 60, in test_parameter_combinations
+    |     RailDualModalDataset(
+    |   File "D:\projects\Repo-for-STQA-Practices\SteelRailWay\datasets\rail_dataset.py", line 119, in __init__
+    |     self.samples: List[Dict] = self._scan_files()
+    |   File "D:\projects\Repo-for-STQA-Practices\SteelRailWay\datasets\rail_dataset.py", line 211, in _scan_files
+    |     raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+    | FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_parameter_combinations0\train\Cam0\rgb
+    | Failing test case: test_parameter_combinations(
+    |     # The test sometimes passed when commented parts were varied together.
+    |     self=<test_parameter_validation.TestParameterValidation object at 0x00000104A34E5C00>,
+    |     tmp_path=WindowsPath('C:/Users/sundowner/AppData/Local/Temp/stqa-cleanup-20260918/after-temp/test_parameter_combinations0'),
+    |     view_id=0,  # or any other generated value
+    |     split='train',  # or any other generated value
+    |     img_size=0,  # or any other generated value
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:59
+    +------------------------------------
+---------------------------- Captured stdout call -----------------------------
+Warning: Test set only has cam1-6, view_id=16 has no test data
+Warning: Test set only has cam1-6, view_id=16 has no test data
+Warning: Test set only has cam1-6, view_id=9 has no test data
+Warning: Test set only has cam1-6, view_id=9 has no test data
+Warning: Test set only has cam1-6, view_id=14 has no test data
+Warning: Test set only has cam1-6, view_id=8 has no test data
+Warning: Test set only has cam1-6, view_id=17 has no test data
+Warning: Test set only has cam1-6, view_id=12 has no test data
+Warning: Test set only has cam1-6, view_id=20 has no test data
+Warning: Test set only has cam1-6, view_id=15 has no test data
+Warning: Test set only has cam1-6, view_id=13 has no test data
+Warning: Test set only has cam1-6, view_id=16 has no test data
+Warning: Test set only has cam1-6, view_id=7 has no test data
+Warning: Test set only has cam1-6, view_id=18 has no test data
+Warning: Test set only has cam1-6, view_id=19 has no test data
+Warning: Test set only has cam1-6, view_id=11 has no test data
+Warning: Test set only has cam1-6, view_id=10 has no test data
+Warning: Test set only has cam1-6, view_id=16 has no test data
+_______________ TestEdgeCaseDiscovery.test_sampling_edge_cases ________________
+tests\module2\ai_assisted\test_parameter_validation.py:76: in test_sampling_edge_cases
+    view_id=st.integers(min_value=1, max_value=8),
+tests\module2\ai_assisted\test_parameter_validation.py:102: in test_sampling_edge_cases
+    with pytest.raises(ValueError):
+E   Failed: DID NOT RAISE ValueError
+E   Failing test case: test_sampling_edge_cases(
+E       # The test always failed when commented parts were varied together.
+E       self=<test_parameter_validation.TestEdgeCaseDiscovery object at 0x00000104A34E7B50>,
+E       tmp_path=WindowsPath('C:/Users/sundowner/AppData/Local/Temp/stqa-cleanup-20260918/after-temp/test_sampling_edge_cases0'),
+E       view_id=1,  # or any other generated value
+E       train_sample_ratio=0.0,  # or any other generated value
+E       patch_stride=0,
+E   )
+E   Explanation:
+E       These lines were always and only run by failing test cases:
+E           D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:102
+___________ TestConfigurationCombinations.test_config_combinations ____________
+tests\module2\ai_assisted\test_parameter_validation.py:120: in test_config_combinations
+    depth_norm=st.sampled_from(["zscore", "minmax", "log", "invalid"]),
+tests\module2\ai_assisted\test_parameter_validation.py:151: in test_config_combinations
+    with pytest.raises(ValueError):
+E   Failed: DID NOT RAISE ValueError
+E   Failing test case: test_config_combinations(
+E       # The test always failed when commented parts were varied together.
+E       self=<test_parameter_validation.TestConfigurationCombinations object at 0x00000104A34E7CA0>,
+E       tmp_path=WindowsPath('C:/Users/sundowner/AppData/Local/Temp/stqa-cleanup-20260918/after-temp/test_config_combinations0'),
+E       depth_norm='zscore',  # or any other generated value
+E       use_patch=False,  # or any other generated value
+E       preload=False,  # or any other generated value
+E       sampling_mode='invalid',
+E   )
+E   Explanation:
+E       These lines were always and only run by failing test cases:
+E           D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:151
+---------------------------- Captured stdout call -----------------------------
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+
+[RailDataset] Preloading 0 images to memory...
+[RailDataset] Using 16 workers
+[RailDataset] Preloading completed in 0.2s
+[RailDataset] Total memory usage: 0.0 MB
+[RailDataset] Average speed: 0.0 images/s
+
+---------------------------- Captured stderr call -----------------------------
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+
+Preloading: 0it [00:00, ?it/s]
+Preloading: 0it [00:00, ?it/s]
+________ TestRegressionDiscovery.test_patch_stride_zero_still_rejected ________
+tests\module2\ai_assisted\test_parameter_validation.py:177: in test_patch_stride_zero_still_rejected
+    with pytest.raises(ValueError, match="patch_stride must be a positive integer"):
+E   Failed: DID NOT RAISE ValueError
+_________ TestRegressionDiscovery.test_invalid_view_id_still_rejected _________
+tests\module2\ai_assisted\test_parameter_validation.py:192: in test_invalid_view_id_still_rejected
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_invalid_view_id_still_rej0\train\Cam0\rgb
+_______ TestRegressionDiscovery.test_invalid_depth_norm_still_rejected ________
+tests\module2\ai_assisted\test_parameter_validation.py:207: in test_invalid_depth_norm_still_rejected
+    with pytest.raises(ValueError, match="depth_norm must be one of"):
+E   Failed: DID NOT RAISE ValueError
+__________ TestRegressionDiscovery.test_empty_list_in_loss_functions __________
+tests\module2\ai_assisted\test_parameter_validation.py:223: in test_empty_list_in_loss_functions
+    assert isinstance(result, torch.Tensor)
+E   AssertionError: assert False
+E    +  where False = isinstance(0.0, <class 'torch.Tensor'>)
+E    +    where <class 'torch.Tensor'> = torch.Tensor
+- generated xml file: D:\projects\Repo-for-STQA-Practices\docs\evidence\cleanup-check\tests.xml -
+=========================== short test summary info ===========================
+FAILED tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_img_size_zero_boundary
+FAILED tests/module1/blackbox/test_boundary_value.py::TestBoundaryValueAnalysis::test_patch_stride_zero_invalid
+FAILED tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_view_id_invalid_zero
+FAILED tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_split_invalid_unknown
+FAILED tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_depth_norm_invalid
+FAILED tests/module1/blackbox/test_equivalence_partitioning.py::TestEquivalencePartitioning::test_train_sample_ratio_invalid_greater_than_one
+FAILED tests/module1/blackbox/test_regression_depth.py::test_depth_read_failure[missing]
+FAILED tests/module1/whitebox/test_condition_coverage.py::TestConditionCoverage::test_condition_isinstance_tuple_true
+FAILED tests/module1/whitebox/test_regression_metrics.py::test_latency_uses_monotonic_high_resolution_clock
+FAILED tests/module1/whitebox/test_regression_metrics.py::test_latency_invalid_runs[0]
+FAILED tests/module2/ai_assisted/test_depth_properties.py::test_zscore_patch_independent_of_access_order
+FAILED tests/module2/ai_assisted/test_depth_properties.py::test_zscore_patch_matches_full_frame_statistics
+FAILED tests/module2/ai_assisted/test_depth_properties.py::test_patch_preload_matches_lazy
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestParameterValidation::test_parameter_combinations
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestEdgeCaseDiscovery::test_sampling_edge_cases
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestConfigurationCombinations::test_config_combinations
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_patch_stride_zero_still_rejected
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_invalid_view_id_still_rejected
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_invalid_depth_norm_still_rejected
+FAILED tests/module2/ai_assisted/test_parameter_validation.py::TestRegressionDiscovery::test_empty_list_in_loss_functions
+======================= 20 failed, 44 passed in 35.82s ========================

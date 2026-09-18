@@ -1,6 +1,0 @@
-{
-  "head": "8da48445d393e882135e659a2b8b72eddee5b0cd",
-  "original_base_commit": "2e40c0cef1e01e8f0cdd8e15aab56c6c4f557846",
-  "baseline_file_mismatches": [],
-  "note": "模块一旧证据的实际源码指纹与提交后工作区匹配；提交后另行复验全套测试。"
-}

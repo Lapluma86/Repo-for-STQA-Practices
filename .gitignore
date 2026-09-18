@@ -5,3 +5,10 @@ __pycache__/
 .coverage
 .coverage.*
 tests/artifacts/
+.work/
+.idea/
+pytest-cache-files-*/
+SteelRailWay/outputs/
+SteelRailWay/results/
+SteelRailWay/logs/
+SteelRailWay/figures/

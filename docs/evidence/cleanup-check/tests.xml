@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="20" skipped="0" tests="64" time="35.814" timestamp="2026-09-18T08:10:49.921512+08:00" hostname="LAPTOP-8I0HB4PO"><properties><property name="hypothesis-statistics-tests/module2/ai_assisted/test_depth_properties.py::test_minmax_constant_is_zero" value="dGVzdHMvbW9kdWxlMi9haV9hc3Npc3RlZC90ZXN0X2RlcHRoX3Byb3BlcnRpZXMucHk6OnRlc3RfbWlubWF4X2NvbnN0YW50X2lzX3plcm86CgogIC0gZHVyaW5nIGdlbmVyYXRlIHBoYXNlICgwLjEyIHNlY29uZHMpOgogICAgLSBUeXBpY2FsIHJ1bnRpbWVzOiB+IDctMTMgbXMsIG9mIHdoaWNoIDwgMW1zIGluIGRhdGEgZ2VuZXJhdGlvbgogICAgLSAxMiBwYXNzaW5nLCAwIGZhaWxpbmcsIGFuZCAwIGludmFsaWQgdGVzdCBjYXNlcwoKICAtIFN0b3BwZWQgYmVjYXVzZSBzZXR0aW5ncy5tYXhfZXhhbXBsZXM9MTI=" /><property name="hypothesis-statistics-tests/module2/ai_assisted/test_depth_properties.py::test_zscore_constant_is_finite_zero" value="dGVzdHMvbW9kdWxlMi9haV9hc3Npc3RlZC90ZXN0X2RlcHRoX3Byb3BlcnRpZXMucHk6OnRlc3RfenNjb3JlX2NvbnN0YW50X2lzX2Zpbml0ZV96ZXJvOgoKICAtIGR1cmluZyBnZW5lcmF0ZSBwaGFzZSAoMC4xMSBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiA2LTExIG1zLCBvZiB3aGljaCA8IDFtcyBpbiBkYXRhIGdlbmVyYXRpb24KICAgIC0gMTIgcGFzc2luZywgMCBmYWlsaW5nLCBhbmQgMCBpbnZhbGlkIHRlc3QgY2FzZXMKCiAgLSBTdG9wcGVkIGJlY2F1c2Ugc2V0dGluZ3MubWF4X2V4YW1wbGVzPTEy" /><property name="hypothesis-statistics-tests/module2/ai_assisted/test_depth_properties.py::test_log_matches_known_value" value="dGVzdHMvbW9kdWxlMi9haV9hc3Npc3RlZC90ZXN0X2RlcHRoX3Byb3BlcnRpZXMucHk6OnRlc3RfbG9nX21hdGNoZXNfa25vd25fdmFsdWU6CgogIC0gZHVyaW5nIGdlbmVyYXRlIHBoYXNlICgwLjEyIHNlY29uZHMpOgogICAgLSBUeXBpY2FsIHJ1bnRpbWVzOiB+IDYtMTMgbXMsIG9mIHdoaWNoIDwgMW1zIGluIGRhdGEgZ2VuZXJhdGlvbgogICAgLSAxMiBwYXNzaW5nLCAwIGZhaWxpbmcsIGFuZCAwIGludmFsaWQgdGVzdCBjYXNlcwoKICAtIFN0b3BwZWQgYmVjYXVzZSBzZXR0aW5ncy5tYXhfZXhhbXBsZXM9MTI=" /><property name="hypothesis-statistics-tests/module2/ai_assisted/test_parameter_validation.py::TestParameterValidation::test_parameter_combinations" value="dGVzdHMvbW9kdWxlMi9haV9hc3Npc3RlZC90ZXN0X3BhcmFtZXRlcl92YWxpZGF0aW9uLnB5OjpUZXN0UGFyYW1ldGVyVmFsaWRhdGlvbjo6dGVzdF9wYXJhbWV0ZXJfY29tYmluYXRpb25zOgoKICAtIGR1cmluZyBnZW5lcmF0ZSBwaGFzZSAoMC42MiBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiAzMS05NiBtcywgb2Ygd2hpY2ggfiAwLTEwIG1zIGluIGRhdGEgZ2VuZXJhdGlvbgogICAgLSAwIHBhc3NpbmcsIDEwIGZhaWxpbmcsIGFuZCAwIGludmFsaWQgdGVzdCBjYXNlcwogICAgLSBGb3VuZCAyIGRpc3RpbmN0IGVycm9ycyBpbiB0aGlzIHBoYXNlCgogIC0gZHVyaW5nIHNocmluayBwaGFzZSAoMC4yNCBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiA0Mi03MCBtcywgb2Ygd2hpY2ggfiAwLTIgbXMgaW4gZGF0YSBnZW5lcmF0aW9uCiAgICAtIDAgcGFzc2luZywgNCBmYWlsaW5nLCBhbmQgMCBpbnZhbGlkIHRlc3QgY2FzZXMKICAgIC0gVHJpZWQgNCBzaHJpbmtzIG9mIHdoaWNoIDYgd2VyZSBzdWNjZXNzZnVsCgogIC0gZHVyaW5nIGV4cGxhaW4gcGhhc2UgKDEzLjM0IHNlY29uZHMpOgogICAgLSBUeXBpY2FsIHJ1bnRpbWVzOiB+IDMxLTcwIG1zLCBvZiB3aGljaCB+IDAtMiBtcyBpbiBkYXRhIGdlbmVyYXRpb24KICAgIC0gMiBwYXNzaW5nLCAyNDcgZmFpbGluZywgYW5kIDAgaW52YWxpZCB0ZXN0IGNhc2VzCgogIC0gU3RvcHBlZCBiZWNhdXNlIG5vdGhpbmcgbGVmdCB0byBkbw==" /><property name="hypothesis-statistics-tests/module2/ai_assisted/test_parameter_validation.py::TestEdgeCaseDiscovery::test_sampling_edge_cases" value="dGVzdHMvbW9kdWxlMi9haV9hc3Npc3RlZC90ZXN0X3BhcmFtZXRlcl92YWxpZGF0aW9uLnB5OjpUZXN0RWRnZUNhc2VEaXNjb3Zlcnk6OnRlc3Rfc2FtcGxpbmdfZWRnZV9jYXNlczoKCiAgLSBkdXJpbmcgZ2VuZXJhdGUgcGhhc2UgKDAuMTYgc2Vjb25kcyk6CiAgICAtIFR5cGljYWwgcnVudGltZXM6IH4gOS0yNiBtcywgb2Ygd2hpY2ggfiAwLTcgbXMgaW4gZGF0YSBnZW5lcmF0aW9uCiAgICAtIDIgcGFzc2luZywgOCBmYWlsaW5nLCBhbmQgMCBpbnZhbGlkIHRlc3QgY2FzZXMKICAgIC0gRm91bmQgMSBkaXN0aW5jdCBlcnJvciBpbiB0aGlzIHBoYXNlCgogIC0gZHVyaW5nIHNocmluayBwaGFzZSAoMC4wMiBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiAxOW1zLCBvZiB3aGljaCB+IDFtcyBpbiBkYXRhIGdlbmVyYXRpb24KICAgIC0gMCBwYXNzaW5nLCAxIGZhaWxpbmcsIGFuZCAwIGludmFsaWQgdGVzdCBjYXNlcwogICAgLSBUcmllZCAxIHNocmlua3Mgb2Ygd2hpY2ggMCB3ZXJlIHN1Y2Nlc3NmdWwKCiAgLSBkdXJpbmcgZXhwbGFpbiBwaGFzZSAoMy43NyBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiAxMi0yNSBtcywgb2Ygd2hpY2ggfiAwLTIgbXMgaW4gZGF0YSBnZW5lcmF0aW9uCiAgICAtIDEgcGFzc2luZywgMTgzIGZhaWxpbmcsIGFuZCAwIGludmFsaWQgdGVzdCBjYXNlcwoKICAtIFN0b3BwZWQgYmVjYXVzZSBub3RoaW5nIGxlZnQgdG8gZG8=" /><property name="hypothesis-statistics-tests/module2/ai_assisted/test_parameter_validation.py::TestConfigurationCombinations::test_config_combinations" value="dGVzdHMvbW9kdWxlMi9haV9hc3Npc3RlZC90ZXN0X3BhcmFtZXRlcl92YWxpZGF0aW9uLnB5OjpUZXN0Q29uZmlndXJhdGlvbkNvbWJpbmF0aW9uczo6dGVzdF9jb25maWdfY29tYmluYXRpb25zOgoKICAtIGR1cmluZyBnZW5lcmF0ZSBwaGFzZSAoMS4yOSBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiAxLTI0MiBtcywgb2Ygd2hpY2ggfiAwLTMgbXMgaW4gZGF0YSBnZW5lcmF0aW9uCiAgICAtIDYgcGFzc2luZywgNCBmYWlsaW5nLCBhbmQgMCBpbnZhbGlkIHRlc3QgY2FzZXMKICAgIC0gRm91bmQgMSBkaXN0aW5jdCBlcnJvciBpbiB0aGlzIHBoYXNlCgogIC0gZHVyaW5nIHNocmluayBwaGFzZSAoMC4wNiBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiA5LTE5IG1zLCBvZiB3aGljaCB+IDFtcyBpbiBkYXRhIGdlbmVyYXRpb24KICAgIC0gMSBwYXNzaW5nLCAyIGZhaWxpbmcsIGFuZCAwIGludmFsaWQgdGVzdCBjYXNlcwogICAgLSBUcmllZCAzIHNocmlua3Mgb2Ygd2hpY2ggMyB3ZXJlIHN1Y2Nlc3NmdWwKCiAgLSBkdXJpbmcgZXhwbGFpbiBwaGFzZSAoMS43MyBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiAxOC0yNDQgbXMsIG9mIHdoaWNoIH4gMS0yIG1zIGluIGRhdGEgZ2VuZXJhdGlvbgogICAgLSAwIHBhc3NpbmcsIDExIGZhaWxpbmcsIGFuZCAwIGludmFsaWQgdGVzdCBjYXNlcwoKICAtIFN0b3BwZWQgYmVjYXVzZSBub3RoaW5nIGxlZnQgdG8gZG8=" /></properties><testcase classname="tests.module1.blackbox.test_boundary_value.TestBoundaryValueAnalysis" name="test_img_size_minimum_value" time="0.028" /><testcase classname="tests.module1.blackbox.test_boundary_value.TestBoundaryValueAnalysis" name="test_img_size_zero_boundary" time="0.014"><failure message="FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_img_size_zero_boundary0\train\Cam1\rgb">tests\module1\blackbox\test_boundary_value.py:45: in test_img_size_zero_boundary
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_img_size_zero_boundary0\train\Cam1\rgb</failure></testcase><testcase classname="tests.module1.blackbox.test_boundary_value.TestBoundaryValueAnalysis" name="test_patch_stride_zero_invalid" time="0.016"><failure message="FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_patch_stride_zero_invalid0\train\Cam1\rgb">tests\module1\blackbox\test_boundary_value.py:60: in test_patch_stride_zero_invalid
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_patch_stride_zero_invalid0\train\Cam1\rgb</failure></testcase><testcase classname="tests.module1.blackbox.test_boundary_value.TestBoundaryValueAnalysis" name="test_train_sample_ratio_zero" time="0.022" /><testcase classname="tests.module1.blackbox.test_boundary_value.TestBoundaryValueAnalysis" name="test_train_sample_ratio_one" time="0.023" /><testcase classname="tests.module1.blackbox.test_boundary_value.TestBoundaryValueAnalysis" name="test_view_id_maximum" time="0.022" /><testcase classname="tests.module1.blackbox.test_decision_table.TestDecisionTable" name="test_combination_patch_true_split_train" time="0.019" /><testcase classname="tests.module1.blackbox.test_decision_table.TestDecisionTable" name="test_combination_patch_false_split_test" time="0.025" /><testcase classname="tests.module1.blackbox.test_decision_table.TestDecisionTable" name="test_combination_log_patch_true" time="0.019" /><testcase classname="tests.module1.blackbox.test_decision_table.TestDecisionTable" name="test_combination_sample_ratio_with_num" time="0.019" /><testcase classname="tests.module1.blackbox.test_equivalence_partitioning.TestEquivalencePartitioning" name="test_view_id_valid_range" time="0.019" /><testcase classname="tests.module1.blackbox.test_equivalence_partitioning.TestEquivalencePartitioning" name="test_view_id_invalid_zero" time="0.014"><failure message="FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_view_id_invalid_zero0\train\Cam0\rgb">tests\module1\blackbox\test_equivalence_partitioning.py:42: in test_view_id_invalid_zero
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_view_id_invalid_zero0\train\Cam0\rgb</failure></testcase><testcase classname="tests.module1.blackbox.test_equivalence_partitioning.TestEquivalencePartitioning" name="test_split_valid_train" time="0.017" /><testcase classname="tests.module1.blackbox.test_equivalence_partitioning.TestEquivalencePartitioning" name="test_split_invalid_unknown" time="0.010"><failure message="Failed: DID NOT RAISE ValueError">tests\module1\blackbox\test_equivalence_partitioning.py:73: in test_split_invalid_unknown
+    with pytest.raises(ValueError, match="split must be one of"):
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.module1.blackbox.test_equivalence_partitioning.TestEquivalencePartitioning" name="test_depth_norm_valid_minmax" time="0.020" /><testcase classname="tests.module1.blackbox.test_equivalence_partitioning.TestEquivalencePartitioning" name="test_depth_norm_invalid" time="0.017"><failure message="FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_depth_norm_invalid0\train\Cam1\rgb">tests\module1\blackbox\test_equivalence_partitioning.py:107: in test_depth_norm_invalid
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_depth_norm_invalid0\train\Cam1\rgb</failure></testcase><testcase classname="tests.module1.blackbox.test_equivalence_partitioning.TestEquivalencePartitioning" name="test_train_sample_ratio_invalid_greater_than_one" time="0.015"><failure message="FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_train_sample_ratio_invali0\train\Cam1\rgb">tests\module1\blackbox\test_equivalence_partitioning.py:122: in test_train_sample_ratio_invalid_greater_than_one
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_train_sample_ratio_invali0\train\Cam1\rgb</failure></testcase><testcase classname="tests.module1.blackbox.test_regression_depth" name="test_depth_read_failure[missing]" time="0.028"><failure message="AttributeError: 'NoneType' object has no attribute 'astype'">tests\module1\blackbox\test_regression_depth.py:17: in test_depth_read_failure
+    dataset[0]
+SteelRailWay\datasets\rail_dataset.py:639: in __getitem__
+    "depth": self._load_depth(s["depth_path"], patch_idx),
+SteelRailWay\datasets\rail_dataset.py:590: in _load_depth
+    depth = cv2.imread(path, cv2.IMREAD_UNCHANGED).astype(np.float32)
+E   AttributeError: 'NoneType' object has no attribute 'astype'</failure></testcase><testcase classname="tests.module1.blackbox.test_sampling_behavior" name="test_count_overrides_ratio" time="0.054" /><testcase classname="tests.module1.blackbox.test_sampling_behavior" name="test_random_sampling_reproducible_unique" time="0.120" /><testcase classname="tests.module1.blackbox.test_spatial_alignment" name="test_rgb_depth_gt_alignment[8]" time="0.044" /><testcase classname="tests.module1.blackbox.test_state_transition" name="test_scan_then_read" time="0.044" /><testcase classname="tests.module1.blackbox.test_state_transition" name="test_lazy_preload_equivalence" time="3.169" /><testcase classname="tests.module1.blackbox.test_state_transition" name="test_state_transition_error_recovery" time="0.031" /><testcase classname="tests.module1.test_pipeline" name="test_dataset_batch_loss_backward" time="0.041" /><testcase classname="tests.module1.whitebox.test_branch_coverage.TestBranchCoverage" name="test_count_trainable_params_total_greater_than_zero_true" time="0.006" /><testcase classname="tests.module1.whitebox.test_branch_coverage.TestBranchCoverage" name="test_count_trainable_params_total_greater_than_zero_false" time="0.005" /><testcase classname="tests.module1.whitebox.test_branch_coverage.TestBranchCoverage" name="test_compute_fp_per_image_n_normal_zero_true" time="0.008" /><testcase classname="tests.module1.whitebox.test_branch_coverage.TestBranchCoverage" name="test_compute_fp_per_image_n_normal_zero_false" time="0.008" /><testcase classname="tests.module1.whitebox.test_branch_coverage.TestBranchCoverage" name="test_loss_distil_pixel_all_branches" time="0.013" /><testcase classname="tests.module1.whitebox.test_condition_coverage.TestConditionCoverage" name="test_condition_i_equals_0_true_i_equals_1_false" time="0.012" /><testcase classname="tests.module1.whitebox.test_condition_coverage.TestConditionCoverage" name="test_condition_i_equals_0_false_i_equals_1_true" time="0.013" /><testcase classname="tests.module1.whitebox.test_condition_coverage.TestConditionCoverage" name="test_condition_i_equals_0_false_i_equals_1_false" time="0.013" /><testcase classname="tests.module1.whitebox.test_condition_coverage.TestConditionCoverage" name="test_condition_isinstance_tuple_true" time="0.011"><failure message="assert 0.0 &gt; 0">tests\module1\whitebox\test_condition_coverage.py:112: in test_condition_isinstance_tuple_true
+    assert latency &gt; 0
+E   assert 0.0 &gt; 0</failure></testcase><testcase classname="tests.module1.whitebox.test_condition_coverage.TestConditionCoverage" name="test_condition_isinstance_both_false" time="0.010" /><testcase classname="tests.module1.whitebox.test_loss_values" name="test_l2_multiscale_value_and_gradient" time="0.010" /><testcase classname="tests.module1.whitebox.test_path_coverage.TestPathCoverage" name="test_measure_inference_latency_path_1" time="0.009" /><testcase classname="tests.module1.whitebox.test_path_coverage.TestPathCoverage" name="test_loss_distil_pixel_path_5" time="0.013" /><testcase classname="tests.module1.whitebox.test_path_coverage.TestPathCoverage" name="test_loss_l2_path_zero_iterations" time="0.008" /><testcase classname="tests.module1.whitebox.test_path_coverage.TestPathCoverage" name="test_loss_l2_path_multiple_iterations" time="0.014" /><testcase classname="tests.module1.whitebox.test_regression_metrics" name="test_latency_uses_monotonic_high_resolution_clock" time="0.010"><failure message="assert 0.0 == 0.5 ± 5.0e-07&#10;  &#10;  comparison failed&#10;  Obtained: 0.0&#10;  Expected: 0.5 ± 5.0e-07">tests\module1\whitebox\test_regression_metrics.py:19: in test_latency_uses_monotonic_high_resolution_clock
+    assert result == pytest.approx(0.5)
+E   assert 0.0 == 0.5 ± 5.0e-07
+E     
+E     comparison failed
+E     Obtained: 0.0
+E     Expected: 0.5 ± 5.0e-07</failure></testcase><testcase classname="tests.module1.whitebox.test_regression_metrics" name="test_latency_invalid_runs[0]" time="0.010"><failure message="ZeroDivisionError: float division by zero">tests\module1\whitebox\test_regression_metrics.py:26: in test_latency_invalid_runs
+    metrics.measure_inference_latency(torch.nn.Identity(), (torch.ones(1),), torch.device("cpu"), n_run=runs)
+SteelRailWay\eval\metrics_engineering.py:45: in measure_inference_latency
+    return elapsed / n_run * 1000.0
+E   ZeroDivisionError: float division by zero</failure></testcase><testcase classname="tests.module1.whitebox.test_statement_coverage.TestStatementCoverage" name="test_loss_l2_basic" time="0.013" /><testcase classname="tests.module1.whitebox.test_statement_coverage.TestStatementCoverage" name="test_loss_distil_basic" time="0.014" /><testcase classname="tests.module1.whitebox.test_statement_coverage.TestStatementCoverage" name="test_loss_distil_p_basic" time="0.014" /><testcase classname="tests.module1.whitebox.test_statement_coverage.TestStatementCoverage" name="test_calculate_pixel_similarity_f_2_basic" time="0.010" /><testcase classname="tests.module1.whitebox.test_statement_coverage.TestStatementCoverage" name="test_count_trainable_params_frozen_layers" time="0.009" /><testcase classname="tests.module1.whitebox.test_statement_coverage.TestStatementCoverage" name="test_compute_fp_per_image_list_input" time="0.008" /><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_minmax_constant_is_zero" time="0.143" /><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_zscore_constant_is_finite_zero" time="0.124" /><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_all_zero_depth_is_finite" time="0.047" /><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_log_matches_known_value" time="0.137" /><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_minmax_range_and_order" time="0.024" /><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_zscore_patch_independent_of_access_order" time="0.044"><failure message="AssertionError: Tensor-likes are not close!&#10;&#10;Mismatched elements: 192 / 192 (100.0%)&#10;Greatest absolute difference: 3.488459587097168 at index (0, 0, 2) (up to 1e-05 allowed)&#10;Greatest relative difference: 1.8373204469680786 at index (0, 7, 7) (up to 1.3e-06 allowed)">tests\module2\ai_assisted\test_depth_properties.py:64: in test_zscore_patch_independent_of_access_order
+    torch.testing.assert_close(a[i], b[i])
+E   AssertionError: Tensor-likes are not close!
+E   
+E   Mismatched elements: 192 / 192 (100.0%)
+E   Greatest absolute difference: 3.488459587097168 at index (0, 0, 2) (up to 1e-05 allowed)
+E   Greatest relative difference: 1.8373204469680786 at index (0, 7, 7) (up to 1.3e-06 allowed)</failure></testcase><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_zscore_patch_matches_full_frame_statistics" time="0.027"><failure message="AssertionError: Tensor-likes are not close!&#10;&#10;Mismatched elements: 64 / 64 (100.0%)&#10;Greatest absolute difference: 1.6664721965789795 at index (7, 7) (up to 1e-05 allowed)&#10;Greatest relative difference: 21.732929229736328 at index (7, 7) (up to 1.3e-06 allowed)">tests\module2\ai_assisted\test_depth_properties.py:72: in test_zscore_patch_matches_full_frame_statistics
+    torch.testing.assert_close(dataset[i]["depth"][0], torch.from_numpy(expected))
+E   AssertionError: Tensor-likes are not close!
+E   
+E   Mismatched elements: 64 / 64 (100.0%)
+E   Greatest absolute difference: 1.6664721965789795 at index (7, 7) (up to 1e-05 allowed)
+E   Greatest relative difference: 21.732929229736328 at index (7, 7) (up to 1.3e-06 allowed)</failure></testcase><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_patch_preload_matches_lazy" time="3.244"><failure message="AssertionError: Tensor-likes are not close!&#10;&#10;Mismatched elements: 192 / 192 (100.0%)&#10;Greatest absolute difference: 1.6664721965789795 at index (0, 0, 0) (up to 1e-05 allowed)&#10;Greatest relative difference: 21.732929229736328 at index (0, 0, 0) (up to 1.3e-06 allowed)">tests\module2\ai_assisted\test_depth_properties.py:79: in test_patch_preload_matches_lazy
+    torch.testing.assert_close(lazy[i]["depth"], cached[i]["depth"])
+E   AssertionError: Tensor-likes are not close!
+E   
+E   Mismatched elements: 192 / 192 (100.0%)
+E   Greatest absolute difference: 1.6664721965789795 at index (0, 0, 0) (up to 1e-05 allowed)
+E   Greatest relative difference: 21.732929229736328 at index (0, 0, 0) (up to 1.3e-06 allowed)</failure></testcase><testcase classname="tests.module2.ai_assisted.test_depth_properties" name="test_depth_channels_are_identical" time="0.038" /><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestParameterValidation" name="test_parameter_combinations" time="14.298"><failure message="exceptiongroup.BaseExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)">+ Exception Group Traceback (most recent call last):
+  |   File "D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py", line 24, in test_parameter_combinations
+  |     view_id=st.integers(min_value=-10, max_value=20),
+  |   File "D:\Anaconda\envs\AI_common\lib\site-packages\hypothesis\core.py", line 2295, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | exceptiongroup.BaseExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py", line 59, in test_parameter_combinations
+    |     with pytest.raises(ValueError):
+    |   File "D:\Anaconda\envs\AI_common\lib\site-packages\_pytest\raises.py", line 699, in __exit__
+    |     fail(f"DID NOT RAISE {self.expected_exceptions[0].__name__}")
+    |   File "D:\Anaconda\envs\AI_common\lib\site-packages\_pytest\outcomes.py", line 162, in __call__
+    |     raise Failed(msg=reason, pytrace=pytrace)
+    | Failed: DID NOT RAISE ValueError
+    | Failing test case: test_parameter_combinations(
+    |     # The test sometimes passed when commented parts were varied together.
+    |     self=&lt;test_parameter_validation.TestParameterValidation object at 0x00000104A34E5C00&gt;,
+    |     tmp_path=WindowsPath('C:/Users/sundowner/AppData/Local/Temp/stqa-cleanup-20260918/after-temp/test_parameter_combinations0'),
+    |     view_id=0,  # or any other generated value
+    |     split='test',  # or any other generated value
+    |     img_size=0,  # or any other generated value
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:59
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py", line 60, in test_parameter_combinations
+    |     RailDualModalDataset(
+    |   File "D:\projects\Repo-for-STQA-Practices\SteelRailWay\datasets\rail_dataset.py", line 119, in __init__
+    |     self.samples: List[Dict] = self._scan_files()
+    |   File "D:\projects\Repo-for-STQA-Practices\SteelRailWay\datasets\rail_dataset.py", line 211, in _scan_files
+    |     raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+    | FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_parameter_combinations0\train\Cam0\rgb
+    | Failing test case: test_parameter_combinations(
+    |     # The test sometimes passed when commented parts were varied together.
+    |     self=&lt;test_parameter_validation.TestParameterValidation object at 0x00000104A34E5C00&gt;,
+    |     tmp_path=WindowsPath('C:/Users/sundowner/AppData/Local/Temp/stqa-cleanup-20260918/after-temp/test_parameter_combinations0'),
+    |     view_id=0,  # or any other generated value
+    |     split='train',  # or any other generated value
+    |     img_size=0,  # or any other generated value
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:59
+    +------------------------------------</failure></testcase><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestEdgeCaseDiscovery" name="test_sampling_edge_cases" time="3.993"><failure message="Failed: DID NOT RAISE ValueError&#10;Failing test case: test_sampling_edge_cases(&#10;    # The test always failed when commented parts were varied together.&#10;    self=&lt;test_parameter_validation.TestEdgeCaseDiscovery object at 0x00000104A34E7B50&gt;,&#10;    tmp_path=WindowsPath('C:/Users/sundowner/AppData/Local/Temp/stqa-cleanup-20260918/after-temp/test_sampling_edge_cases0'),&#10;    view_id=1,  # or any other generated value&#10;    train_sample_ratio=0.0,  # or any other generated value&#10;    patch_stride=0,&#10;)&#10;Explanation:&#10;    These lines were always and only run by failing test cases:&#10;        D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:102">tests\module2\ai_assisted\test_parameter_validation.py:76: in test_sampling_edge_cases
+    view_id=st.integers(min_value=1, max_value=8),
+tests\module2\ai_assisted\test_parameter_validation.py:102: in test_sampling_edge_cases
+    with pytest.raises(ValueError):
+E   Failed: DID NOT RAISE ValueError
+E   Failing test case: test_sampling_edge_cases(
+E       # The test always failed when commented parts were varied together.
+E       self=&lt;test_parameter_validation.TestEdgeCaseDiscovery object at 0x00000104A34E7B50&gt;,
+E       tmp_path=WindowsPath('C:/Users/sundowner/AppData/Local/Temp/stqa-cleanup-20260918/after-temp/test_sampling_edge_cases0'),
+E       view_id=1,  # or any other generated value
+E       train_sample_ratio=0.0,  # or any other generated value
+E       patch_stride=0,
+E   )
+E   Explanation:
+E       These lines were always and only run by failing test cases:
+E           D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:102</failure></testcase><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestConfigurationCombinations" name="test_config_combinations" time="3.126"><failure message="Failed: DID NOT RAISE ValueError&#10;Failing test case: test_config_combinations(&#10;    # The test always failed when commented parts were varied together.&#10;    self=&lt;test_parameter_validation.TestConfigurationCombinations object at 0x00000104A34E7CA0&gt;,&#10;    tmp_path=WindowsPath('C:/Users/sundowner/AppData/Local/Temp/stqa-cleanup-20260918/after-temp/test_config_combinations0'),&#10;    depth_norm='zscore',  # or any other generated value&#10;    use_patch=False,  # or any other generated value&#10;    preload=False,  # or any other generated value&#10;    sampling_mode='invalid',&#10;)&#10;Explanation:&#10;    These lines were always and only run by failing test cases:&#10;        D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:151">tests\module2\ai_assisted\test_parameter_validation.py:120: in test_config_combinations
+    depth_norm=st.sampled_from(["zscore", "minmax", "log", "invalid"]),
+tests\module2\ai_assisted\test_parameter_validation.py:151: in test_config_combinations
+    with pytest.raises(ValueError):
+E   Failed: DID NOT RAISE ValueError
+E   Failing test case: test_config_combinations(
+E       # The test always failed when commented parts were varied together.
+E       self=&lt;test_parameter_validation.TestConfigurationCombinations object at 0x00000104A34E7CA0&gt;,
+E       tmp_path=WindowsPath('C:/Users/sundowner/AppData/Local/Temp/stqa-cleanup-20260918/after-temp/test_config_combinations0'),
+E       depth_norm='zscore',  # or any other generated value
+E       use_patch=False,  # or any other generated value
+E       preload=False,  # or any other generated value
+E       sampling_mode='invalid',
+E   )
+E   Explanation:
+E       These lines were always and only run by failing test cases:
+E           D:\projects\Repo-for-STQA-Practices\tests\module2\ai_assisted\test_parameter_validation.py:151</failure></testcase><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestRegressionDiscovery" name="test_patch_stride_zero_still_rejected" time="0.020"><failure message="Failed: DID NOT RAISE ValueError">tests\module2\ai_assisted\test_parameter_validation.py:177: in test_patch_stride_zero_still_rejected
+    with pytest.raises(ValueError, match="patch_stride must be a positive integer"):
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestRegressionDiscovery" name="test_invalid_view_id_still_rejected" time="0.013"><failure message="FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_invalid_view_id_still_rej0\train\Cam0\rgb">tests\module2\ai_assisted\test_parameter_validation.py:192: in test_invalid_view_id_still_rejected
+    RailDualModalDataset(
+SteelRailWay\datasets\rail_dataset.py:119: in __init__
+    self.samples: List[Dict] = self._scan_files()
+SteelRailWay\datasets\rail_dataset.py:211: in _scan_files
+    raise FileNotFoundError(f"RGB directory not found: {rgb_dir}")
+E   FileNotFoundError: RGB directory not found: C:\Users\sundowner\AppData\Local\Temp\stqa-cleanup-20260918\after-temp\test_invalid_view_id_still_rej0\train\Cam0\rgb</failure></testcase><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestRegressionDiscovery" name="test_invalid_depth_norm_still_rejected" time="0.018"><failure message="Failed: DID NOT RAISE ValueError">tests\module2\ai_assisted\test_parameter_validation.py:207: in test_invalid_depth_norm_still_rejected
+    with pytest.raises(ValueError, match="depth_norm must be one of"):
+E   Failed: DID NOT RAISE ValueError</failure></testcase><testcase classname="tests.module2.ai_assisted.test_parameter_validation.TestRegressionDiscovery" name="test_empty_list_in_loss_functions" time="0.017"><failure message="AssertionError: assert False&#10; +  where False = isinstance(0.0, &lt;class 'torch.Tensor'&gt;)&#10; +    where &lt;class 'torch.Tensor'&gt; = torch.Tensor">tests\module2\ai_assisted\test_parameter_validation.py:223: in test_empty_list_in_loss_functions
+    assert isinstance(result, torch.Tensor)
+E   AssertionError: assert False
+E    +  where False = isinstance(0.0, &lt;class 'torch.Tensor'&gt;)
+E    +    where &lt;class 'torch.Tensor'&gt; = torch.Tensor</failure></testcase></testsuite></testsuites>

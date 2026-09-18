@@ -28,7 +28,6 @@ from utils.losses import (
 from eval.metrics_engineering import (
     count_trainable_params,
     measure_inference_latency,
-    measure_peak_gpu_memory,
     compute_fp_per_image
 )
 

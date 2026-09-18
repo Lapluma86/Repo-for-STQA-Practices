@@ -1,9 +1,0 @@
-# 当前测试套件实际使用的工具（Python 3.10）
-pytest>=7.4,<10
-pytest-cov>=4.1,<8
-pytest-html>=3.2,<5
-hypothesis>=6.82,<7
-# OpenCV 为被测数据加载器的运行依赖；保留当前 NumPy 1.x 兼容性。
-opencv-python>=4.8,<4.12
-# torch、torchvision、numpy、scipy、scikit-learn、Pillow 使用 AI_common 已有版本。
-tqdm>=4.66,<5

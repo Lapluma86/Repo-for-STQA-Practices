@@ -1,9 +1,0 @@
-{
-  "collected": 215,
-  "passed": 204,
-  "skipped": 11,
-  "failed": 0,
-  "duration_log_seconds": 41.92,
-  "head": "8da48445d393e882135e659a2b8b72eddee5b0cd",
-  "scope": "module1 + module2"
-}

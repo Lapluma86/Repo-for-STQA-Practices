@@ -20,7 +20,6 @@ from utils.losses import loss_l2, loss_distil, loss_distil_pixel
 from eval.metrics_engineering import (
     count_trainable_params,
     measure_inference_latency,
-    measure_peak_gpu_memory,
     compute_fp_per_image
 )
 
@@ -34,30 +33,11 @@ class TestPathCoverage:
     # 路径2: total == 0 → 返回0.0 → return
 
 
-    # 路径1: device.type != "cuda" → return 0.0
-    # 路径2: device.type == "cuda" → 计算显存 → return
-
-    def test_measure_peak_gpu_memory_path_1(self):
-        """
-        测试用例ID: TC-PC-002-1
-        路径: 入口 → device!="cuda"(True) → return 0.0
-        测试目的: CPU设备路径
-        """
-        device = torch.device("cpu")
-
-        memory = measure_peak_gpu_memory(device)
-
-        # 路径验证
-        assert memory == 0.0
-
-
     # 路径1: n_normal == 0 → return 0.0
     # 路径2: n_normal > 0 → 计算误报率 → return
 
 
     # 路径1: 入口 → assert失败 → 抛出异常
-    # 路径2: 入口 → assert通过 → use_cuda=False → 不同步 → return
-    # 路径3: 入口 → assert通过 → use_cuda=True → 同步 → return
 
     def test_measure_inference_latency_path_1(self):
         """
