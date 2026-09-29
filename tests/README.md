@@ -7,9 +7,13 @@
 | `module1/blackbox/` | 数据集等价类、边界值、判定表、状态与空间对齐 |
 | `module1/whitebox/` | 损失函数、工程指标的语句/分支/条件/路径设计及数值断言 |
 | `module1/test_pipeline.py` | 数据集→DataLoader→损失→反向传播集成验证 |
-| `module2/ai_assisted/` | Hypothesis 参数组合、属性测试和缺陷验证 |
+| `module2/ai_assisted/` | Hypothesis 参数组合、属性测试，以及从精简前程序补回的采样、读取行为和损失/指标用例 |
 
-模块一48项（黑盒24、白盒23、集成1），模块二16项。用例数不等于 Hypothesis 生成示例数。
+模块一48项（黑盒24、白盒23、集成1）。模块二51项：原有16项，补回35项。用例数不等于 Hypothesis 生成示例数。
+
+```powershell
+.\run_module2_tests.bat --no-pause
+```
 
 ## 环境与运行
 

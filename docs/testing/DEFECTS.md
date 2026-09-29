@@ -11,3 +11,11 @@
 潜在修复方向分别为高分辨率单调时钟、读取结果空值检查、执行次数参数校验；本次结构清理不实施修复。
 
 此外，部分参数非法值未在目录扫描前校验；原始断言要求的ValueError与实际FileNotFoundError不符。完整失败节点见 [执行证据](../evidence/README.md)。实测时延断言可能因计时分辨率产生波动，不能把该波动直接归因于目录调整。
+
+模块二在同一冻结源码上另确认两处缺陷，当前未修复。负预热次数并入 DEF-03 的同一缺口，不单列。
+
+| 编号 | 位置与触发条件 | 预期 | 实际行为 | 回归节点（模块二） |
+| --- | --- | --- | --- | --- |
+| DEF-20260925-01 | `datasets/rail_dataset.py` 的 `_load_depth`；先切 patch，再按当前块统计并按路径缓存 | 访问顺序、全帧统计、预加载与懒加载三者一致 | 三组比较的元素全部不一致 | `ai_assisted/test_depth_properties.py` 的顺序、全帧统计、预加载三项 |
+| DEF-20260925-02 | `utils/losses.py` 四个蒸馏函数；学生与教师特征都是空列表 | 返回数值为 0 的张量 | 返回 Python 浮点 0.0 | `test_parameter_validation.py::TestRegressionDiscovery::test_empty_list_in_loss_functions` |
+| 并入 DEF-03 | `measure_inference_latency`；`n_warmup=-1` | 抛出说明 `n_warmup` 的 ValueError | 未抛出 ValueError | `test_loss_metrics_scale.py::test_negative_warmup_is_rejected` |

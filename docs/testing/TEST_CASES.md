@@ -57,7 +57,7 @@
 
 ## 模块二：AI辅助测试
 
-共16项，利用Hypothesis探索参数组合及数值/变形性质，人工核对断言与接口约定。参数组合的可执行断言以测试源码为准。
+2026-09-25 起共 51 项。下面先列出原有 16 项，它们继续用 Hypothesis 探索参数组合及数值性质，人工核对断言。其后 35 项从精简前程序恢复，预期改成可手算的结果；CUDA 用例未恢复。参数组合的可执行断言以测试源码为准。
 
 | 测试文件 | 函数 | 设计说明 |
 | --- | --- | --- |
@@ -77,3 +77,11 @@
 | test_parameter_validation.py | `test_invalid_view_id_still_rejected` | 验证非法视角应被拒绝；检查异常类型与触发顺序 |
 | test_parameter_validation.py | `test_invalid_depth_norm_still_rejected` | 验证非法归一化模式应被拒绝 |
 | test_parameter_validation.py | `test_empty_list_in_loss_functions` | 验证空特征列表的损失函数行为 |
+
+2026-09-25 执行：原有 16 项为 6 通过、10 失败。补回 35 项为 34 通过、1 失败，失败项是负预热次数。
+
+| 测试文件 | 覆盖 | 本次结果 |
+| --- | --- | --- |
+| test_dataset_scale.py | 比例抽样、数量封顶、训练/验证划分、缺配对、reflectance/tif、边长、视角 1 与 8、空测试划分 | 16 项通过 |
+| test_behavior_scale.py | 重复读取、切块数量、minmax 预加载一致、log 切块与整帧 z-score 手算、测试集 good/broken | 8 项通过 |
+| test_loss_metrics_scale.py | 余弦同向与反向、单尺度 L2、误报率、空模型参数量、负预热次数 | 10 项通过，1 项失败 |

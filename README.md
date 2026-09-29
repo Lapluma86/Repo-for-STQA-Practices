@@ -20,10 +20,10 @@
 
 双击 `run_module1_tests.bat` 可运行模块一；终端中可加 `--no-pause`。详细依赖、报告命令和临时目录权限处理见 [测试 README](tests/README.md)。
 
-模块一保留48项CPU测试，模块二保留16项；被测源码冻结，已有缺陷会造成测试失败。当前状态见 [CURRENT_STATUS.md](docs/testing/CURRENT_STATUS.md)。测试失败不等于运行未完成，也不能通过修改断言或源码指纹掩盖。
+模块一保留48项CPU测试。模块二现为51项：原有16项，另从精简前程序补回35项。被测源码冻结，已有缺陷会造成测试失败。当前状态见 [CURRENT_STATUS.md](docs/testing/CURRENT_STATUS.md)。测试失败不等于运行未完成，也不能通过修改断言或源码指纹掩盖。双击 `run_module2_tests.bat` 可只运行模块二。
 
 真实数据、预训练权重和模型 checkpoint 不随仓库提供。完整训练和真实数据评估需自行准备资源；训练入口从 `SteelRailWay/` 运行，参数以对应 argparse 为准。
 
 ## 文件管理
 
-研究输出、缓存和新生成的测试报告不纳入版本控制。必要执行证据集中到 `docs/evidence/`，避免重复副本。汇报PPT、演示材料与过期文档已移除。Git提交信息使用中文，本地 `AGENTS.md` 和 `.vscode/` 不提交。
+研究输出、缓存和新生成的测试报告不纳入版本控制。必要执行证据集中到 `docs/evidence/`，避免重复副本。演示视频、个人实验报告和过期文档不提交。Git提交信息使用中文，本地 `AGENTS.md` 和 `.vscode/` 不提交。

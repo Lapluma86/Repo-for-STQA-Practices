@@ -97,7 +97,8 @@ def rail_factory(tmp_path):
 
     def create(count=1, **kwargs):
         root = tmp_path / "train"
-        rgb_dir, depth_dir = root / "Cam1/rgb", root / "Cam1/depth"
+        view_id = int(kwargs.get("view_id", 1))
+        rgb_dir, depth_dir = root / f"Cam{view_id}/rgb", root / f"Cam{view_id}/depth"
         rgb_dir.mkdir(parents=True, exist_ok=True)
         depth_dir.mkdir(parents=True, exist_ok=True)
         for i in range(count):
@@ -106,7 +107,7 @@ def rail_factory(tmp_path):
             assert cv2.imwrite(str(rgb_dir / f"frame_{i:03}.jpg"), rgb)
             assert cv2.imwrite(str(depth_dir / f"frame_{i:03}.tiff"), depth)
         options = dict(train_root=str(root), test_root=str(tmp_path / "test"),
-                       view_id=1, split="train", img_size=8, use_patch=False,
+                       view_id=view_id, split="train", img_size=8, use_patch=False,
                        patch_size=8, patch_stride=8, preload_workers=1,
                        train_val_test_split=[1, 0, 0])
         options.update(kwargs)
